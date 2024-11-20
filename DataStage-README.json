@@ -1,0 +1,64 @@
+{
+  "project_name": "TS-ETL-TEST",
+  "project_id": "4594fcb3-f651-4f46-a32e-ebc1e091604d",
+  "created_by": "tshimada",
+  "created_at": "2024-11-20T00:56:44.032544678Z",
+  "environment": "cp4d",
+  "services_info": [
+    {
+      "name": "DSAssets",
+      "version": "503.0.6"
+    },
+    {
+      "name": "ds-canvas",
+      "version": "503.0.33"
+    },
+    {
+      "name": "ds-cas-lite",
+      "version": "503.0.4"
+    },
+    {
+      "name": "ds-codegen",
+      "version": "503.0.12"
+    },
+    {
+      "name": "ds-flow-runtime",
+      "version": "503.0.4"
+    },
+    {
+      "name": "ds-flows",
+      "version": "503.0.12"
+    },
+    {
+      "name": "ds-migration",
+      "version": "503.0.23"
+    },
+    {
+      "name": "ds-px-runtime",
+      "version": "503.0.22"
+    },
+    {
+      "name": "qs-ruleset",
+      "version": "503.0.5"
+    }
+  ],
+  "assets": [
+    {
+      "name": "FLOW1",
+      "type": "data_intg_flow"
+    },
+    {
+      "name": "default_datastage_px",
+      "type": "environment"
+    },
+    {
+      "name": "FLOW1.DataStage job",
+      "type": "job"
+    },
+    {
+      "name": "FLOW1",
+      "type": "px_executables",
+      "location": "FLOW1"
+    }
+  ]
+}
