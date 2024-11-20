@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "FLOW1.DataStage job2",
+    "asset_id" : "d9fa200f-93bc-4403-82e0-524e0c8285ca",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "version" : "0.1",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-ETL-TEST",
+      "asset_ref" : "f8d4afe8-4f1b-4fae-8e67-fe0382957bf4",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "FLOW1"
+    }
+  }
+}
