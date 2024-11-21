@@ -21,7 +21,7 @@
         },
         "schema_ref" : "5193b0f6-bfbf-4b0a-8ffb-b282655bde20",
         "parameters" : {
-          "records" : 20,
+          "records" : 30,
           "buf_mode" : "default",
           "enableSchemalessDesign" : false
         }
@@ -100,8 +100,17 @@
                 "label" : "Link_1",
                 "y_pos" : -20,
                 "height" : 80
+              }, {
+                "temporary" : false,
+                "width" : 200,
+                "x_pos" : -20,
+                "id" : "dec-9",
+                "position" : "middle",
+                "label" : "20 rows\n20 rows/sec",
+                "y_pos" : 8,
+                "height" : 80
               } ],
-              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+              "class_name" : "linkStyle__runMetricsLinkFinishedStyle___QBKP8"
             }
           },
           "link_name" : "Link_1",
