@@ -21,7 +21,7 @@
         },
         "schema_ref" : "5193b0f6-bfbf-4b0a-8ffb-b282655bde20",
         "parameters" : {
-          "records" : 10,
+          "records" : 30,
           "buf_mode" : "default",
           "enableSchemalessDesign" : false
         }
@@ -77,14 +77,14 @@
                 "y_pos" : -10,
                 "class_name" : "linkStartImage"
               }, {
-                "image" : "/data-intg/flows/graphics/flows/noMeta-specific.svg",
+                "image" : "/data-intg/flows/graphics/flows/link-marking--specific-partitioning.svg",
                 "temporary" : false,
                 "outline" : false,
                 "distance" : 0,
-                "width" : 70,
-                "tooltip" : "No columns\nSpecific partition",
-                "x_pos" : -23,
-                "id" : "dec-6S",
+                "width" : 50,
+                "tooltip" : "Specific partition",
+                "x_pos" : -15,
+                "id" : "dec-9C",
                 "position" : "middle",
                 "y_pos" : 4,
                 "height" : 50
@@ -100,7 +100,17 @@
                 "label" : "Link_1",
                 "y_pos" : -20,
                 "height" : 80
-              } ]
+              }, {
+                "temporary" : false,
+                "width" : 200,
+                "x_pos" : -20,
+                "id" : "dec-9",
+                "position" : "middle",
+                "label" : "20 rows\n20 rows/sec",
+                "y_pos" : 8,
+                "height" : 80
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkFinishedStyle___QBKP8"
             }
           },
           "link_name" : "Link_1",
