@@ -21,7 +21,7 @@
         },
         "schema_ref" : "b862b948-c45c-40e4-b0f8-f19309c811cd",
         "parameters" : {
-          "records" : 10,
+          "records" : 2,
           "buf_mode" : "default",
           "enableSchemalessDesign" : false
         }
