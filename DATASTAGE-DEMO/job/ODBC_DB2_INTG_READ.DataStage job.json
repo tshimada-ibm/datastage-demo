@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "ODBC_DB2_INTG_READ.DataStage job",
+    "asset_id" : "b52994fc-7ff9-4442-8878-f14c913c2103",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "9d10d0a8-5665-4628-9b16-dd5211334bd8",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "ODBC_DB2_INTG_READ"
+    }
+  }
+}

@@ -1,0 +1,917 @@
+{
+  "app_data" : {
+    "pipeline_data" : {
+      "caching_method" : "automatic",
+      "default_cache_mode" : "never",
+      "default_error_policy" : "fail_on_error",
+      "parameter_sets" : [ ],
+      "settings" : {
+        "mark_completed_with_errors" : true,
+        "propagate_completed_with_warnings_status" : true
+      },
+      "validation" : {
+        "valid" : true,
+        "validated_at" : "2025-06-14 00:38:56.037011185 +0000 UTC"
+      },
+      "variables" : [ ],
+      "version" : "11.0"
+    },
+    "ui_data" : {
+      "settings" : {
+        "auto_link_color" : true,
+        "autosave" : false,
+        "enable_ds_funcs" : true,
+        "limit_ab_jobs_scope" : true,
+        "shape_nodes" : true
+      }
+    }
+  },
+  "doc_type" : "pipeline",
+  "id" : "f75bf8c4-0b9f-4308-8c29-31934b48333b",
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "pipelines" : [ {
+    "app_data" : {
+      "pipeline_data" : {
+        "inputs" : [ {
+          "default" : "ISISODPX",
+          "description" : "DB - Source Server",
+          "name" : "$pDBSrcServer",
+          "type" : "String"
+        }, {
+          "default" : "ISISRPT",
+          "description" : "DB - Source Schema Owner",
+          "name" : "$pDBSrcOwner",
+          "type" : "String"
+        }, {
+          "default" : "IP_PMWS",
+          "description" : "DB - Source User ID",
+          "name" : "$pDBSrcUser",
+          "type" : "String"
+        }, {
+          "default" : "{dsmenc}h6snb+LP1h6EbZ4MDD1daA==",
+          "description" : "DB - Source User Password",
+          "name" : "$pDBSrcPass",
+          "type" : "Encrypted"
+        }, {
+          "default" : "/var/dstage",
+          "description" : "Directory Structure - Root Level",
+          "name" : "$pDirRoot",
+          "type" : "String"
+        }, {
+          "default" : "/owi/prod",
+          "description" : "Directory Structure - Group Level",
+          "name" : "$pDirGroup",
+          "type" : "String"
+        }, {
+          "default" : "/dswork",
+          "description" : "Directory Structure - DataStage Working Level",
+          "name" : "$pDirDSWorking",
+          "type" : "String"
+        }, {
+          "default" : "/tdm",
+          "description" : "Directory Structure - TDM Level",
+          "name" : "$pDirTDM",
+          "type" : "String"
+        }, {
+          "default" : "/log/",
+          "description" : "Directory Structure - Log Level",
+          "name" : "$pDirLog",
+          "type" : "String"
+        }, {
+          "default" : ".txt",
+          "description" : "File Extention Default",
+          "name" : "$pFileExt",
+          "type" : "String"
+        }, {
+          "default" : "2014-05-19 00:00:00",
+          "description" : "Date - Begining Timestamp for sql query",
+          "name" : "$pBegDT",
+          "type" : "String"
+        }, {
+          "default" : "2014-05-19 23:59:59",
+          "description" : "Date - Ending Timestamp for sql query",
+          "name" : "$pEndDT",
+          "type" : "String"
+        }, {
+          "default" : "OWI3037",
+          "description" : "DataStage Job Identifier (Name) of this Job",
+          "name" : "$pDSJobID",
+          "type" : "String"
+        }, {
+          "default" : "OWI3037",
+          "description" : "Job Identifier for this Job",
+          "name" : "$pJobID",
+          "type" : "String"
+        }, {
+          "default" : "ISISRPT",
+          "description" : "DB - Source DB Name",
+          "name" : "$pDBSrcName",
+          "type" : "String"
+        }, {
+          "default" : "",
+          "description" : "Job invocation ID",
+          "name" : "DSJobInvocationId",
+          "type" : "String"
+        } ]
+      },
+      "ui_data" : {
+        "asset_metadata" : {
+          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
+            "name" : "DATASTAGE-DEMO"
+          },
+          "99091d7b-a616-489f-9e5e-78faefb416ff" : {
+            "name" : "EXTOWITableIsisNcrPxP01.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }
+        },
+        "comments" : [ ],
+        "exception_handler_x_pos" : -80,
+        "exception_handler_y_pos" : -80,
+        "zoom" : {
+          "k" : 0.8,
+          "x" : 41.599999999999994,
+          "y" : 81.6
+        }
+      }
+    },
+    "id" : "b617116f-0d3a-4e04-bdd7-b4f6905c5fa7",
+    "nodes" : [ {
+      "app_data" : {
+        "componentGroup" : "run",
+        "componentLabelRef" : "Run DataStage job",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            },
+            "job_parameters" : {
+              "description" : "Optional. Additional job parameters passed to the job run.",
+              "descriptive_name" : "Job Parameters",
+              "human_name" : "Job Parameters",
+              "name" : "job_parameters",
+              "optional" : true,
+              "type" : "JobParameters"
+            },
+            "parameter_sets" : {
+              "description" : "Additional parameter sets passed to the job run.",
+              "descriptive_name" : "Parameter sets",
+              "human_name" : "Parameter sets",
+              "name" : "parameter_sets",
+              "optional" : true,
+              "pass_style" : "file",
+              "type" : "ParameterSets"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-datastage-job",
+              "component_version_id_ref" : "run-datastage-job-1"
+            }
+          },
+          "inputs" : [ {
+            "allowed_scopes" : [ "space", "project" ],
+            "description" : "Required. CPD path of the DataStage job to be run.",
+            "human_name" : "DataStage Job",
+            "name" : "job",
+            "related_asset_type" : "data_intg_flow",
+            "source_of_scope" : true,
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "ui_data" : {
+              "assetInputType" : "exact",
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-job-input" : "SELECT_RESOURCE"
+              },
+              "scopeType" : "project"
+            },
+            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/99091d7b-a616-489f-9e5e-78faefb416ff"
+          }, {
+            "description" : "Optional. An action taken when the run has failed.",
+            "human_name" : "Error Policy",
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "fail_on_error"
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter SV_JobName",
+            "name" : "SV_JobName",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "ds.JobName"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter SV_JobStartTime",
+            "name" : "SV_JobStartTime",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "ds.JobStartTime"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter SV_JobStartTimestamp",
+            "name" : "SV_JobStartTimestamp",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "ds.JobStartTimestamp"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter SV_JobStartDate",
+            "name" : "SV_JobStartDate",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "ds.JobStartDate"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter SV_JobController",
+            "name" : "SV_JobController",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "ds.JobController"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDBSrcServer",
+            "name" : "$pDBSrcServer",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDBSrcServer\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDBSrcOwner",
+            "name" : "$pDBSrcOwner",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDBSrcOwner\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDBSrcUser",
+            "name" : "$pDBSrcUser",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDBSrcUser\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDBSrcPass",
+            "name" : "$pDBSrcPass",
+            "type" : "Encrypted",
+            "value_from" : {
+              "expression" : "params[\"$pDBSrcPass\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDirRoot",
+            "name" : "$pDirRoot",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDirRoot\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDirGroup",
+            "name" : "$pDirGroup",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDirGroup\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDirDSWorking",
+            "name" : "$pDirDSWorking",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDirDSWorking\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDirTDM",
+            "name" : "$pDirTDM",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDirTDM\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDirLog",
+            "name" : "$pDirLog",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDirLog\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pFileExt",
+            "name" : "$pFileExt",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pFileExt\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pBegDT",
+            "name" : "$pBegDT",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pBegDT\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pEndDT",
+            "name" : "$pEndDT",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pEndDT\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDSJobID",
+            "name" : "$pDSJobID",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDSJobID\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pJobID",
+            "name" : "$pJobID",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pJobID\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $pDBSrcName",
+            "name" : "$pDBSrcName",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$pDBSrcName\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter DSJobInvocationId",
+            "name" : "DSJobInvocationId",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "\"#DSJobInvocationId#\""
+            }
+          } ],
+          "name" : "job1",
+          "outputs" : [ {
+            "description" : "The status of the job. One of: \"Completed\", \"CompletedWithWarnings\", \"CompletedWithErrors\", \"Failed\", \"Canceled\"",
+            "human_name" : "Execution Status",
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "description" : "Message associated with the status.",
+            "human_name" : "Status Message",
+            "name" : "status_message",
+            "type" : "String"
+          }, {
+            "human_name" : "Job",
+            "name" : "job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "human_name" : "Job Run",
+            "name" : "job_run",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job_run",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "human_name" : "Job Name",
+            "name" : "job_name",
+            "type" : "String"
+          }, {
+            "human_name" : "Job Name with Invocation id",
+            "name" : "resolved_job_name",
+            "type" : "String"
+          }, {
+            "human_name" : "User Status",
+            "name" : "user_status",
+            "type" : "String"
+          }, {
+            "annotations" : {
+              "human_name" : "Job Run Name"
+            },
+            "name" : "job_run_name",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "job1_type_label",
+            "label" : "Run DataStage job",
+            "position" : "middleCenter",
+            "x_pos" : -63,
+            "y_pos" : 13
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/datastage_flow.svg",
+          "label" : "P01",
+          "x_pos" : 240,
+          "y_pos" : 48
+        },
+        "validators" : { }
+      },
+      "id" : "job1",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort",
+        "links" : [ {
+          "app_data" : {
+            "ui_data" : {
+              "decorations" : [ {
+                "class_name" : "condition-decorator-add",
+                "height" : 16,
+                "hotspot" : true,
+                "id" : "assocDecAdd",
+                "image" : "/pipelines/graphics/orchestration-flows/add-condition.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 16,
+                "x_pos" : -8,
+                "y_pos" : -8
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 40,
+                "hotspot" : true,
+                "id" : "assocDecAddPill",
+                "image" : "/pipelines/graphics/orchestration-flows/link/add-condition-pill.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 150,
+                "x_pos" : -75,
+                "y_pos" : -20
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 16,
+                "id" : "assocDecAddText",
+                "label" : "Add condition",
+                "position" : "middle",
+                "width" : 84,
+                "x_pos" : -59,
+                "y_pos" : -12
+              } ]
+            }
+          },
+          "id" : "b7313924-c11b-4312-8c31-dcde7ff23670",
+          "node_id_ref" : "routine1",
+          "port_id_ref" : "outPort"
+        } ]
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "label" : ""
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    }, {
+      "app_data" : {
+        "componentGroup" : "run",
+        "componentLabelRef" : "Routine activity(unsupported)",
+        "emptyImage" : "/pipelines/graphics/orchestration-flows/nodes/run/empty.svg",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-bash-script",
+              "component_version_id_ref" : "run-bash-script-1"
+            }
+          },
+          "inputs" : [ {
+            "description" : "Body of the script.",
+            "human_name" : "Script",
+            "name" : "script",
+            "optional" : true,
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "# Routine 'JobControlRoutine' is missing from the import file. \n# The following script is a dummy script for routine.\n\n## The following is the original, untranslated routine source code,\n# written in IBM InfoSphere DataStage BASIC language.\n#\n# # <undefined>\n\necho \"Routine 'JobControlRoutine' is missing\" > $command_name_PATH\n"
+          }, {
+            "default" : "standalone",
+            "description" : "The runtime type for a bash script execution",
+            "human_name" : "Runtime type(optional)",
+            "name" : "runtime_type",
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-runtime_type-input" : "SELECT_RESOURCE"
+              }
+            },
+            "value" : "shared"
+          }, {
+            "description" : "Optional. An action taken when the run has failed.",
+            "human_name" : "Error Policy",
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "fail_on_error"
+          }, {
+            "current_scope" : true,
+            "default" : "b128f957-581d-46d0-95b6-8af5cd5be580",
+            "name" : "hardware_specification",
+            "related_asset_type" : "orchestration_flow",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "hardware_specification",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "value" : "abfde4f8-88a7-57c7-bee4-e047a481f7cb"
+          } ],
+          "name" : "routine1",
+          "outputs" : [ {
+            "description" : "Return value from the script",
+            "human_name" : "Return Value",
+            "name" : "return_value",
+            "type" : "Integer"
+          }, {
+            "description" : "Command name of the inline script",
+            "group" : "output_variables",
+            "human_name" : "Command Name",
+            "name" : "command_name",
+            "size_estimation" : 10,
+            "type" : "String"
+          }, {
+            "description" : "Standard Output from the script",
+            "human_name" : "Standard Output",
+            "name" : "standard_output",
+            "size_estimation" : 250,
+            "type" : "String"
+          }, {
+            "name" : "standard_error",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "description" : "The status of the job. One of: \"Completed\", \"CompletedWithWarnings\", \"CompletedWithErrors\", \"Failed\", \"Canceled\"",
+            "human_name" : "Execution Status",
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "description" : "Message associated with the status.",
+            "human_name" : "Status Message",
+            "name" : "status_message",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "routine1_type_label",
+            "label" : "Routine activity(unsupported)",
+            "position" : "middleCenter",
+            "x_pos" : -63,
+            "y_pos" : 13
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/bash_script.svg",
+          "label" : "JobControlRoutine",
+          "x_pos" : 48,
+          "y_pos" : 48
+        }
+      },
+      "id" : "routine1",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort"
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "label" : ""
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    }, {
+      "app_data" : {
+        "componentGroup" : "run",
+        "componentLabelRef" : "Routine activity(unsupported)",
+        "emptyImage" : "/pipelines/graphics/orchestration-flows/nodes/run/empty.svg",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-bash-script",
+              "component_version_id_ref" : "run-bash-script-1"
+            }
+          },
+          "inputs" : [ {
+            "description" : "Body of the script.",
+            "human_name" : "Script",
+            "name" : "script",
+            "optional" : true,
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "\necho \"DSJobReport\" > $command_name_PATH\n\necho ${DSJobReport_InputArg} > $InputArg_PATH\n\nsh /mnts/ds-storage/utilityScripts/DSJobReport.sh \"${DSJobReport_InputArg}\"\n"
+          }, {
+            "default" : "standalone",
+            "description" : "The runtime type for a bash script execution",
+            "human_name" : "Runtime type(optional)",
+            "name" : "runtime_type",
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-runtime_type-input" : "SELECT_RESOURCE"
+              }
+            },
+            "value" : "shared"
+          }, {
+            "group" : "env_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.InputArg#",
+            "name" : "DSJobReport_InputArg",
+            "value_from" : {
+              "expression" : "\"2;#$pDirRoot##$pDirGroup##$pDirLog#\""
+            }
+          }, {
+            "group" : "env_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.Ans#",
+            "name" : "DSJobReport_Ans",
+            "value_from" : {
+              "expression" : "\"\""
+            }
+          }, {
+            "group" : "env_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.job_report#",
+            "name" : "DSJobReport_job_report",
+            "value_from" : {
+              "expression" : "\"\""
+            }
+          }, {
+            "description" : "Optional. An action taken when the run has failed.",
+            "human_name" : "Error Policy",
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "fail_on_error"
+          }, {
+            "current_scope" : true,
+            "default" : "b128f957-581d-46d0-95b6-8af5cd5be580",
+            "name" : "hardware_specification",
+            "related_asset_type" : "orchestration_flow",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "hardware_specification",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "value" : "abfde4f8-88a7-57c7-bee4-e047a481f7cb"
+          } ],
+          "name" : "routine2",
+          "outputs" : [ {
+            "description" : "Return value from the script",
+            "human_name" : "Return Value",
+            "name" : "return_value",
+            "type" : "Integer"
+          }, {
+            "description" : "Command name of the inline script",
+            "group" : "output_variables",
+            "human_name" : "Command Name",
+            "name" : "command_name",
+            "size_estimation" : 10,
+            "type" : "String"
+          }, {
+            "description" : "Environment variable for #AfterJobRoutine.InputArg#",
+            "group" : "output_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.InputArg#",
+            "name" : "InputArg",
+            "type" : "String"
+          }, {
+            "description" : "Environment variable for #AfterJobRoutine.Ans#",
+            "group" : "output_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.Ans#",
+            "name" : "Ans",
+            "type" : "String"
+          }, {
+            "description" : "Environment variable for #AfterJobRoutine.job_report#",
+            "group" : "output_variables",
+            "human_name" : "Environment variable for #AfterJobRoutine.job_report#",
+            "name" : "job_report",
+            "type" : "String"
+          }, {
+            "description" : "Standard Output from the script",
+            "human_name" : "Standard Output",
+            "name" : "standard_output",
+            "size_estimation" : 250,
+            "type" : "String"
+          }, {
+            "name" : "standard_error",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "description" : "The status of the job. One of: \"Completed\", \"CompletedWithWarnings\", \"CompletedWithErrors\", \"Failed\", \"Canceled\"",
+            "human_name" : "Execution Status",
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "description" : "Message associated with the status.",
+            "human_name" : "Status Message",
+            "name" : "status_message",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "routine2_type_label",
+            "label" : "Routine activity(unsupported)",
+            "position" : "middleCenter",
+            "x_pos" : -63,
+            "y_pos" : 13
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/bash_script.svg",
+          "label" : "AfterJobRoutine",
+          "x_pos" : 432,
+          "y_pos" : 48
+        }
+      },
+      "id" : "routine2",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "label" : ""
+          }
+        },
+        "id" : "inPort",
+        "links" : [ {
+          "app_data" : {
+            "ui_data" : {
+              "decorations" : [ {
+                "class_name" : "condition-decorator-add",
+                "height" : 16,
+                "hotspot" : true,
+                "id" : "assocDecAdd",
+                "image" : "/pipelines/graphics/orchestration-flows/add-condition.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 16,
+                "x_pos" : -8,
+                "y_pos" : -8
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 40,
+                "hotspot" : true,
+                "id" : "assocDecAddPill",
+                "image" : "/pipelines/graphics/orchestration-flows/link/add-condition-pill.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 150,
+                "x_pos" : -75,
+                "y_pos" : -20
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 16,
+                "id" : "assocDecAddText",
+                "label" : "Add condition",
+                "position" : "middle",
+                "width" : 84,
+                "x_pos" : -59,
+                "y_pos" : -12
+              } ]
+            }
+          },
+          "id" : "3020a957-9632-4300-9c07-167fc9671c4f",
+          "node_id_ref" : "job1",
+          "port_id_ref" : "outPort"
+        } ]
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Output Port"
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    } ],
+    "runtime_ref" : "kfp"
+  } ],
+  "primary_pipeline" : "b617116f-0d3a-4e04-bdd7-b4f6905c5fa7",
+  "schemas" : [ ],
+  "version" : "3.0"
+}

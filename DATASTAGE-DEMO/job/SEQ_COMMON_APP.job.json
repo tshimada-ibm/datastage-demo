@@ -1,0 +1,35 @@
+{
+  "metadata" : {
+    "name" : "SEQ_COMMON_APP.job",
+    "description" : "",
+    "asset_id" : "ce2394da-688c-4301-af1f-641159d4c687",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "orchestration_flow",
+      "configuration" : {
+        "version" : "fd1cca49-1957-4bc7-b465-a94e7579913e-0",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "fd1cca49-1957-4bc7-b465-a94e7579913e",
+      "job_parameters" : [ {
+        "name" : "$SCRIPT_DIR",
+        "value" : "PROJDEF"
+      } ],
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "schedule" : "",
+      "flow_name" : "SEQ_COMMON_APP"
+    }
+  }
+}

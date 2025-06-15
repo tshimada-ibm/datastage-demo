@@ -1,0 +1,208 @@
+{
+  "primary_pipeline" : "f728706b-6f29-4141-b0ee-fce45c917c55",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "9467feba-7d36-43bf-aaf4-d5670e082fec",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "27426f48-b1d1-46cf-9eae-d95aed3e231e"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "fe41a035-12e3-4b21-9956-6d617939463f"
+      } ],
+      "op" : "OracleConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "limit_rows" : false,
+          "isolation_level" : "0",
+          "connection_type" : "tcp",
+          "oracle_db_port" : "#INTG_ORA.ORA_PORT2#",
+          "table_name" : "test1",
+          "oracle_db_host" : "#INTG_ORA.ORA_HOST2#",
+          "password" : "#INTG_ORA.PASSWD#",
+          "read_mode" : "0",
+          "before_after" : false,
+          "generate_sql" : true,
+          "oracle_service_name" : "#INTG_ORA.SID#",
+          "enable_quoted_ids" : false,
+          "fail_on_row_error_px" : true,
+          "array_size" : "2000",
+          "enable_partitioned_reads" : false,
+          "username" : "#INTG_ORA.USER#"
+        }
+      },
+      "id" : "4aad9016-1495-4bba-8dd6-c27cc9e8caf3",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/OracleConnectorPX.svg",
+          "x_pos" : 144.0,
+          "label" : "DRS_Connector_0",
+          "y_pos" : 120.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "4aad9016-1495-4bba-8dd6-c27cc9e8caf3",
+          "type_attr" : "PRIMARY",
+          "id" : "27426f48-b1d1-46cf-9eae-d95aed3e231e",
+          "link_name" : "DSLink2",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "DSLink2",
+                "label" : "DSLink2",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "9467feba-7d36-43bf-aaf4-d5670e082fec"
+        } ],
+        "id" : "b77d49cd-8e65-41fd-905d-1d85735e92cb",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "fe41a035-12e3-4b21-9956-6d617939463f"
+      } ],
+      "id" : "8bbcd5ad-72e3-4b39-9368-12ea755972df",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "b77d49cd-8e65-41fd-905d-1d85735e92cb"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 456.0,
+          "label" : "Peek_1",
+          "y_pos" : 120.0
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "nrecs" : 10,
+        "selection" : " ",
+        "output_count" : 0,
+        "input_count" : 1,
+        "columns" : " ",
+        "name" : "name",
+        "dataset" : " ",
+        "allow_column_mapping" : false
+      }
+    } ],
+    "id" : "f728706b-6f29-4141-b0ee-fce45c917c55",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "false"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "7105d25e-c195-4fe2-ba64-2b77267a27fe",
+    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "name" : "INTG_ORA"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "fe41a035-12e3-4b21-9956-6d617939463f",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 30,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "e7886edd-f9a7-4294-91c1-c5aa93d1b491",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    }
+  },
+  "version" : "3.0"
+}

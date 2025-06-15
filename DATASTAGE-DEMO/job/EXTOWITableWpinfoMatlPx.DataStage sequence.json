@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableWpinfoMatlPx.DataStage sequence",
+    "asset_id" : "f6ec2362-60f5-4190-936c-87f82b5d8b65",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "orchestration_flow",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "64dd1313-200c-4071-9fcc-adaddf88678e",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "EXTOWITableWpinfoMatlPx"
+    }
+  }
+}

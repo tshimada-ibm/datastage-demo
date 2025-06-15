@@ -1,0 +1,216 @@
+{
+  "primary_pipeline" : "c7f9e7b5-ef00-4d88-b09d-6c78d1f9637f",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "7849b42a-0341-4b83-a37e-a3ab9531167f",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "a7ca0e22-2d75-43a2-a7e8-d99562547e2c"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "57521006-7786-485a-b1d2-e02ffa782c87"
+      } ],
+      "op" : "DB2ConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "session.isolation_level" : "cursor_stability",
+          "limit_rows" : false,
+          "EnablePartitionedReads" : "false",
+          "advanced.hostname" : "#INTG_DB2.DB2_HOST2#",
+          "Session.ARRAYSIZE" : "2000",
+          "GENSQL" : "0",
+          "Transaction.TX_ISO_LEVEL" : "1",
+          "ISCASESENS" : "false",
+          "session.array_size" : 2000,
+          "table_name" : "test1",
+          "authentication_type" : "username_and_password",
+          "TABLE" : "test1",
+          "write_mode" : "insert",
+          "prefix_for_expression_columns" : "EXPR",
+          "database" : "#INTG_DB2.DATABASE#",
+          "password" : "#INTG_DB2.PASSWD#",
+          "before_after" : false,
+          "advanced.port" : "#INTG_DB2.DB2_PORT2#",
+          "generate_sql" : true,
+          "enable_quoted_i_ds" : false,
+          "table_action" : "append",
+          "username" : "#INTG_DB2.USER#"
+        }
+      },
+      "id" : "de9a3d53-da02-4f57-88c5-d9cc82909bda",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : {
+          "outputs_order" : "7849b42a-0341-4b83-a37e-a3ab9531167f"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/DB2ConnectorPX.svg",
+          "x_pos" : 144.0,
+          "label" : "DRS_Connector_0",
+          "y_pos" : 120.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "de9a3d53-da02-4f57-88c5-d9cc82909bda",
+          "type_attr" : "PRIMARY",
+          "id" : "a7ca0e22-2d75-43a2-a7e8-d99562547e2c",
+          "link_name" : "DSLink2",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "DSLink2",
+                "label" : "DSLink2",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "7849b42a-0341-4b83-a37e-a3ab9531167f"
+        } ],
+        "id" : "426449b7-3cb9-4e9b-adcc-22e6a9d9407f",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "57521006-7786-485a-b1d2-e02ffa782c87"
+      } ],
+      "id" : "886c444d-3146-4d3a-9d4b-44528472f99b",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "426449b7-3cb9-4e9b-adcc-22e6a9d9407f"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 456.0,
+          "label" : "Peek_1",
+          "y_pos" : 120.0
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "nrecs" : 10,
+        "selection" : " ",
+        "output_count" : 0,
+        "input_count" : 1,
+        "columns" : " ",
+        "name" : "name",
+        "dataset" : " ",
+        "allow_column_mapping" : false
+      }
+    } ],
+    "id" : "c7f9e7b5-ef00-4d88-b09d-6c78d1f9637f",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "false"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "a6d0543c-ff19-4923-841b-9dba66f12ceb",
+    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "name" : "INTG_DB2"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "57521006-7786-485a-b1d2-e02ffa782c87",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "b2008b52-9b7f-4dc7-8186-80d28e24a093",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    }
+  },
+  "version" : "3.0"
+}

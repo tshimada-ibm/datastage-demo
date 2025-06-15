@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "JDBC_INTG_DB2_READ.DataStage job",
+    "asset_id" : "13f3d0ac-7eaa-4ed4-bed6-03f7f19a3ff1",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "53c898c0-4278-4510-bbfe-3eb1e4ba7b32",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "JDBC_INTG_DB2_READ"
+    }
+  }
+}

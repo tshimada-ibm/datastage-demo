@@ -1,0 +1,404 @@
+{
+  "primary_pipeline" : "0e2fccb9-0f21-4faa-b665-15834a05d9c9",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 0
+            }
+          }
+        }
+      } ],
+      "op" : "hdfs-apache",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "b0247ad6-9c2d-42c7-a7d7-adbc3e6662d3",
+          "type_attr" : "PRIMARY",
+          "id" : "76d8e298-2874-472e-b01d-cc79dc7308a1",
+          "link_name" : "DSLink4",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "DSLink4",
+                "label" : "DSLink4",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "9a762771-0997-4f75-be51-0a636e7b0f38"
+        } ],
+        "id" : "43e92fca-c31d-40f7-84c5-ab19207a9c97",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "bc0b0e1f-bb6c-4408-bcbc-5ebf9ffa8835"
+      } ],
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "ssl_certificate" : "#ConnParamSet_HDFS.ssl_certificate#",
+          "_cleanup" : true,
+          "_split_on_key" : false,
+          "_file_format.delimited_syntax.header" : false,
+          "_file_format.delimited_syntax.field_delimiter" : ",",
+          "_filename_target" : "#$INTG_HDFS_DATA_DIR#/test.dat",
+          "_create_hive_table" : false,
+          "_file_format" : "delimited",
+          "_max_file_size" : 0,
+          "_file_format.delimited_syntax.row_delimiter" : "<NL>",
+          "filesystem_type" : "webhdfs",
+          "url" : "https://#$INTG_HDFS_HOST#:#$INTG_HDFS_PORT#",
+          "authentication_method" : "kerberos",
+          "_file_format.delimited_syntax.quotes" : "none",
+          "_write_mode" : "write_multiple_files",
+          "_use_datastage" : true,
+          "_file_format.delimited_syntax.encoding.output_bom" : false,
+          "_file_exists" : "overwrite_file",
+          "_wave_handling.append_uid" : false,
+          "_file_format.delimited_syntax.encoding" : "",
+          "_force_sequential" : false,
+          "user_principal" : "#$INTG_HDFS_USER#",
+          "hive_ssl" : false
+        }
+      },
+      "id" : "d0e077a1-4552-4d8f-9ec2-8ef5307ca9ce",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/hdfs-apache.svg",
+          "x_pos" : 552.0,
+          "label" : "File_Connector_0",
+          "y_pos" : 264.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 0,
+        "input_count" : 1,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "9a762771-0997-4f75-be51-0a636e7b0f38",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "76d8e298-2874-472e-b01d-cc79dc7308a1"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "buf_free_run" : 50,
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        },
+        "schema_ref" : "bc0b0e1f-bb6c-4408-bcbc-5ebf9ffa8835"
+      } ],
+      "op" : "PxCopy",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "e0dff47a-04d6-484b-84d8-2fdff2065bb8",
+          "type_attr" : "PRIMARY",
+          "id" : "d349a84a-a23b-46ad-9b5f-b97c627a0c21",
+          "link_name" : "DSLink3",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "DSLink3",
+                "label" : "DSLink3",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "25337ba0-518d-41f2-a2c8-ccc248bd394c"
+        } ],
+        "id" : "0c259249-7de2-4ce3-ad50-b178867b08b5",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "a53f6efd-3795-48fd-b383-4cf9233c9279"
+      } ],
+      "id" : "b0247ad6-9c2d-42c7-a7d7-adbc3e6662d3",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxCopy.svg",
+          "x_pos" : 384.0,
+          "label" : "Copy_2",
+          "y_pos" : 264.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 1,
+        "force" : " ",
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "25337ba0-518d-41f2-a2c8-ccc248bd394c",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "d349a84a-a23b-46ad-9b5f-b97c627a0c21"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "records" : 10,
+          "buf_free_run" : 50,
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        },
+        "schema_ref" : "a53f6efd-3795-48fd-b383-4cf9233c9279"
+      } ],
+      "op" : "PxRowGenerator",
+      "id" : "e0dff47a-04d6-484b-84d8-2fdff2065bb8",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxRowGenerator.svg",
+          "x_pos" : 192.0,
+          "label" : "Row_Generator_1",
+          "y_pos" : 264.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    } ],
+    "id" : "0e2fccb9-0f21-4faa-b665-15834a05d9c9",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "false"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "376e383d-2819-4eab-b031-95df7f60fbfc",
+    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "name" : "ConnParamSet_HDFS"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "bc0b0e1f-bb6c-4408-bcbc-5ebf9ffa8835",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "DSLink3.a",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "DSLink3.b",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 2,
+        "decimal_precision" : 10,
+        "source_field_id" : "DSLink3.c",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "c",
+      "type" : "double",
+      "app_data" : {
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    } ]
+  }, {
+    "id" : "a53f6efd-3795-48fd-b383-4cf9233c9279",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 2,
+        "decimal_precision" : 10,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "c",
+      "type" : "double",
+      "app_data" : {
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "22fee452-220a-4a81-a03e-ddb381971dc4",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "name" : "$INTG_HDFS_HOST",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_HOST",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$INTG_HDFS_PORT",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_PORT",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$INTG_HDFS_USER",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_USER",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$INTG_HDFS_KEYTAB_FILE",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_KEYTAB_FILE",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$INTG_HDFS_DATA_DIR",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_DATA_DIR",
+      "value" : "PROJDEF"
+    } ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "parameter_set" : {
+    "value_sets" : [ ],
+    "name" : "INTG_ODBC_DB2",
+    "description" : "",
+    "parameters" : [ {
+      "name" : "DSN",
+      "type" : "string",
+      "prompt" : "DSN",
+      "value" : "INTG_DB2"
+    }, {
+      "name" : "USER",
+      "type" : "string",
+      "prompt" : "USER",
+      "value" : "db2inst1"
+    }, {
+      "name" : "PASSWD",
+      "type" : "encrypted",
+      "prompt" : "PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    } ]
+  }
+}

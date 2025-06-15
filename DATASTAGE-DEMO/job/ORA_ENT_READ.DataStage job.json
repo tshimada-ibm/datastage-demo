@@ -1,0 +1,39 @@
+{
+  "metadata" : {
+    "name" : "ORA_ENT_READ.DataStage job",
+    "asset_id" : "5cc37dc1-0c30-48bc-9e79-1569d3ebaa72",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ],
+        "env_id" : "25b816da-b4d4-4023-b79d-46cbbfa2f84c"
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "015b2452-0798-4cb9-894e-b6abea046573",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "retention_policy" : { },
+      "parameter_sets" : [ {
+        "name" : "ConnParamSet_Oracle",
+        "ref" : "ccccf9cb-558c-4461-bbed-1b82286a2b4a"
+      } ],
+      "job_parameters" : [ ],
+      "flow_name" : "ORA_ENT_READ"
+    }
+  }
+}

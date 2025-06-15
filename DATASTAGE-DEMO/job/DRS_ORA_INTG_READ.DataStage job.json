@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "DRS_ORA_INTG_READ.DataStage job",
+    "asset_id" : "df75bceb-40d6-4233-86a4-df322f00cbb2",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "23bd6255-bef7-4491-a0e7-f41ad1b442b3",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "DRS_ORA_INTG_READ"
+    }
+  }
+}

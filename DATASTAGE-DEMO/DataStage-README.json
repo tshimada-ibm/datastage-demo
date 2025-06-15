@@ -1,0 +1,605 @@
+{
+  "project" : "DATASTAGE-DEMO",
+  "projectId" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+  "created_by" : "tshimada",
+  "created_at" : null,
+  "environment" : "cp4d",
+  "services_info" : [ {
+    "name" : "ds-canvas",
+    "version" : "512.0.10"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "512.0.3"
+  }, {
+    "name" : "ds-codegen",
+    "version" : "512.0.7"
+  }, {
+    "name" : "ds-flow-runtime",
+    "version" : "512.0.2"
+  }, {
+    "name" : "ds-flows",
+    "version" : "512.0.7"
+  }, {
+    "name" : "ds-migration",
+    "version" : "512.0.4"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "512.0.7"
+  }, {
+    "name" : "DSAssets",
+    "version" : "512.0.3"
+  }, {
+    "name" : "qs-ruleset",
+    "version" : "512.0.2"
+  } ],
+  "assets" : [ {
+    "name" : "Trial job - PIPE_K8S_BATCH",
+    "type" : "job"
+  }, {
+    "name" : "DB2_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "EXTOWITableIsisNcrPxP01",
+    "type" : "px_executables",
+    "location" : "EXTOWITableIsisNcrPxP01"
+  }, {
+    "name" : "DRS_ORA_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "UTILITY_LOG.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ",
+    "type" : "px_executables",
+    "location" : "ODBC_ORA_INTG_READ"
+  }, {
+    "name" : "184d63dd-cb90-4059-949f-070acc6b1c30-DataStage_settings",
+    "type" : "data_intg_project_settings"
+  }, {
+    "name" : "DRS_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "SEQ_SUB_ORA.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "INTG_DB2",
+    "type" : "parameter_set"
+  }, {
+    "name" : "DB2_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "DB2_INTG_READ_PSET"
+  }, {
+    "name" : "EXTOWITableIsisNcrPxP01.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ORA_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "ORA_INTG_READ_PSET"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "CREATE_SALES_DATA.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ORA_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "DRS_DB2_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "EXTOWITableOrderPartPx",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "DB2_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "FLOW_SET_USER_STATUS",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB",
+    "type" : "px_executables",
+    "location" : "RUN_DSJOBREPORT_AFTER_SUB"
+  }, {
+    "name" : "DWH_Functions",
+    "type" : "data_intg_parallel_function"
+  }, {
+    "name" : "ETLSHARE",
+    "type" : "connection"
+  }, {
+    "name" : "SEQ_RUN_ALL_PSET.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "ConnParamSet_DB2",
+    "type" : "parameter_set"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ_PSET",
+    "type" : "px_executables",
+    "location" : "JDBC_INTG_DB2_READ_PSET"
+  }, {
+    "name" : "CUSTOM_ROUTINE",
+    "type" : "px_executables",
+    "location" : "CUSTOM_ROUTINE"
+  }, {
+    "name" : "DRS_DB2_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ISD_ADDRESS",
+    "type" : "px_executables",
+    "location" : "ISD_ADDRESS"
+  }, {
+    "name" : "libsetuserstatus.so",
+    "type" : "function_library"
+  }, {
+    "name" : "CREATE_SALES_DATA",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ISQL_ECHO.DataStage sequence job",
+    "type" : "job"
+  }, {
+    "name" : "USER_STATUS_TEST.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_ORA_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ConnParamSet_HDFS",
+    "type" : "parameter_set"
+  }, {
+    "name" : "ConnParamSet_Oracle",
+    "type" : "parameter_set"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPx",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "SEQ_SUB_DB2.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "EXTOWITableOrderPartPxP01",
+    "type" : "px_executables",
+    "location" : "EXTOWITableOrderPartPxP01"
+  }, {
+    "name" : "Trial job - PIPE_TEST1",
+    "type" : "job"
+  }, {
+    "name" : "libutilitylog.so",
+    "type" : "function_library"
+  }, {
+    "name" : "EXTOWITableIsisNcrPx",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "SEQ_COMMON_APP.job",
+    "type" : "job"
+  }, {
+    "name" : "EXTOWITableOrderPartPx.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "MIGRATED_PX_AFTER_ROUTINE",
+    "type" : "px_executables",
+    "location" : "MIGRATED_PX_AFTER_ROUTINE"
+  }, {
+    "name" : "PIPE_TEST1",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "ROWGEN_FILE",
+    "type" : "px_executables",
+    "location" : "ROWGEN_FILE"
+  }, {
+    "name" : "PIPE_APP1.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ",
+    "type" : "px_executables",
+    "location" : "ODBC_DB2_INTG_READ"
+  }, {
+    "name" : "UtilityLog",
+    "type" : "data_intg_parallel_function"
+  }, {
+    "name" : "ConnParamSet_JDBC",
+    "type" : "parameter_set"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPxP01",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "PIPE_APP1",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "MIGRATED_PX_AFTER_ROUTINE.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "CUSTOM_ROUTINE",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "DRS_DB2_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "SEQ_RUN_ALL_PSET",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "PIPE_USER_STATUS",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "DB2_INTG_READ",
+    "type" : "px_executables",
+    "location" : "DB2_INTG_READ"
+  }, {
+    "name" : "UTILITY_LOG",
+    "type" : "px_executables",
+    "location" : "UTILITY_LOG"
+  }, {
+    "name" : "ConnParamSet_Oracle_pDBSrcServer",
+    "type" : "parameter_set"
+  }, {
+    "name" : "DRS_ORA_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPxP01.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ISQL_ECHO",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "ODBC_ORA_INTG_READ_PSET"
+  }, {
+    "name" : "EXTOWITableIsisNcrPx.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPx_copy_1",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "FLOW_SET_USER_STATUS",
+    "type" : "px_executables",
+    "location" : "FLOW_SET_USER_STATUS"
+  }, {
+    "name" : "ROWGEN_FILE.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_DB2_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "DRS_DB2_INTG_READ_PSET"
+  }, {
+    "name" : "SEQ_SUB_ORA",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "COLUMN_NAME_WITH_SPACES.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ConnParamSet_DB2__INTG_DB2_DATABASE",
+    "type" : "parameter_set"
+  }, {
+    "name" : "Dataservice.isd-address",
+    "type" : "job"
+  }, {
+    "name" : "ORA_ENT_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "HDFS_READ1.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "ODBC_DB2_INTG_READ_PSET"
+  }, {
+    "name" : "SEQ_RUN_ALL.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "Trial job - SEQ_RUN_ALL",
+    "type" : "job"
+  }, {
+    "name" : "PIPE_SET_USER_STATUS.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DB2_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ORA_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "CUSTOM_ROUTINE.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "FLOW_SET_USER_STATUS.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPx.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "ORA_ENT_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "EXTOWITableWpinfoMatlPx_copy_1.DataStage sequence job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_ORA_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "DRS_ORA_INTG_READ_PSET"
+  }, {
+    "name" : "INTG_ODBC_ORA",
+    "type" : "parameter_set"
+  }, {
+    "name" : "SEQ_RUN_ALL",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ_PSET",
+    "type" : "px_executables",
+    "location" : "DRS_ODBC_DB2_INTG_READ_PSET"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "PIPE_K8S_BATCH",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "ROWGEN_FILE",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "Trial job - PIPE_APP1",
+    "type" : "job"
+  }, {
+    "name" : "EXTOWITableIsisNcrPxP01",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ODBC_DB2_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "PROJDEF",
+    "type" : "parameter_set"
+  }, {
+    "name" : "HDFS_READ1",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "XML_OUTPUT.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "ISD_ADDRESS",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "INTG_JDBC_DB2",
+    "type" : "parameter_set"
+  }, {
+    "name" : "DB2_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "MIGRATED_PX_AFTER_ROUTINE",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ORA_ENT_READ",
+    "type" : "px_executables",
+    "location" : "ORA_ENT_READ"
+  }, {
+    "name" : "default_datastage_px",
+    "type" : "environment"
+  }, {
+    "name" : "EXTOWITableOrderPartPxP01",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "INTG_ORA",
+    "type" : "parameter_set"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "HDFS_READ1",
+    "type" : "px_executables",
+    "location" : "HDFS_READ1"
+  }, {
+    "name" : "JDBC_INTG_DB2_READ",
+    "type" : "px_executables",
+    "location" : "JDBC_INTG_DB2_READ"
+  }, {
+    "name" : "COLUMN_NAME_WITH_SPACES",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "PIPE_USER_STATUS.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "Equitable Library",
+    "type" : "data_intg_parallel_function"
+  }, {
+    "name" : "EXTOWITableOrderPartPxP01.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "SEQ_SUB_DB2",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "UTILITY_LOG",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "SEQ_RUN_DB.DataStage sequence",
+    "type" : "job"
+  }, {
+    "name" : "CREATE_SALES_DATA",
+    "type" : "px_executables",
+    "location" : "CREATE_SALES_DATA"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ORA_INTG_READ_PSET.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_ODBC_DB2_INTG_READ",
+    "type" : "px_executables",
+    "location" : "DRS_ODBC_DB2_INTG_READ"
+  }, {
+    "name" : "Trial job - PIPE_SET_USER_STATUS",
+    "type" : "job"
+  }, {
+    "name" : "XML_OUTPUT",
+    "type" : "px_executables",
+    "location" : "XML_OUTPUT"
+  }, {
+    "name" : "SEQ_RUN_DB",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "DRS_DB2_INTG_READ",
+    "type" : "px_executables",
+    "location" : "DRS_DB2_INTG_READ"
+  }, {
+    "name" : "DS_USER_STATUS",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "INTG_ODBC_DB2",
+    "type" : "parameter_set"
+  }, {
+    "name" : "ODBC_ORA_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "COLUMN_NAME_WITH_SPACES",
+    "type" : "px_executables",
+    "location" : "COLUMN_NAME_WITH_SPACES"
+  }, {
+    "name" : "DRS_ORA_INTG_READ_PSET",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "XML_OUTPUT",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "ORA_INTG_READ.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "SEQ_COMMON_APP.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "DRS_ORA_INTG_READ",
+    "type" : "px_executables",
+    "location" : "DRS_ORA_INTG_READ"
+  }, {
+    "name" : "PIPE_SET_USER_STATUS",
+    "type" : "orchestration_flow"
+  }, {
+    "name" : "SEQ_COMMON_APP",
+    "type" : "orchestration_flow"
+  } ],
+  "flow_job_mapping" : [ {
+    "flow" : "RUN_DSJOBREPORT_AFTER_SUB",
+    "job" : "RUN_DSJOBREPORT_AFTER_SUB.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ODBC_ORA_INTG_READ_PSET",
+    "job" : "ODBC_ORA_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ORA_ENT_READ",
+    "job" : "ORA_ENT_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ORA_INTG_READ",
+    "job" : "ORA_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ODBC_DB2_INTG_READ",
+    "job" : "ODBC_DB2_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "EXTOWITableWpinfoMatlPxP01",
+    "job" : "EXTOWITableWpinfoMatlPxP01.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "JDBC_INTG_DB2_READ_PSET",
+    "job" : "JDBC_INTG_DB2_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "SEQ_SUB_DB2",
+    "job" : "SEQ_SUB_DB2.DataStage sequence",
+    "type" : "orchestration_flow"
+  }, {
+    "flow" : "EXTOWITableOrderPartPxP01",
+    "job" : "EXTOWITableOrderPartPxP01.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_ODBC_DB2_INTG_READ",
+    "job" : "DRS_ODBC_DB2_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "SEQ_SUB_ORA",
+    "job" : "SEQ_SUB_ORA.DataStage sequence",
+    "type" : "orchestration_flow"
+  }, {
+    "flow" : "DB2_INTG_READ",
+    "job" : "DB2_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ORA_INTG_READ_PSET",
+    "job" : "ORA_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DB2_INTG_READ_PSET",
+    "job" : "DB2_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_DB2_INTG_READ",
+    "job" : "DRS_DB2_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_DB2_INTG_READ_PSET",
+    "job" : "DRS_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "JDBC_INTG_DB2_READ",
+    "job" : "JDBC_INTG_DB2_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_ORA_INTG_READ_PSET",
+    "job" : "DRS_ORA_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_ORA_INTG_READ",
+    "job" : "DRS_ORA_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ODBC_DB2_INTG_READ_PSET",
+    "job" : "ODBC_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "ODBC_ORA_INTG_READ",
+    "job" : "ODBC_ORA_INTG_READ.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "EXTOWITableIsisNcrPxP01",
+    "job" : "EXTOWITableIsisNcrPxP01.DataStage job",
+    "type" : "data_intg_flow"
+  }, {
+    "flow" : "DRS_ODBC_DB2_INTG_READ_PSET",
+    "job" : "DRS_ODBC_DB2_INTG_READ_PSET.DataStage job",
+    "type" : "data_intg_flow"
+  } ]
+}

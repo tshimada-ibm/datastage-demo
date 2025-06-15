@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "ORA_INTG_READ_PSET.DataStage job",
+    "asset_id" : "2a4892fb-9f9b-40a1-a1db-0a7690b92e34",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "ab68d099-4eb0-4f40-8afe-4688b530c1c6",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "ORA_INTG_READ_PSET"
+    }
+  }
+}

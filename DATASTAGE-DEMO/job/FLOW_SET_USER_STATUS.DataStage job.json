@@ -1,0 +1,33 @@
+{
+  "metadata" : {
+    "name" : "FLOW_SET_USER_STATUS.DataStage job",
+    "asset_id" : "fb334615-ea62-47ba-bd50-924cb99621aa",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "env_variables" : [ ],
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : ""
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "0d1432ec-61be-4bb0-935b-1f576484f1b0",
+      "parameter_sets" : [ ],
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "FLOW_SET_USER_STATUS"
+    }
+  }
+}

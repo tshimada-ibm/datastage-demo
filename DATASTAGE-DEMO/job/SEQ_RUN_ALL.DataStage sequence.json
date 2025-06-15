@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "SEQ_RUN_ALL.DataStage sequence",
+    "asset_id" : "1879971d-483e-4f5f-8a95-f308db42555d",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "orchestration_flow",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "1dc319f1-521f-4246-b41a-c749453b944f",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "SEQ_RUN_ALL"
+    }
+  }
+}

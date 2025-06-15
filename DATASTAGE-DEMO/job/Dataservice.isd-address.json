@@ -1,0 +1,35 @@
+{
+  "metadata" : {
+    "name" : "Dataservice.isd-address",
+    "asset_id" : "ec5605a1-28c5-42bc-b689-1eb15b91511f",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : 0
+        },
+        "dataservice_props" : {
+          "has_dataservice_source" : true,
+          "has_dataservice_target" : true
+        },
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "4b343a70-12fc-4694-9b7e-56a62508ec72",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "ISD_ADDRESS"
+    }
+  }
+}

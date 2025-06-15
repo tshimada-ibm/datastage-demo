@@ -1,0 +1,40 @@
+{
+  "parameter_set" : {
+    "name" : "INTG_DB2",
+    "description" : "",
+    "parameters" : [ {
+      "name" : "DATABASE",
+      "type" : "string",
+      "prompt" : "DATABASE",
+      "value" : "DEMO"
+    }, {
+      "name" : "USER",
+      "type" : "string",
+      "prompt" : "USER",
+      "value" : "db2inst1"
+    }, {
+      "name" : "PASSWD",
+      "type" : "encrypted",
+      "prompt" : "PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "hostname",
+      "type" : "string",
+      "prompt" : "",
+      "value" : ""
+    }, {
+      "name" : "port",
+      "type" : "int64",
+      "prompt" : "",
+      "value" : 50000
+    }, {
+      "name" : "DB2_HOST2",
+      "type" : "string",
+      "value" : "169.47.101.211"
+    }, {
+      "name" : "DB2_PORT2",
+      "type" : "int64",
+      "value" : 50000
+    } ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableOrderPartPxP01.DataStage job",
+    "asset_id" : "c1e22686-c52c-4010-b05c-bbac4909497b",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "850dbe86-316f-4f4b-85a1-1a7e1e13087c",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "EXTOWITableOrderPartPxP01"
+    }
+  }
+}

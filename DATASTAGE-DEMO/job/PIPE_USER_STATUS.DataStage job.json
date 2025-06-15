@@ -1,0 +1,30 @@
+{
+  "metadata" : {
+    "name" : "PIPE_USER_STATUS.DataStage job",
+    "description" : "",
+    "asset_id" : "b525ed57-4c5b-4301-b1f9-6ac04f16ee82",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "orchestration_flow",
+      "configuration" : {
+        "version" : "b9dbff19-4f31-4085-8e39-541f94510d88-0",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "DATASTAGE-DEMO",
+      "asset_ref" : "b9dbff19-4f31-4085-8e39-541f94510d88",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "flow_name" : "PIPE_USER_STATUS"
+    }
+  }
+}

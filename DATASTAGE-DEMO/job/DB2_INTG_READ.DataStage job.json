@@ -1,0 +1,39 @@
+{
+  "metadata" : {
+    "name" : "DB2_INTG_READ.DataStage job",
+    "asset_id" : "0a36453a-ee19-4dc8-8c26-ffc6750640ac",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref_type" : "data_intg_flow",
+      "configuration" : {
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "runPriorityQueue" : "Medium",
+        "env_type" : "",
+        "env_variables" : [ ],
+        "env_id" : "25b816da-b4d4-4023-b79d-46cbbfa2f84c"
+      },
+      "last_run_initiator" : "deprecated field",
+      "last_run_time" : "deprecated field",
+      "last_run_status" : "deprecated field",
+      "last_run_status_timestamp" : 0,
+      "future_scheduled_runs" : [ ],
+      "enable_notifications" : true,
+      "project_name" : "TS-NGAUTO",
+      "asset_ref" : "34b60e2a-70c8-4aab-9c78-9ba1a5effce9",
+      "schedule_id" : "",
+      "schedule_creator_id" : "",
+      "retention_policy" : { },
+      "parameter_sets" : [ {
+        "name" : "ConnParamSet_DB2__INTG_DB2_DATABASE",
+        "ref" : "0d6aae3a-458f-4a2b-93e7-1f172a9e0306"
+      } ],
+      "job_parameters" : [ ],
+      "flow_name" : "DB2_INTG_READ"
+    }
+  }
+}

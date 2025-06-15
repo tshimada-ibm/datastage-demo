@@ -1,0 +1,55 @@
+{
+  "project" : {
+    "jobNameSuffix" : ".DataStage job",
+    "runEnvironmentId" : "25b816da-b4d4-4023-b79d-46cbbfa2f84c",
+    "runPriorityQueue" : "Medium",
+    "runRemoteEngineEnforcement" : false,
+    "testDataProperties" : {
+      "testCaseJobNameSuffix" : ".DataStageTestCase Job",
+      "testDataConnectionType" : ""
+    },
+    "saveFrequency" : "save_changes_automatically",
+    "formatTimeString" : "",
+    "flowLimits" : {
+      "warnLimit" : 100
+    },
+    "testDataConnectionId" : "",
+    "nlsCollate" : "OFF",
+    "disableParamsRefreshCache" : false,
+    "runMessageHandlerId" : "",
+    "formatDecimalSeparator" : "",
+    "testDataBasePath" : "",
+    "sequenceNameSuffix" : ".DataStage sequence",
+    "defineParameters" : false,
+    "optimizedSequenceNameSuffix" : ".DataStage sequence job",
+    "runArtifactRetention" : {
+      "retentionData" : { },
+      "enabled" : false
+    },
+    "gitIntegration" : {
+      "enableGit" : true,
+      "gitProvider" : "git",
+      "gitFolder" : "DATASTAGE-DEMO",
+      "gitToken" : "{dsnextenc}DWp9UwnCQiWQBGIP3Gohq/fG/iduHMhISgiZlgxsFxR7dFK5uYDT+DG1H9VdD0yx",
+      "gitURL" : "https://github.com/tshimada-ibm/datastage-demo.git",
+      "gitBranch" : "dev"
+    },
+    "thresholdLimits" : { },
+    "runEnvironmentIds" : [ "25b816da-b4d4-4023-b79d-46cbbfa2f84c" ],
+    "formatDateString" : "",
+    "metricsRepository" : {
+      "enableMetrics" : false,
+      "connection" : {
+        "datasource_type" : "e1c23729-99d8-4407-b3df-336e33ffdc82",
+        "properties" : {
+          "query_timeout" : "300",
+          "retry_limit" : "2"
+        }
+      },
+      "enableAdvancedFind" : false
+    },
+    "nlsMap" : "",
+    "formatTimestampString" : "",
+    "runEnvironmentNames" : [ "default_datastage_px" ]
+  }
+}
