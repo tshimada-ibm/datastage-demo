@@ -2,14 +2,14 @@
   "project" : "DATASTAGE-DEMO",
   "projectId" : "184d63dd-cb90-4059-949f-070acc6b1c30",
   "created_by" : "tshimada",
-  "created_at" : null,
+  "created_at" : "2025-06-15T00:22:33.701965441Z",
   "environment" : "cp4d",
   "services_info" : [ {
     "name" : "ds-canvas",
     "version" : "512.0.10"
   }, {
-    "name" : "ds-cas-lite",
-    "version" : "512.0.3"
+    "name" : "ds-flows",
+    "version" : "512.0.7"
   }, {
     "name" : "ds-codegen",
     "version" : "512.0.7"
@@ -17,17 +17,17 @@
     "name" : "ds-flow-runtime",
     "version" : "512.0.2"
   }, {
-    "name" : "ds-flows",
-    "version" : "512.0.7"
-  }, {
     "name" : "ds-migration",
     "version" : "512.0.4"
   }, {
-    "name" : "ds-px-runtime",
-    "version" : "512.0.7"
-  }, {
     "name" : "DSAssets",
     "version" : "512.0.3"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "512.0.3"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "512.0.7"
   }, {
     "name" : "qs-ruleset",
     "version" : "512.0.2"
@@ -207,6 +207,10 @@
     "name" : "UtilityLog",
     "type" : "data_intg_parallel_function"
   }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB.",
+    "type" : "data_intg_flow",
+    "location" : ""
+  }, {
     "name" : "ConnParamSet_JDBC",
     "type" : "parameter_set"
   }, {
@@ -250,6 +254,10 @@
   }, {
     "name" : "ISQL_ECHO",
     "type" : "orchestration_flow"
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB.DataStage job.",
+    "type" : "job",
+    "location" : ""
   }, {
     "name" : "ODBC_ORA_INTG_READ_PSET",
     "type" : "px_executables",
