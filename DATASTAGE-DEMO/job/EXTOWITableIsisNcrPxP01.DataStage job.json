@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableIsisNcrPxP01.DataStage job",
+    "asset_id" : "4d5b3b7e-327b-48e0-bc05-0796db92e1d8",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "7c66062e-5670-4941-8e6e-476476ed8327",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "EXTOWITableIsisNcrPxP01"
+    }
+  }
+}

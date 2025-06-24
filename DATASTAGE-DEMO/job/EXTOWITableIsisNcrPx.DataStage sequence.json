@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableIsisNcrPx.DataStage sequence",
+    "asset_id" : "3cc15f95-5f26-440a-ac51-a15a2e04e27b",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "cb146d77-026f-47b6-a2c7-b26144fc550b",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "EXTOWITableIsisNcrPx"
+    }
+  }
+}

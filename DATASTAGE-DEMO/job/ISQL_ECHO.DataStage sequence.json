@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "ISQL_ECHO.DataStage sequence",
+    "asset_id" : "e6158606-b280-4aa8-a343-44da296ea7b1",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "a776d4e9-6109-4f96-b905-c281b79ff8e3",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "ISQL_ECHO"
+    }
+  }
+}

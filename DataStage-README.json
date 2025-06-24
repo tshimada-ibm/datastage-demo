@@ -1,64 +1,70 @@
 {
-  "project_name": "TS-ETL-TEST",
-  "project_id": "4594fcb3-f651-4f46-a32e-ebc1e091604d",
-  "created_by": "tshimada",
-  "created_at": "2024-11-20T00:56:44.032544678Z",
-  "environment": "cp4d",
-  "services_info": [
-    {
-      "name": "DSAssets",
-      "version": "503.0.6"
-    },
-    {
-      "name": "ds-canvas",
-      "version": "503.0.33"
-    },
-    {
-      "name": "ds-cas-lite",
-      "version": "503.0.4"
-    },
-    {
-      "name": "ds-codegen",
-      "version": "503.0.12"
-    },
-    {
-      "name": "ds-flow-runtime",
-      "version": "503.0.4"
-    },
-    {
-      "name": "ds-flows",
-      "version": "503.0.12"
-    },
-    {
-      "name": "ds-migration",
-      "version": "503.0.23"
-    },
-    {
-      "name": "ds-px-runtime",
-      "version": "503.0.22"
-    },
-    {
-      "name": "qs-ruleset",
-      "version": "503.0.5"
-    }
-  ],
-  "assets": [
-    {
-      "name": "FLOW1",
-      "type": "data_intg_flow"
-    },
-    {
-      "name": "default_datastage_px",
-      "type": "environment"
-    },
-    {
-      "name": "FLOW1.DataStage job",
-      "type": "job"
-    },
-    {
-      "name": "FLOW1",
-      "type": "px_executables",
-      "location": "FLOW1"
-    }
-  ]
+  "project" : "DATASTAGE-DEMO-QA",
+  "projectId" : "9fa73363-f167-464a-ba08-88db16713af6",
+  "created_by" : "tshimada",
+  "created_at" : "2025-06-24T17:26:29.911016724Z",
+  "environment" : "cp4d",
+  "services_info" : [ {
+    "name" : "ds-canvas",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flows",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-codegen",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flow-runtime",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-migration",
+    "version" : "520.0.3"
+  }, {
+    "name" : "DSAssets",
+    "version" : "520.0.6"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "520.0.17"
+  }, {
+    "name" : "qs-ruleset",
+    "version" : "520.0.3"
+  } ],
+  "assets" : [ {
+    "name" : "GIT_NEW_FLOW1.DataStage job.",
+    "type" : "job",
+    "location" : ""
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB.DataStage job.",
+    "type" : "job",
+    "location" : ""
+  }, {
+    "name" : "FLOW1.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "GIT_NEW_FLOW1.",
+    "type" : "data_intg_flow",
+    "location" : ""
+  }, {
+    "name" : "default_datastage_px",
+    "type" : "environment"
+  }, {
+    "name" : "FLOW1",
+    "type" : "px_executables",
+    "location" : "FLOW1"
+  }, {
+    "name" : "RUN_DSJOBREPORT_AFTER_SUB.",
+    "type" : "data_intg_flow",
+    "location" : ""
+  }, {
+    "name" : "FLOW1",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "PROJDEF.",
+    "type" : "parameter_set",
+    "location" : ""
+  } ],
+  "flow_job_mapping" : [ ]
 }

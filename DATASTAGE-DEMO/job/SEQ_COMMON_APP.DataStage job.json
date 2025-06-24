@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "name" : "SEQ_COMMON_APP.DataStage job",
+    "description" : "",
+    "asset_id" : "72307d6f-2011-4495-bc8b-4d96b5e1d7b3",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "6eebd592-915b-4cac-882c-041833de87cc",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "version" : "6eebd592-915b-4cac-882c-041833de87cc-0",
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "job_parameters" : [ {
+        "name" : "$SCRIPT_DIR",
+        "value" : "PROJDEF"
+      } ],
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "SEQ_COMMON_APP"
+    }
+  }
+}

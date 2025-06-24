@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "CUSTOM_ROUTINE.DataStage job",
+    "asset_id" : "0ba1b648-4a35-4494-a468-87f7e2ec6901",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "3b7a601e-3fa5-48aa-9b2d-d41ce500400c",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "CUSTOM_ROUTINE"
+    }
+  }
+}

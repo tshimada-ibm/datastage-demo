@@ -1,0 +1,31 @@
+{
+  "metadata" : {
+    "name" : "Trial job - SEQ_RUN_ALL",
+    "description" : "Trial job and run created for the pipeline: SEQ_RUN_ALL",
+    "asset_id" : "e98364cb-6a37-49b2-8038-33b59ccda164",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "5cf37711-b87d-4a8b-b78d-57bd4ee4acab",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "version" : "5cf37711-b87d-4a8b-b78d-57bd4ee4acab-0",
+        "env_type" : "",
+        "sub_type" : "oflow_trial_run",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "SEQ_RUN_ALL"
+    }
+  }
+}

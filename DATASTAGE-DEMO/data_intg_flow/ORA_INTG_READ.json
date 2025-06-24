@@ -1,0 +1,963 @@
+{
+  "primary_pipeline" : "b9220fd7-a28e-47a1-b530-7d62ccc1e37e",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "47ce4d59-75b3-40fd-89d6-a613293183df",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "93dc0e0a-8e93-44ea-ae29-614a269752fb"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "887f127b-03fb-4196-bf10-bd5fe70c6619"
+      }, {
+        "id" : "36543114-9b57-4cad-9fd3-1a6eb777f546",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "b7470a68-6014-4a24-8c82-913a032767dc"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "OracleConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "record_count" : 2000,
+          "isolation_level" : "0",
+          "limit_rows" : false,
+          "treat_warnings_as_errors" : false,
+          "connection_type" : "tcp",
+          "prefetch_memory_size" : 0,
+          "oracle_db_port" : "#ORA_PORT1#",
+          "table_name" : "test1",
+          "oracle_db_host" : "#ORA_HOST1#",
+          "application_failover_control" : false,
+          "password" : "#$INTG_ORA_PASSWD#",
+          "read_mode" : "0",
+          "prefetch_row_count" : 1,
+          "end_of_wave" : "0",
+          "before_after" : false,
+          "generate_sql" : true,
+          "pass_lob_locator" : false,
+          "oracle_service_name" : "#$INTG_ORA_SERVICE#",
+          "table_scope" : "0",
+          "enable_quoted_ids" : false,
+          "array_size" : 2000,
+          "enable_partitioned_reads" : false,
+          "treat_fetch_truncate_as_error" : true,
+          "username" : "#$INTG_ORA_USER#"
+        }
+      },
+      "id" : "161cbad3-d24e-4a35-b750-2483be4c9740",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/OracleConnectorPX.svg",
+          "x_pos" : 174.24,
+          "label" : "Oracle_Connector_0",
+          "y_pos" : 174.24
+        }
+      },
+      "parameters" : {
+        "output_count" : 2,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "161cbad3-d24e-4a35-b750-2483be4c9740",
+          "type_attr" : "PRIMARY",
+          "id" : "93dc0e0a-8e93-44ea-ae29-614a269752fb",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "DSLink2",
+                "y_pos" : -20,
+                "height" : 80
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "DSLink2",
+          "port_id_ref" : "47ce4d59-75b3-40fd-89d6-a613293183df"
+        } ],
+        "id" : "575ac267-1cc8-412a-b7cd-4001a9fd1eba",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "887f127b-03fb-4196-bf10-bd5fe70c6619",
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "50f3ddc4-b3fc-4f18-9786-565cbbdecd7d",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "575ac267-1cc8-412a-b7cd-4001a9fd1eba"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 79.2,
+          "label" : "Peek_1",
+          "y_pos" : 126.72
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "nrecs" : 10,
+        "selection" : " ",
+        "output_count" : 0,
+        "input_count" : 1,
+        "columns" : " ",
+        "name" : "name",
+        "dataset" : " ",
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "op" : "PxSequentialFile",
+      "inputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "id" : "3daade6c-c4b0-4852-86d8-f4afd4d50552",
+      "type" : "binding",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxSequentialFile.svg",
+          "x_pos" : 95.03999999999999,
+          "label" : "Sequential_file_1",
+          "y_pos" : 332.64
+        }
+      },
+      "parameters" : {
+        "output_count" : 0,
+        "input_count" : 0,
+        "execmode" : "default_seq"
+      }
+    }, {
+      "op" : "ftp",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "34e1fc44-4a4d-45ef-b4e1-fd21f66d582d",
+          "type_attr" : "PRIMARY",
+          "id" : "7bb26d3d-3e4a-4387-b2bb-7d86794cd00e",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/noMeta-collection.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "width" : 70,
+                "tooltip" : "No columns\nCollection",
+                "x_pos" : -23,
+                "id" : "dec-6H",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Link_3",
+                "y_pos" : -20,
+                "height" : 80
+              } ]
+            }
+          },
+          "link_name" : "Link_3",
+          "port_id_ref" : "480cbdc8-99f3-48cd-b78a-13798a8381b6"
+        } ],
+        "id" : "d825d309-4c23-48ee-ab29-3775ed38308d",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "connection" : { },
+      "id" : "a8dede46-00fc-4320-be63-c84685df32f3",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "d825d309-4c23-48ee-ab29-3775ed38308d",
+          "outputs_order" : ""
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/ftp.svg",
+          "x_pos" : 918.72,
+          "label" : "FTP_1",
+          "y_pos" : 205.92
+        }
+      },
+      "parameters" : {
+        "OutputlinkOrderingList" : [ ],
+        "InputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "Link_3"
+        } ],
+        "output_count" : 0,
+        "input_count" : 1,
+        "execmode" : "default_seq"
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "480cbdc8-99f3-48cd-b78a-13798a8381b6",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "7bb26d3d-3e4a-4387-b2bb-7d86794cd00e"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "parameters" : {
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "PxFunnel",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "161cbad3-d24e-4a35-b750-2483be4c9740",
+          "type_attr" : "PRIMARY",
+          "id" : "b7470a68-6014-4a24-8c82-913a032767dc",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Link_1",
+                "y_pos" : -20,
+                "height" : 80
+              } ]
+            }
+          },
+          "link_name" : "Link_1",
+          "port_id_ref" : "36543114-9b57-4cad-9fd3-1a6eb777f546"
+        } ],
+        "id" : "b642956b-3061-4824-b3a9-3504a380d5d0",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 2,
+              "max" : 2147483646
+            }
+          }
+        },
+        "parameters" : { }
+      }, {
+        "links" : [ {
+          "node_id_ref" : "7c28d521-9a1a-4445-b3c6-b01289a2de02",
+          "type_attr" : "PRIMARY",
+          "id" : "dc631ffd-58d1-4201-8720-37bf8451a6c6",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/noMeta-autoPartition.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 5,
+                "width" : 70,
+                "tooltip" : "No columns\nAuto-partition",
+                "x_pos" : -27,
+                "id" : "dec-6W",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Link_2",
+                "y_pos" : -20,
+                "height" : 80
+              } ]
+            }
+          },
+          "link_name" : "Link_2",
+          "port_id_ref" : "a78d5c6a-e6b8-4d25-986e-95cd17d0c748"
+        } ],
+        "id" : "e1b23c26-9067-4d44-bcb6-ca6c3788f622",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 2,
+              "max" : 2147483646
+            }
+          }
+        },
+        "parameters" : { }
+      } ],
+      "id" : "34e1fc44-4a4d-45ef-b4e1-fd21f66d582d",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "b642956b-3061-4824-b3a9-3504a380d5d0|e1b23c26-9067-4d44-bcb6-ca6c3788f622",
+          "outputs_order" : "480cbdc8-99f3-48cd-b78a-13798a8381b6"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxFunnel.svg",
+          "x_pos" : 681.12,
+          "label" : "Funnel_1",
+          "y_pos" : 205.92
+        }
+      },
+      "parameters" : {
+        "showPartType" : true,
+        "showCollType" : false,
+        "enableSchemalessDesign" : false,
+        "preserve" : -3,
+        "operator" : "sequence",
+        "inputName" : "Link_1",
+        "showSortOptions" : false,
+        "combinability" : "auto",
+        "inputcolProperties" : [ ],
+        "InputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "Link_1"
+        }, {
+          "link_label" : "1",
+          "link_name" : "Link_2"
+        } ],
+        "output_count" : 1,
+        "execmode" : "default_par",
+        "input_count" : 2
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "a78d5c6a-e6b8-4d25-986e-95cd17d0c748",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "dc631ffd-58d1-4201-8720-37bf8451a6c6"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "outputName" : "Link_2"
+        }
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "id" : "7c28d521-9a1a-4445-b3c6-b01289a2de02",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "",
+          "outputs_order" : "a78d5c6a-e6b8-4d25-986e-95cd17d0c748"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 491.04,
+          "label" : "Transformer_1",
+          "y_pos" : 31.68
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "OutputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "Link_2"
+        } ],
+        "InputlinkOrderingList" : [ ],
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "input_count" : 0,
+        "execmode" : "default_par",
+        "preserve" : -3,
+        "SKKeySourceType" : "file"
+      }
+    } ],
+    "description" : "",
+    "id" : "b9220fd7-a28e-47a1-b530-7d62ccc1e37e",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "",
+        "runtime_column_propagation" : "false",
+        "nls_locale" : "OFF"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "ecb8be62-f5ef-4fb8-86ba-7b516d8d8799",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
+    "name" : "ConnParamSet_Oracle"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "887f127b-03fb-4196-bf10-bd5fe70c6619",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "20db3835-76e5-406a-9bfe-544761b039b8",
+  "app_data" : {
+    "datastage" : {
+      "timestamp_format" : "",
+      "decimal_separator" : "",
+      "parameterSetListRuntime" : [ {
+        "ref" : "ccccf9cb-558c-4461-bbed-1b82286a2b4a",
+        "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+        "name" : "ConnParamSet_Oracle",
+        "parameter_set" : {
+          "name" : "ConnParamSet_Oracle",
+          "description" : "DataStage generated parameter set for connection properties.",
+          "parameters" : [ {
+            "name" : "oracle_db_host",
+            "type" : "string",
+            "prompt" : "",
+            "value" : ""
+          }, {
+            "name" : "oracle_db_port",
+            "type" : "string",
+            "prompt" : "",
+            "value" : "1521"
+          }, {
+            "name" : "oracle_service_name",
+            "type" : "string",
+            "prompt" : "",
+            "value" : "orcl"
+          } ]
+        },
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      }, {
+        "ref" : "63835d8b-4e7c-4e2c-8935-d1bdd354b81e",
+        "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+        "name" : "PROJDEF",
+        "parameter_set" : {
+          "value_sets" : [ ],
+          "name" : "PROJDEF",
+          "description" : "DataStage project environment variables",
+          "parameters" : [ {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_ORA_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ODBC_ORA_USER",
+            "value" : "dsadm"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_DB2_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_DB2_USER",
+            "value" : "db2inst1"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_ORA_DSN",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ODBC_ORA_DSN",
+            "value" : "INTG_ORA"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ORA_SERVICE",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ORA_SERVICE",
+            "value" : "FREE"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_ORA_PASSWD",
+            "description" : "",
+            "type" : "encrypted",
+            "prompt" : "INTG_ODBC_ORA_PASSWD",
+            "value" : "{dsnextenc}2yHtEdT+ZCYwTfjKCsgP7g=="
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ORA_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ORA_USER",
+            "value" : "dsadm"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_DB2_PASSWD",
+            "description" : "",
+            "type" : "encrypted",
+            "prompt" : "INTG_ODBC_DB2_PASSWD",
+            "value" : "{dsnextenc}2yHtEdT+ZCYwTfjKCsgP7g=="
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_JDBC_DB2_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_JDBC_DB2_USER",
+            "value" : "db2inst1"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_DB2_DATABASE",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_DB2_DATABASE",
+            "value" : "DEMO"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_HDFS_PORT",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_HDFS_PORT",
+            "value" : ""
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_HDFS_DATA_DIR",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_HDFS_DATA_DIR",
+            "value" : ""
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_JDBC_DB2_PASSWD",
+            "description" : "",
+            "type" : "encrypted",
+            "prompt" : "INTG_JDBC_DB2_PASSWD",
+            "value" : "{dsnextenc}2yHtEdT+ZCYwTfjKCsgP7g=="
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_DB2_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ODBC_DB2_USER",
+            "value" : "db2inst1"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_DB2_PASSWD",
+            "description" : "",
+            "type" : "encrypted",
+            "prompt" : "INTG_DB2_PASSWD",
+            "value" : "{dsnextenc}2yHtEdT+ZCYwTfjKCsgP7g=="
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_HDFS_KEYTAB_FILE",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_HDFS_KEYTAB_FILE",
+            "value" : ""
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_HDFS_USER",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_HDFS_USER",
+            "value" : ""
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ODBC_DB2_DSN",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_ODBC_DB2_DSN",
+            "value" : "INTG_DB2"
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_ORA_PASSWD",
+            "description" : "",
+            "type" : "encrypted",
+            "prompt" : "INTG_ORA_PASSWD",
+            "value" : "{dsnextenc}2yHtEdT+ZCYwTfjKCsgP7g=="
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_HDFS_HOST",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_HDFS_HOST",
+            "value" : ""
+          }, {
+            "subtype" : "",
+            "name" : "$INTG_JDBC_DB2_URL",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "INTG_JDBC_DB2_URL",
+            "value" : "jdbc:db2://169.47.101.211:50000/DEMO"
+          }, {
+            "subtype" : "",
+            "name" : "DB2_HOST1",
+            "description" : "",
+            "type" : "string",
+            "prompt" : "",
+            "value" : "10.241.75.204"
+          }, {
+            "subtype" : "",
+            "name" : "DB2_PORT1",
+            "type" : "int64",
+            "value" : 50000
+          }, {
+            "subtype" : "",
+            "name" : "ORA_HOST1",
+            "type" : "string",
+            "value" : "169.47.101.211"
+          }, {
+            "subtype" : "",
+            "name" : "ORA_PORT1",
+            "type" : "int64",
+            "value" : 1521
+          }, {
+            "subtype" : "",
+            "name" : "JDBC_DRIVER1",
+            "type" : "string",
+            "value" : "com.ibm.db2.jcc.DB2Driver"
+          }, {
+            "subtype" : "",
+            "name" : "$PROJ_ORA_HOST",
+            "type" : "string",
+            "prompt" : "PROJ_ORA_HOST",
+            "value" : "host-a.abc.com"
+          }, {
+            "subtype" : "",
+            "name" : "$PROJ_ROW_COUNT",
+            "type" : "string",
+            "prompt" : "PROJ_ROW_COUNT",
+            "value" : "3"
+          }, {
+            "subtype" : "",
+            "name" : "$SCRIPT_DIR",
+            "type" : "string",
+            "prompt" : "SCRIPT_DIR",
+            "value" : "/mnts/etlshare/scripts"
+          }, {
+            "subtype" : "",
+            "name" : "$DATA_DIR",
+            "type" : "string",
+            "prompt" : "DATA_DIR",
+            "value" : "/mnts/etlshare/data"
+          } ]
+        }
+      } ],
+      "flowRunPriorityQueue" : "Medium",
+      "time_format" : "",
+      "runArtifactRetentionJob" : {
+        "enabled" : false
+      },
+      "valueSetSelected" : {
+        "PROJDEF" : {
+          "parameterSetName" : "PROJDEF",
+          "label" : "Default",
+          "id" : 0
+        },
+        "ConnParamSet_Oracle" : {
+          "parameterSetName" : "ConnParamSet_Oracle",
+          "label" : "Default",
+          "id" : 0
+        }
+      },
+      "date_format" : "",
+      "message_handlers" : [ ],
+      "subroutines" : {
+        "function_calls" : [ {
+          "call_context" : "BEFORE",
+          "function_name" : "ExecSHSilent",
+          "input_value" : "cp /date_template/empty_file.txt /data/vipor_data1.csv",
+          "command_write_to_job_log" : false
+        } ]
+      },
+      "version" : "3.0.5",
+      "localParameterListRuntime" : [ {
+        "name" : "$INTG_ORA_SERVICE",
+        "type" : "string",
+        "prompt" : "INTG_ORA_SERVICE",
+        "value" : "PROJDEF",
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      }, {
+        "name" : "$INTG_ORA_USER",
+        "type" : "string",
+        "prompt" : "INTG_ORA_USER",
+        "value" : "PROJDEF",
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      }, {
+        "name" : "$INTG_ORA_PASSWD",
+        "type" : "encrypted",
+        "prompt" : "INTG_ORA_PASSWD",
+        "value" : "{dsnextenc}oOSEquBAu3RNkU6H3dMZzw==",
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      }, {
+        "name" : "ORA_HOST1",
+        "type" : "string",
+        "value" : "PROJDEF",
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      }, {
+        "name" : "ORA_PORT1",
+        "type" : "int64",
+        "value" : "PROJDEF",
+        "referenced_by" : [ "ORA_INTG_READ" ]
+      } ]
+    },
+    "additionalProperties" : {
+      "transInputLinkMapper" : { },
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "saveChangeFrequency" : "apply_changes_temporarily",
+      "disableParamsCacheOnFlow" : false,
+      "rcpLinkList" : [ ],
+      "globalAcp" : true,
+      "enableRCP" : false,
+      "isNewTransActive" : false,
+      "enableSchemaLessDesign" : false,
+      "runMode" : "ETL"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "subtype" : "",
+      "name" : "$INTG_ORA_SERVICE",
+      "type" : "string",
+      "prompt" : "INTG_ORA_SERVICE",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$INTG_ORA_USER",
+      "type" : "string",
+      "prompt" : "INTG_ORA_USER",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$INTG_ORA_PASSWD",
+      "type" : "encrypted",
+      "prompt" : "INTG_ORA_PASSWD",
+      "value" : "{dsmenc}fJIAtWfUGz/snJJt8mSTzQ=="
+    }, {
+      "subtype" : "",
+      "name" : "ORA_HOST1",
+      "type" : "string",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "ORA_PORT1",
+      "type" : "int64",
+      "value" : "PROJDEF"
+    } ]
+  }
+}

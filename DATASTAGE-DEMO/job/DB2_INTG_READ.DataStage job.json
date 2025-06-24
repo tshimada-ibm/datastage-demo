@@ -1,0 +1,38 @@
+{
+  "metadata" : {
+    "name" : "DB2_INTG_READ.DataStage job",
+    "asset_id" : "6f8137a7-4b80-4968-9227-df0e8edca106",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "99fa504a-7d42-4bd2-a140-0f1a50a8116d",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ ],
+      "parameter_sets" : [ {
+        "ref" : "7484bf95-fd0b-428b-b4a4-5cdc25f35d09",
+        "name" : "ConnParamSet_DB2__INTG_DB2_DATABASE"
+      } ],
+      "last_run_status" : "deprecated field",
+      "retention_policy" : { },
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "DB2_INTG_READ"
+    }
+  }
+}

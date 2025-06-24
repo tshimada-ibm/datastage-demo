@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "SEQ_SUB_DB2.DataStage sequence",
+    "asset_id" : "781725f3-282b-40b8-8ed9-effa7dd58483",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "dea79cc1-1f9e-4210-b97b-342d23117b66",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "SEQ_SUB_DB2"
+    }
+  }
+}

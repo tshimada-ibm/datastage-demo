@@ -1,0 +1,39 @@
+{
+  "metadata" : {
+    "name" : "XML_OUTPUT.DataStage job",
+    "asset_id" : "1b9428c3-ab34-43d8-b13e-b7c6f2c22efe",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "64a9215c-7225-4e0d-b6be-77a467a9fd4c",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ {
+        "name" : "$DATA_DIR",
+        "value" : "PROJDEF"
+      }, {
+        "name" : "TEXT",
+        "value" : ""
+      } ],
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "XML_OUTPUT"
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "primary_pipeline" : "2d7285e9-b032-4032-a527-8fa453516879",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "b3184951-9049-4d93-aa89-824e964bc804",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "5cff381d-51e6-4492-ac67-54ad1ae6836f"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "8fd83bbf-c315-44d7-8f48-e632e58dcad0",
+        "parameters" : {
+          "records" : 10,
+          "buf_mode" : "default",
+          "enableSchemalessDesign" : false
+        }
+      } ],
+      "op" : "PxRowGenerator",
+      "id" : "4d3fb49b-311e-43c1-8e6d-4c01e61c9e56",
+      "type" : "binding",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxRowGenerator.svg",
+          "x_pos" : 126.72,
+          "label" : "Row_Generator_1",
+          "y_pos" : 126.72
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "default_seq",
+        "preserve" : -3
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "97f74560-fa6e-4635-b61d-f9d966d9444d",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "4212785b-89c1-4335-b9cd-6b55dde11115"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "a54c332b-0324-4f13-8152-70d7a95a504b",
+        "parameters" : {
+          "outputName" : "Link_2",
+          "valueDerivation" : [ {
+            "parsedExpression" : "UtilityMessageToLog(\"logmessage\")",
+            "columnName" : "message_to_log"
+          }, {
+            "parsedExpression" : "UtilityWarningToLog(\"my warning\")",
+            "columnName" : "warning_to_log"
+          }, {
+            "parsedExpression" : "UtilityAbortToLog(\"my abort\")",
+            "columnName" : "abort_to_log"
+          } ],
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "4d3fb49b-311e-43c1-8e6d-4c01e61c9e56",
+          "type_attr" : "PRIMARY",
+          "id" : "5cff381d-51e6-4492-ac67-54ad1ae6836f",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--specific-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "width" : 50,
+                "tooltip" : "Specific partition",
+                "x_pos" : -15,
+                "id" : "dec-9C",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Link_1",
+                "y_pos" : -20,
+                "height" : 80
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "Link_1",
+          "port_id_ref" : "b3184951-9049-4d93-aa89-824e964bc804"
+        } ],
+        "id" : "bc3ba847-54cf-44c5-85c4-e49edd8ca19e",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "8fd83bbf-c315-44d7-8f48-e632e58dcad0",
+        "parameters" : {
+          "keyColsPart" : [ ],
+          "perform_sort" : false,
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "177ceb76-16ec-4c7d-9360-87dcac9263f3",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "bc3ba847-54cf-44c5-85c4-e49edd8ca19e",
+          "outputs_order" : "97f74560-fa6e-4635-b61d-f9d966d9444d"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 427.68,
+          "label" : "Transformer_1",
+          "y_pos" : 126.72
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "OutputlinkOrderingList" : [ ],
+        "InputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "Link_1"
+        } ],
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "StageVariables" : [ ],
+        "input_count" : 1,
+        "execmode" : "default_par",
+        "Triggers" : [ ],
+        "preserve" : -3,
+        "LoopVariables" : [ ],
+        "SKKeySourceType" : "file"
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "177ceb76-16ec-4c7d-9360-87dcac9263f3",
+          "type_attr" : "PRIMARY",
+          "id" : "4212785b-89c1-4335-b9cd-6b55dde11115",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -18,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Link_2",
+                "y_pos" : -20,
+                "height" : 80
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "Link_2",
+          "port_id_ref" : "97f74560-fa6e-4635-b61d-f9d966d9444d"
+        } ],
+        "id" : "ad57b77d-bdab-4dcc-a383-000f9e85a6d8",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "a54c332b-0324-4f13-8152-70d7a95a504b"
+      } ],
+      "id" : "aa87e047-ab68-43fe-a9d6-05e5c02eabe5",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "ad57b77d-bdab-4dcc-a383-000f9e85a6d8",
+          "outputs_order" : ""
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 728.64,
+          "label" : "Peek_1",
+          "y_pos" : 126.72
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "columns" : " ",
+        "enableFlowAcpControl" : true,
+        "part_type" : "auto",
+        "combinability" : "auto",
+        "OutputlinkOrderingList" : [ ],
+        "nrecs" : 10,
+        "selection" : " ",
+        "InputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "Link_2"
+        } ],
+        "output_count" : 0,
+        "execmode" : "default_par",
+        "input_count" : 1,
+        "name" : "name",
+        "dataset" : " "
+      }
+    } ],
+    "description" : "",
+    "id" : "2d7285e9-b032-4032-a527-8fa453516879",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "",
+        "nls_locale" : "OFF"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "external_paramsets" : [ ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "8fd83bbf-c315-44d7-8f48-e632e58dcad0",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "description" : "",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "idx",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    } ]
+  }, {
+    "id" : "a54c332b-0324-4f13-8152-70d7a95a504b",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "description" : "",
+        "source_field_id" : "Link_1.idx",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "idx",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "description" : " ",
+        "TimeScale" : 0,
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "message_to_log",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "description" : " ",
+        "TimeScale" : 0,
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "warning_to_log",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "description" : " ",
+        "TimeScale" : 0,
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "abort_to_log",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "96e3683c-3958-4eb9-b908-11c2a27b046e",
+  "app_data" : {
+    "datastage" : {
+      "timestamp_format" : "",
+      "decimal_separator" : "",
+      "flowRunPriorityQueue" : "Medium",
+      "time_format" : "",
+      "function_libraries" : [ {
+        "return_type" : "int",
+        "asset_name" : "UtilityLog",
+        "library_name" : "libutilitylog",
+        "arguments" : [ {
+          "data_type" : "char*",
+          "name" : "arg_0",
+          "description" : "",
+          "id" : "0"
+        } ],
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
+        "display_name" : "UtilityMessageToLog",
+        "routine_name" : "MessageToLog"
+      }, {
+        "return_type" : "int",
+        "asset_name" : "UtilityLog",
+        "library_name" : "libutilitylog",
+        "arguments" : [ {
+          "data_type" : "char*",
+          "name" : "arg_0",
+          "description" : "",
+          "id" : "0"
+        } ],
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
+        "display_name" : "UtilityWarningToLog",
+        "routine_name" : "WarningToLog"
+      }, {
+        "return_type" : "int",
+        "asset_name" : "UtilityLog",
+        "library_name" : "libutilitylog",
+        "arguments" : [ {
+          "data_type" : "char*",
+          "name" : "arg_0",
+          "description" : "",
+          "id" : "0"
+        } ],
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
+        "display_name" : "UtilityAbortToLog",
+        "routine_name" : "AbortToLog"
+      } ],
+      "date_format" : "",
+      "message_handlers" : [ ],
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "transInputLinkMapper" : {
+        "177ceb76-16ec-4c7d-9360-87dcac9263f3" : "Link_1"
+      },
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "saveChangeFrequency" : "apply_changes_temporarily",
+      "disableParamsCacheOnFlow" : false,
+      "rcpLinkList" : [ ],
+      "globalAcp" : true,
+      "enableRCP" : false,
+      "enableSchemaLessDesign" : false,
+      "runMode" : "ETL"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ ]
+  }
+}

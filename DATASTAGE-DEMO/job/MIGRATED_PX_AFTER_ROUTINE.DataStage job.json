@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "MIGRATED_PX_AFTER_ROUTINE.DataStage job",
+    "asset_id" : "a4f9e5b0-9de6-4cde-9386-8e83fb64ad3e",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "fb884ee9-3443-495b-a804-5816624747c8",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "MIGRATED_PX_AFTER_ROUTINE"
+    }
+  }
+}

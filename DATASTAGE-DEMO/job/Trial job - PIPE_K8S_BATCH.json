@@ -1,0 +1,31 @@
+{
+  "metadata" : {
+    "name" : "Trial job - PIPE_K8S_BATCH",
+    "description" : "Trial job and run created for the pipeline: PIPE_K8S_BATCH",
+    "asset_id" : "76200209-8849-4f0b-9029-10b6c1c2a7ea",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "52138a14-800b-481b-95a9-69c2fb70457c",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "version" : "52138a14-800b-481b-95a9-69c2fb70457c-0",
+        "env_type" : "",
+        "sub_type" : "oflow_trial_run",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "PIPE_K8S_BATCH"
+    }
+  }
+}

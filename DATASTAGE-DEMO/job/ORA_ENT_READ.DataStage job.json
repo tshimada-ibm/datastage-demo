@@ -1,0 +1,38 @@
+{
+  "metadata" : {
+    "name" : "ORA_ENT_READ.DataStage job",
+    "asset_id" : "7bdb8046-3d16-4b2d-8140-6e805ebd5287",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "090e1893-2af1-4699-a01c-ac3f21ce7315",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ ],
+      "parameter_sets" : [ {
+        "ref" : "ecb8be62-f5ef-4fb8-86ba-7b516d8d8799",
+        "name" : "ConnParamSet_Oracle"
+      } ],
+      "last_run_status" : "deprecated field",
+      "retention_policy" : { },
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "ORA_ENT_READ"
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "primary_pipeline" : "cd5e3c08-f64a-4d73-83da-3753149189f1",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "7602ddd3-e009-4acc-80d4-9c00e827f689",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "525c7f15-9212-4a8f-b024-ea7b9d74ae0b"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "reject_from_link" : -1,
+          "reject_uses" : "rows",
+          "reject_threshold" : 0,
+          "reject_number" : 0
+        },
+        "schema_ref" : "ed2828d6-2484-4ea7-bc7e-3f227ddbe056"
+      } ],
+      "op" : "ODBCConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "session.schema_reconciliation.fail_on_code_page_mismatch" : false,
+          "session.isolation_level" : "read_uncommitted",
+          "session.pass_lob_locator" : false,
+          "limit_rows" : false,
+          "transaction.end_of_wave" : "none",
+          "session.schema_reconciliation.fail_on_size_mismatch" : true,
+          "session.array_size" : 2000,
+          "table_name" : "test1",
+          "sql.enable_partitioning" : false,
+          "dsn_name" : "#INTG_ODBC_DB2.DSN#",
+          "session.autocommit_mode" : "off",
+          "session.schema_reconciliation.fail_on_type_mismatch" : true,
+          "dsn_type" : "use_dsn_name",
+          "password" : "#INTG_ODBC_DB2.PASSWD#",
+          "session.code_page" : "default",
+          "before_after" : false,
+          "generate_sql" : true,
+          "transaction.record_count" : 2000,
+          "enable_quoted_i_ds" : false,
+          "username" : "#INTG_ODBC_DB2.USER#"
+        }
+      },
+      "id" : "9ee4191d-f79a-4f35-a0bb-a764d66436a5",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/ODBCConnectorPX.svg",
+          "x_pos" : 144.0,
+          "label" : "ODBC_DB2_INTG",
+          "y_pos" : 192.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "9ee4191d-f79a-4f35-a0bb-a764d66436a5",
+          "type_attr" : "PRIMARY",
+          "id" : "525c7f15-9212-4a8f-b024-ea7b9d74ae0b",
+          "link_name" : "DSLink2",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "DSLink2",
+                "label" : "DSLink2",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "7602ddd3-e009-4acc-80d4-9c00e827f689"
+        } ],
+        "id" : "0718cda4-2168-446a-ab0d-f45a2c8af8bc",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "ed2828d6-2484-4ea7-bc7e-3f227ddbe056"
+      } ],
+      "id" : "a3db14cd-7d34-435f-8789-65c27cb31d5e",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "0718cda4-2168-446a-ab0d-f45a2c8af8bc"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 408.0,
+          "label" : "Peek_1",
+          "y_pos" : 192.0
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "nrecs" : 10,
+        "selection" : " ",
+        "output_count" : 0,
+        "input_count" : 1,
+        "columns" : " ",
+        "name" : "name",
+        "dataset" : " ",
+        "allow_column_mapping" : false
+      }
+    } ],
+    "id" : "cd5e3c08-f64a-4d73-83da-3753149189f1",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "false"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "5450d0dc-a891-4442-983b-94052ffbeb81",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
+    "name" : "INTG_ODBC_DB2"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "ed2828d6-2484-4ea7-bc7e-3f227ddbe056",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "50a9f795-7200-4053-a54d-197e66191208",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
+    }
+  },
+  "version" : "3.0"
+}

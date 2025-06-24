@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "ODBC_ORA_INTG_READ_PSET.DataStage job",
+    "asset_id" : "d72ee6a6-05a6-4cb0-be95-42dd58e362ea",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "76156e5d-dfb6-4de7-b7e4-f0955ee0ba65",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "ODBC_ORA_INTG_READ_PSET"
+    }
+  }
+}

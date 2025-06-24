@@ -1,0 +1,201 @@
+{
+  "app_data" : {
+    "pipeline_data" : {
+      "caching_method" : "automatic",
+      "validation" : {
+        "valid" : true,
+        "validated_at" : "2025-06-15 00:46:21.457763794 +0000 UTC"
+      },
+      "version" : "11.0"
+    },
+    "ui_data" : {
+      "raw_allowed" : false,
+      "settings" : {
+        "autosave" : true,
+        "autosave_freq" : 1000,
+        "enable_ds_funcs" : false
+      }
+    }
+  },
+  "doc_type" : "pipeline",
+  "id" : "5cb694bc-01e8-43bf-a6ed-a43997a94b92",
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "pipelines" : [ {
+    "app_data" : {
+      "ui_data" : {
+        "comments" : [ ],
+        "node_prev_unique_idx" : {
+          "run_bash_script" : 0
+        }
+      }
+    },
+    "id" : "c6c937bf-1b74-4a4b-b67e-034060b6be8d",
+    "nodes" : [ {
+      "app_data" : {
+        "annotations" : {
+          "cache_supported" : "true",
+          "component_group" : "run",
+          "component_type" : "bash-script",
+          "encrypted_supported" : "true",
+          "node_id_prefix" : "run_bash_script"
+        },
+        "componentGroup" : "run",
+        "componentLabelRef" : "Run Bash script",
+        "emptyImage" : "/pipelines/graphics/orchestration-flows/nodes/run/empty.svg",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Additional environment variables passed to the shell.",
+              "descriptive_name" : "Environment Variables",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "pass_style" : "file",
+              "type" : "DynamicParamSet"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables. Environment variables will be created with the names as the output variable names suffixed with `_PATH` which can be used in the script to create output (e.g. `echo -n someValue > $myVariable_PATH`).",
+              "descriptive_name" : "Output Variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "pass_style" : "file",
+              "size_estimation" : 2000,
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "notConfigured" : false,
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-bash-script",
+              "component_version_id_ref" : "run-bash-script-1"
+            }
+          },
+          "descriptive_name" : "Run Bash script",
+          "inputs" : [ {
+            "deprecated" : true,
+            "name" : "script_asset",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "script",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "name" : "script",
+            "pass_style" : "file",
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-script-input" : "SELECT_RESOURCE"
+              }
+            },
+            "value" : "isql 'select * from mytable'"
+          }, {
+            "current_scope" : true,
+            "name" : "hardware_specification",
+            "related_asset_type" : "orchestration_flow",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "hardware_specification",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "default" : "shared",
+            "default_from" : {
+              "config" : "default_runtime_type"
+            },
+            "name" : "runtime_type",
+            "type" : "String",
+            "value" : "shared"
+          }, {
+            "default" : "false",
+            "deprecated" : true,
+            "name" : "use_shared_runtime",
+            "type" : "String",
+            "value" : "false"
+          }, {
+            "name" : "error_policy",
+            "type" : "ErrorPolicy"
+          } ],
+          "name" : "run_bash_script",
+          "outputs" : [ {
+            "name" : "return_value",
+            "type" : "Integer"
+          }, {
+            "name" : "standard_output",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "name" : "standard_error",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "name" : "status_message",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "run-bash-script_type_label",
+            "label" : "Run Bash script",
+            "position" : "topLeft",
+            "x_pos" : 66,
+            "y_pos" : 45
+          } ],
+          "description" : "Run Bash script.",
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/bash_script.svg",
+          "label" : "Run Bash script",
+          "x_pos" : 291,
+          "y_pos" : 213
+        },
+        "validators" : { }
+      },
+      "id" : "run_bash_script",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort"
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Output Port"
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    } ],
+    "runtime_ref" : "kfp"
+  } ],
+  "primary_pipeline" : "c6c937bf-1b74-4a4b-b67e-034060b6be8d",
+  "schemas" : [ ],
+  "version" : "3.0"
+}

@@ -1,0 +1,37 @@
+{
+  "metadata" : {
+    "name" : "VS1_JOB.DataStage job",
+    "asset_id" : "94111cff-1042-45aa-ba39-15d972fd5de9",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "2a0d9c14-6a23-464f-8beb-7aee73719a27",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_id" : "45f8934e-1120-459f-8513-c613a042dcc1",
+        "env_type" : "datastage",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "parameter_sets" : [ {
+        "ref" : "e3843f07-d190-43f2-9f73-169eee1ed040",
+        "name" : "ConnParamSet_DB2"
+      } ],
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "VS1_JOB"
+    }
+  }
+}

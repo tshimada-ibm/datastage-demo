@@ -1,0 +1,574 @@
+{
+  "app_data" : {
+    "pipeline_data" : {
+      "caching_method" : "automatic",
+      "default_cache_mode" : "never",
+      "default_error_policy" : "fail_on_error",
+      "parameter_sets" : [ ],
+      "settings" : {
+        "mark_completed_with_errors" : true,
+        "propagate_completed_with_warnings_status" : true
+      },
+      "validation" : {
+        "valid" : true,
+        "validated_at" : "2025-06-15 00:47:18.29236893 +0000 UTC"
+      },
+      "variables" : [ ],
+      "version" : "11.0"
+    },
+    "ui_data" : {
+      "raw_allowed" : false,
+      "settings" : {
+        "auto_link_color" : true,
+        "autosave" : false,
+        "autosave_freq" : 1000,
+        "enable_ds_funcs" : true,
+        "limit_ab_jobs_scope" : true,
+        "shape_nodes" : true
+      }
+    }
+  },
+  "doc_type" : "pipeline",
+  "id" : "62ef700f-ec6a-44ab-9bc2-5317603eb9aa",
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "pipelines" : [ {
+    "app_data" : {
+      "pipeline_data" : {
+        "inputs" : [ {
+          "default" : "TERADEVL.CA.BOEING.COM",
+          "description" : "DB - Source Server",
+          "name" : "$pDBSrcServer",
+          "type" : "String"
+        }, {
+          "default" : "Owi_Int_Tbl",
+          "description" : "DB - Source Schema Owner",
+          "name" : "$pDBSrcOwner",
+          "type" : "String"
+        }, {
+          "default" : "owietl2",
+          "description" : "DB - Source User ID",
+          "name" : "$pDBSrcUser",
+          "type" : "String"
+        }, {
+          "default" : "{dsmenc}tuWaEziJM5jZQj2G6uN1tDGQns4qn9qvW/y37Y6mPjM=",
+          "description" : "DB - Source User Password",
+          "name" : "$pDBSrcPass",
+          "type" : "Encrypted"
+        }, {
+          "default" : "/var/dstage",
+          "description" : "Directory Structure - Root Level",
+          "name" : "$pDirRoot",
+          "type" : "String"
+        }, {
+          "default" : "/owi/dev1",
+          "description" : "Directory Structure - Group Level",
+          "name" : "$pDirGroup",
+          "type" : "String"
+        }, {
+          "default" : "/dswork",
+          "description" : "Directory Structure - DataStage Working Level",
+          "name" : "$pDirDSWorking",
+          "type" : "String"
+        }, {
+          "default" : "/log/",
+          "description" : "Directory Structure - Log Level",
+          "name" : "$pDirLog",
+          "type" : "String"
+        }, {
+          "default" : "/tdm",
+          "description" : "Directory Structure - TDM Level",
+          "name" : "$pDirTDM",
+          "type" : "String"
+        }, {
+          "default" : ".txt",
+          "description" : "File Extention Default",
+          "name" : "$pFileExt",
+          "type" : "String"
+        }, {
+          "default" : "2010-11-30 00:00:00",
+          "description" : "Date - Begining Timestamp for sql query",
+          "name" : "$pBegDT",
+          "type" : "String"
+        }, {
+          "default" : "2015-12-18 00:00:00",
+          "description" : "Date - Ending Timestamp for sql query",
+          "name" : "$pEndDT",
+          "type" : "String"
+        }, {
+          "default" : "OWI3037",
+          "description" : "DataStage Job Identifier (Name) of this Job",
+          "name" : "$pDSJobID",
+          "type" : "String"
+        }, {
+          "default" : "OWI3037",
+          "description" : "Job Identifier for this Job",
+          "name" : "$pJobID",
+          "type" : "String"
+        }, {
+          "default" : "TERADEVL.CA.BOEING.COM",
+          "description" : "DB - Target DSN",
+          "name" : "$pDBTgtDSN",
+          "type" : "String"
+        }, {
+          "default" : "owi_int_tbl",
+          "description" : "DB - Target DB Name",
+          "name" : "$pDBTgtName",
+          "type" : "String"
+        }, {
+          "default" : "TERADEVL.CA.BOEING.COM",
+          "description" : "DB - Target Server",
+          "name" : "$pDBTgtServer",
+          "type" : "String"
+        }, {
+          "default" : "owietl2",
+          "description" : "DB - Target User ID",
+          "name" : "$pDBTgtUser",
+          "type" : "String"
+        }, {
+          "default" : "{dsmenc}tuWaEziJM5jZQj2G6uN1tDGQns4qn9qvW/y37Y6mPjM=",
+          "description" : "DB - Target User Password",
+          "name" : "$pDBTgtPass",
+          "type" : "Encrypted"
+        }, {
+          "default" : "",
+          "description" : "Job invocation ID",
+          "name" : "DSJobInvocationId",
+          "type" : "String"
+        } ]
+      },
+      "ui_data" : {
+        "asset_metadata" : { },
+        "comments" : [ ],
+        "exception_handler_x_pos" : -80,
+        "exception_handler_y_pos" : -80,
+        "node_prev_unique_idx" : {
+          "job1" : 0,
+          "routine1" : 0,
+          "routine2" : 0
+        },
+        "zoom" : {
+          "k" : 0.8,
+          "x" : 41.60000000000008,
+          "y" : 81.60000000000008
+        }
+      }
+    },
+    "id" : "2a18885f-7bde-4e19-ab4b-3a6f599de4f1",
+    "nodes" : [ {
+      "app_data" : {
+        "annotations" : {
+          "cache_supported" : "true",
+          "component_group" : "run",
+          "component_type" : "datastage-job",
+          "component_type_name" : "DataStage Job",
+          "encrypted_supported" : "true",
+          "entitlements" : "datastage",
+          "node_name_from_input_asset" : "job",
+          "results_resolved" : "true"
+        },
+        "componentGroup" : "run",
+        "componentLabelRef" : "Run DataStage job",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            },
+            "job_parameters" : {
+              "description" : "Optional. Additional job parameters passed to the job run.",
+              "descriptive_name" : "Job Parameters",
+              "human_name" : "Job Parameters",
+              "name" : "job_parameters",
+              "optional" : true,
+              "type" : "JobParameters"
+            },
+            "parameter_sets" : {
+              "description" : "Additional parameter sets passed to the job run.",
+              "descriptive_name" : "Parameter sets",
+              "human_name" : "Parameter sets",
+              "name" : "parameter_sets",
+              "optional" : true,
+              "pass_style" : "file",
+              "type" : "ParameterSets"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "notConfigured" : false,
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-datastage-job",
+              "component_version_id_ref" : "run-datastage-job-1"
+            }
+          },
+          "descriptive_name" : "P01",
+          "inputs" : [ {
+            "name" : "job",
+            "related_asset_type" : "data_intg_flow",
+            "source_of_scope" : true,
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "ui_data" : {
+              "assetInputType" : "search",
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-job-asset-name-input" : "SELECT_RESOURCE",
+                "selected-node-values-job-input" : "SELECT_RESOURCE"
+              },
+              "job_param_source" : "job",
+              "scopeType" : "project"
+            },
+            "value" : "jobs?name=RUN_DSJOBREPORT_AFTER_SUB.DataStage+job&asset_type=job"
+          }, {
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "fail_on_error"
+          }, {
+            "deprecated" : true,
+            "name" : "environment",
+            "related_asset_type" : "data_intg_flow",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "environment",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          } ],
+          "name" : "job1",
+          "outputs" : [ {
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "name" : "status_message",
+            "type" : "String"
+          }, {
+            "name" : "job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "name" : "job_run",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job_run",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "name" : "job_name",
+            "type" : "String"
+          }, {
+            "name" : "resolved_job_name",
+            "type" : "String"
+          }, {
+            "name" : "user_status",
+            "type" : "String"
+          }, {
+            "annotations" : {
+              "human_name" : "Job Run Name"
+            },
+            "name" : "job_run_name",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "job1_type_label",
+            "label" : "Run DataStage job",
+            "position" : "topLeft",
+            "x_pos" : 66,
+            "y_pos" : 45
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/datastage_flow.svg",
+          "label" : "P01",
+          "x_pos" : 240,
+          "y_pos" : 48
+        }
+      },
+      "id" : "job1",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort",
+        "links" : [ {
+          "app_data" : {
+            "ui_data" : {
+              "decorations" : [ {
+                "class_name" : "condition-decorator-add",
+                "height" : 16,
+                "hotspot" : true,
+                "id" : "assocDecAdd",
+                "image" : "/pipelines/graphics/orchestration-flows/add-condition.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 16,
+                "x_pos" : -8,
+                "y_pos" : -8
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 24,
+                "hotspot" : true,
+                "id" : "assocDecAddPill",
+                "image" : "/pipelines/graphics/orchestration-flows/link/add-condition-pill-shape-nodes.svg",
+                "outline" : false,
+                "position" : "middle",
+                "width" : 86,
+                "x_pos" : -40,
+                "y_pos" : -12
+              }, {
+                "class_name" : "condition-decorator-add-hover",
+                "height" : 16,
+                "id" : "assocDecAddText",
+                "label" : "Condition",
+                "position" : "middle",
+                "width" : 84,
+                "x_pos" : -20,
+                "y_pos" : -11
+              } ]
+            }
+          },
+          "id" : "b81531f9-518a-462a-a4da-58b45197dd6d",
+          "node_id_ref" : "routine1",
+          "port_id_ref" : "outPort"
+        } ]
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : ""
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    }, {
+      "app_data" : {
+        "annotations" : {
+          "cache_supported" : "true",
+          "component_group" : "run",
+          "component_type" : "bash-script",
+          "encrypted_supported" : "true",
+          "node_id_prefix" : "run_bash_script"
+        },
+        "componentGroup" : "run",
+        "componentLabelRef" : "Run Bash script",
+        "emptyImage" : "/pipelines/graphics/orchestration-flows/nodes/run/empty.svg",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "notConfigured" : false,
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-bash-script",
+              "component_version_id_ref" : "run-bash-script-1"
+            }
+          },
+          "descriptive_name" : "JobControlRoutine",
+          "inputs" : [ {
+            "name" : "script",
+            "pass_style" : "file",
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-script-input" : "SELECT_RESOURCE"
+              }
+            },
+            "value" : "sh $ROUTINE_SCRIPTS_DIR/EXTOWITableIsisNcrPxJobControl.sh $DSJOBID"
+          }, {
+            "default" : "shared",
+            "default_from" : {
+              "config" : "default_runtime_type"
+            },
+            "name" : "runtime_type",
+            "type" : "String",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-runtime_type-input" : "SELECT_RESOURCE"
+              }
+            },
+            "value" : "shared"
+          }, {
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "fail_on_error"
+          }, {
+            "current_scope" : true,
+            "name" : "hardware_specification",
+            "related_asset_type" : "orchestration_flow",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "hardware_specification",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "value" : "abfde4f8-88a7-57c7-bee4-e047a481f7cb"
+          }, {
+            "deprecated" : true,
+            "name" : "script_asset",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "script",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "default" : "false",
+            "deprecated" : true,
+            "name" : "use_shared_runtime",
+            "type" : "String"
+          }, {
+            "group" : "env_variables",
+            "name" : "DSJOBID",
+            "optional" : true,
+            "value_from" : {
+              "pipeline_input" : {
+                "param_name" : "$pDSJobID"
+              }
+            }
+          } ],
+          "name" : "routine1",
+          "outputs" : [ {
+            "name" : "return_value",
+            "type" : "Integer"
+          }, {
+            "name" : "standard_output",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "name" : "standard_error",
+            "pass_style" : "file",
+            "type" : "String"
+          }, {
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "name" : "status_message",
+            "type" : "String"
+          }, {
+            "description" : "Command name of the inline script",
+            "group" : "output_variables",
+            "human_name" : "Command Name",
+            "name" : "command_name",
+            "size_estimation" : 10,
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "routine1_type_label",
+            "label" : "Run Bash script",
+            "position" : "topLeft",
+            "x_pos" : 66,
+            "y_pos" : 45
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/bash_script.svg",
+          "label" : "JobControlRoutine",
+          "x_pos" : 48,
+          "y_pos" : 48
+        }
+      },
+      "id" : "routine1",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort"
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : ""
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    } ],
+    "runtime_ref" : "kfp"
+  } ],
+  "primary_pipeline" : "2a18885f-7bde-4e19-ab4b-3a6f599de4f1",
+  "schemas" : [ ],
+  "version" : "3.0"
+}

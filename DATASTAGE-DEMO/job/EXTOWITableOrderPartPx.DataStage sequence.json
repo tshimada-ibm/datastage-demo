@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableOrderPartPx.DataStage sequence",
+    "asset_id" : "1c0c064f-6a91-416e-b726-d6b668899b93",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "e1329b5f-1958-490b-9814-392a28f36e69",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "EXTOWITableOrderPartPx"
+    }
+  }
+}

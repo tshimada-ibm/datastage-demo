@@ -1,0 +1,12 @@
+{
+  "parameter_set" : {
+    "name" : "ConnParamSet_HDFS",
+    "description" : "DataStage generated parameter set for connection properties.",
+    "parameters" : [ {
+      "name" : "ssl_certificate",
+      "type" : "string",
+      "prompt" : "",
+      "value" : ""
+    } ]
+  }
+}

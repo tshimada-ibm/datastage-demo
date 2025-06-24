@@ -1,0 +1,12 @@
+{
+  "parameter_set" : {
+    "name" : "ConnParamSet_JDBC",
+    "description" : "DataStage generated parameter set for connection properties.",
+    "parameters" : [ {
+      "name" : "jdbc_driver",
+      "type" : "string",
+      "prompt" : "",
+      "value" : ""
+    } ]
+  }
+}

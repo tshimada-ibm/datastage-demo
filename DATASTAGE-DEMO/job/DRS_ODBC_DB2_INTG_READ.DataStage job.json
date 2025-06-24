@@ -1,0 +1,32 @@
+{
+  "metadata" : {
+    "name" : "DRS_ODBC_DB2_INTG_READ.DataStage job",
+    "asset_id" : "905fc1e1-1038-42d1-b7b0-d90d3159e098",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "50ea88f0-4742-4c72-b027-69f099c7fb4f",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : "100"
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "DRS_ODBC_DB2_INTG_READ"
+    }
+  }
+}

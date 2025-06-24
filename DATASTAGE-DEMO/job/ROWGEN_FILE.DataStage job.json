@@ -1,0 +1,43 @@
+{
+  "metadata" : {
+    "name" : "ROWGEN_FILE.DataStage job",
+    "asset_id" : "73940c18-104a-48bf-bb17-7f44e3e80c8d",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "9afb2893-7397-4619-80d0-dbc7272124af",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ {
+        "name" : "DATA_DIR",
+        "value" : "/mnts/etlshare/data"
+      }, {
+        "name" : "$PROJ_ROW_COUNT",
+        "value" : "3"
+      }, {
+        "name" : "TEXT",
+        "value" : "default-text"
+      } ],
+      "last_run_status" : "deprecated field",
+      "retention_policy" : { },
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "ROWGEN_FILE"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "EXTOWITableWpinfoMatlPx_copy_1.DataStage sequence job",
+    "asset_id" : "03a8e680-575e-46ce-bbe2-545dcdb31177",
+    "owner_id" : "1000331004",
+    "version" : 2
+  },
+  "entity" : {
+    "job" : {
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "data_intg_flow",
+        "pipeline_id" : "23514823-3218-40fa-b5fe-5a711c9bad03",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "EXTOWITableWpinfoMatlPx_copy_1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "name" : "SEQ_RUN_ALL_PSET.DataStage sequence",
+    "asset_id" : "d4263a52-7865-4e9c-8e89-0e345ded0801",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "bfee2496-18c2-43c8-b035-afb9a1b1a7d9",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_type" : "",
+        "env_variables" : [ ]
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "SEQ_RUN_ALL_PSET"
+    }
+  }
+}

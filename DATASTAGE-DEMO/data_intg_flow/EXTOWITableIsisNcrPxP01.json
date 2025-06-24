@@ -1,0 +1,2374 @@
+{
+  "primary_pipeline" : "d0880b0c-6bf7-41f5-a2a2-b2e9d68ad9a8",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "op" : "PxSequentialFile",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "9b41b1df-c988-41b8-97b1-0e24513bc381",
+          "type_attr" : "PRIMARY",
+          "id" : "3541e970-4161-40d1-87f8-299a507ea19b",
+          "link_name" : "toSq",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "toSq",
+                "label" : "toSq",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "c09ebdeb-b8f3-4f49-acba-731078e9f228"
+        } ],
+        "id" : "762e01f5-39b8-40fd-85e7-9db179d97e4e",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "final_delim" : "end",
+          "Writetime" : "0",
+          "null_field" : "''",
+          "firstLineColumnNames" : " ",
+          "Backup" : "0",
+          "OmitNewLine" : "0",
+          "Flushrow" : "0",
+          "append-overwrite" : "overwrite",
+          "PadChar" : "#",
+          "EnforceMetaData" : "0",
+          "file" : [ "#$pDirRoot##$pDirGroup##$pDirDSWorking##$pDirTDM#/TDM_#$pDBSrcServer#_IsisNcr#$pFileExt#" ],
+          "quote" : "'none'",
+          "ColSpace" : "0",
+          "WaitforReader" : "0",
+          "writemethod" : " ",
+          "part_coll" : "none",
+          "runtime_column_propagation" : 0,
+          "registerDataAsset" : false,
+          "delim" : "'¸'"
+        },
+        "schema_ref" : "9d87ac57-bad8-4bd2-971f-2f24c50f36d0"
+      } ],
+      "id" : "6a7e2dde-c540-4e78-a754-646c521944e6",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxSequentialFile.svg",
+          "x_pos" : 523.0,
+          "label" : "sq_z",
+          "y_pos" : 397.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 0,
+        "nls_map_name" : "UTF8",
+        "input_count" : 1,
+        "execmode" : "seq",
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "c09ebdeb-b8f3-4f49-acba-731078e9f228",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "3541e970-4161-40d1-87f8-299a507ea19b"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "Reject" : false,
+          "RowLimit" : 0,
+          "valueDerivation" : [ {
+            "parsedExpression" : "tblnm_src_read.SOURCE_FLAG",
+            "columnName" : "SOURCE_FLAG",
+            "sourceColumn" : "tblnm_src_read.SOURCE_FLAG"
+          }, {
+            "parsedExpression" : "tblnm_src_read.NCR_HEADER_ID",
+            "columnName" : "NCR_HEADER_ID",
+            "sourceColumn" : "tblnm_src_read.NCR_HEADER_ID"
+          }, {
+            "parsedExpression" : "tblnm_src_read.NCR_SERIAL",
+            "columnName" : "NCR_SERIAL",
+            "sourceColumn" : "tblnm_src_read.NCR_SERIAL"
+          }, {
+            "parsedExpression" : "tblnm_src_read.NCR_TYPE",
+            "columnName" : "NCR_TYPE",
+            "sourceColumn" : "tblnm_src_read.NCR_TYPE"
+          }, {
+            "parsedExpression" : "tblnm_src_read.BUSINESS_UNIT_SHRT",
+            "columnName" : "BUSINESS_UNIT_SHRT",
+            "sourceColumn" : "tblnm_src_read.BUSINESS_UNIT_SHRT"
+          }, {
+            "parsedExpression" : "tblnm_src_read.BEST_SITE_ACRO",
+            "columnName" : "BEST_SITE_ACRO",
+            "sourceColumn" : "tblnm_src_read.BEST_SITE_ACRO"
+          }, {
+            "parsedExpression" : "tblnm_src_read.SITE_SHRT",
+            "columnName" : "SITE_SHRT",
+            "sourceColumn" : "tblnm_src_read.SITE_SHRT"
+          }, {
+            "parsedExpression" : "NumToStrFixed(tblnm_src_read.NCR_QUANTITY, 6)",
+            "columnName" : "NCR_QUANTITY",
+            "sourceColumn" : "tblnm_src_read.NCR_QUANTITY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PART_NUMBER",
+            "columnName" : "PART_NUMBER",
+            "sourceColumn" : "tblnm_src_read.PART_NUMBER"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PART_DESCRIPTION",
+            "columnName" : "PART_DESCRIPTION",
+            "sourceColumn" : "tblnm_src_read.PART_DESCRIPTION"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PART_SERIAL_NUMBER",
+            "columnName" : "PART_SERIAL_NUMBER",
+            "sourceColumn" : "tblnm_src_read.PART_SERIAL_NUMBER"
+          }, {
+            "parsedExpression" : "tblnm_src_read.BEST_CODE",
+            "columnName" : "BEST_CODE",
+            "sourceColumn" : "tblnm_src_read.BEST_CODE"
+          }, {
+            "parsedExpression" : "tblnm_src_read.SYSTEM_SUPPLIER_CODE",
+            "columnName" : "SYSTEM_SUPPLIER_CODE",
+            "sourceColumn" : "tblnm_src_read.SYSTEM_SUPPLIER_CODE"
+          }, {
+            "parsedExpression" : "NumToStr(DaysSinceFromDate2(tblnm_src_read.NCR_WRITTEN_DATE, \"1967-12-31\"), 9)",
+            "columnName" : "NCR_WRITTEN_DATE",
+            "sourceColumn" : "tblnm_src_read.NCR_WRITTEN_DATE"
+          }, {
+            "parsedExpression" : "NumToStr(DaysSinceFromDate2(tblnm_src_read.NCR_CLOSED_DATE, \"1967-12-31\"), 9)",
+            "columnName" : "NCR_CLOSED_DATE",
+            "sourceColumn" : "tblnm_src_read.NCR_CLOSED_DATE"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PO_NUMBER",
+            "columnName" : "PO_NUMBER",
+            "sourceColumn" : "tblnm_src_read.PO_NUMBER"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PO_LINE_ITEM",
+            "columnName" : "PO_LINE_ITEM",
+            "sourceColumn" : "tblnm_src_read.PO_LINE_ITEM"
+          }, {
+            "parsedExpression" : "tblnm_src_read.LOT_CODE",
+            "columnName" : "LOT_CODE",
+            "sourceColumn" : "tblnm_src_read.LOT_CODE"
+          }, {
+            "parsedExpression" : "NumToStrFixed(tblnm_src_read.ON_SITE_HOURS, 2)",
+            "columnName" : "ON_SITE_HOURS",
+            "sourceColumn" : "tblnm_src_read.ON_SITE_HOURS"
+          }, {
+            "parsedExpression" : "NumToStrFixed(tblnm_src_read.OFF_SITE_HOURS, 2)",
+            "columnName" : "OFF_SITE_HOURS",
+            "sourceColumn" : "tblnm_src_read.OFF_SITE_HOURS"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PVR_DISPLAY_IDENT",
+            "columnName" : "PVR_DISPLAY_IDENT",
+            "sourceColumn" : "tblnm_src_read.PVR_DISPLAY_IDENT"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PVR_STATUS",
+            "columnName" : "PVR_STATUS",
+            "sourceColumn" : "tblnm_src_read.PVR_STATUS"
+          }, {
+            "parsedExpression" : "NumToStr(DaysSinceFromDate2(tblnm_src_read.PLANNED_SHIP_DATE, \"1967-12-31\"), 9)",
+            "columnName" : "PLANNED_SHIP_DATE",
+            "sourceColumn" : "tblnm_src_read.PLANNED_SHIP_DATE"
+          }, {
+            "parsedExpression" : "tblnm_src_read.BOEING_REP_BEMSID",
+            "columnName" : "BOEING_REP_BEMSID",
+            "sourceColumn" : "tblnm_src_read.BOEING_REP_BEMSID"
+          }, {
+            "parsedExpression" : "tblnm_src_read.BFE_CUSTOMER",
+            "columnName" : "BFE_CUSTOMER",
+            "sourceColumn" : "tblnm_src_read.BFE_CUSTOMER"
+          }, {
+            "parsedExpression" : "tblnm_src_read.EFFECTIVITY",
+            "columnName" : "EFFECTIVITY",
+            "sourceColumn" : "tblnm_src_read.EFFECTIVITY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.AIRCRAFT_LINE_NUMBER",
+            "columnName" : "AIRCRAFT_LINE_NUMBER",
+            "sourceColumn" : "tblnm_src_read.AIRCRAFT_LINE_NUMBER"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PV_BFAI_DISPLAY_IDENT",
+            "columnName" : "PV_BFAI_DISPLAY_IDENT",
+            "sourceColumn" : "tblnm_src_read.PV_BFAI_DISPLAY_IDENT"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PROGRAM_SHRT",
+            "columnName" : "PROGRAM_SHRT",
+            "sourceColumn" : "tblnm_src_read.PROGRAM_SHRT"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.QUANTITY_VERIFIED, \"fix_zero, suppress_zero\")",
+            "columnName" : "QUANTITY_VERIFIED",
+            "sourceColumn" : "tblnm_src_read.QUANTITY_VERIFIED"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.QUANTITY_ACCEPTED, \"fix_zero, suppress_zero\")",
+            "columnName" : "QUANTITY_ACCEPTED",
+            "sourceColumn" : "tblnm_src_read.QUANTITY_ACCEPTED"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PV_ACTIVITY_TYPE_SHRT",
+            "columnName" : "PV_ACTIVITY_TYPE_SHRT",
+            "sourceColumn" : "tblnm_src_read.PV_ACTIVITY_TYPE_SHRT"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PV_ACTIVITY_SUB_TYPE_SHRT",
+            "columnName" : "PV_ACTIVITY_SUB_TYPE_SHRT",
+            "sourceColumn" : "tblnm_src_read.PV_ACTIVITY_SUB_TYPE_SHRT"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PV_ACTIVITY_SUB_TYPE_SRI",
+            "columnName" : "PV_ACTIVITY_SUB_TYPE_SRI",
+            "sourceColumn" : "tblnm_src_read.PV_ACTIVITY_SUB_TYPE_SRI"
+          }, {
+            "parsedExpression" : "tblnm_src_read.RESPONSIBILITY",
+            "columnName" : "RESPONSIBILITY",
+            "sourceColumn" : "tblnm_src_read.RESPONSIBILITY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.CA_DOCUMENT_QUEUE_STATUS_CODE",
+            "columnName" : "CA_DOCUMENT_QUEUE_STATUS_CODE",
+            "sourceColumn" : "tblnm_src_read.CA_DOCUMENT_QUEUE_STATUS_CODE"
+          }, {
+            "parsedExpression" : "tblnm_src_read.CA_DOCUMENT_QUEUE_STATUS_LONG",
+            "columnName" : "CA_DOCUMENT_QUEUE_STATUS_LONG",
+            "sourceColumn" : "tblnm_src_read.CA_DOCUMENT_QUEUE_STATUS_LONG"
+          }, {
+            "parsedExpression" : "TimestampToString(tblnm_src_read.LASTUPDATEDATE, \"%yyyy-%mm-%dd %hh:%nn:%ss.6\")",
+            "columnName" : "LASTUPDATEDATE",
+            "sourceColumn" : "tblnm_src_read.LASTUPDATEDATE"
+          }, {
+            "parsedExpression" : "NumToStr(tblnm_src_read.QUANTITY_FIXED_WHILE_WAITING, 9)",
+            "columnName" : "QUANTITY_FIXED_WHILE_WAITING",
+            "sourceColumn" : "tblnm_src_read.QUANTITY_FIXED_WHILE_WAITING"
+          }, {
+            "parsedExpression" : "NumToStr(tblnm_src_read.QUANTITY_TOTAL_DEFECTIVE, 9)",
+            "columnName" : "QUANTITY_TOTAL_DEFECTIVE",
+            "sourceColumn" : "tblnm_src_read.QUANTITY_TOTAL_DEFECTIVE"
+          } ]
+        },
+        "schema_ref" : "9d87ac57-bad8-4bd2-971f-2f24c50f36d0"
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "e16575bc-1c50-4966-b1f9-9b02dc2c2e46",
+          "type_attr" : "PRIMARY",
+          "id" : "87698eb3-8966-42ce-b2c8-9b57302dcae1",
+          "link_name" : "tblnm_src_read",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "tblnm_src_read",
+                "label" : "tblnm_src_read",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "bf732aab-cbe7-409a-9526-17aa9dea8b2e"
+        } ],
+        "id" : "2404f555-b3f2-4081-a59f-a7983ad70447",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "4c48fa1c-bf62-4d7e-a93e-bb5e9c782dde"
+      } ],
+      "id" : "9b41b1df-c988-41b8-97b1-0e24513bc381",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "2404f555-b3f2-4081-a59f-a7983ad70447",
+          "outputs_order" : "c09ebdeb-b8f3-4f49-acba-731078e9f228"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 338.0,
+          "label" : "xfm_table",
+          "y_pos" : 398.0
+        }
+      },
+      "parameters" : {
+        "MaxLoopIterations" : 0,
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "input_count" : 1,
+        "execmode" : "seq",
+        "BlockSize" : 0
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "bf732aab-cbe7-409a-9526-17aa9dea8b2e",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "87698eb3-8966-42ce-b2c8-9b57302dcae1"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "4c48fa1c-bf62-4d7e-a93e-bb5e9c782dde"
+      } ],
+      "op" : "OracleConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "record_count" : 2000,
+          "isolation_level" : "0",
+          "limit_rows" : false,
+          "treat_warnings_as_errors" : false,
+          "connection_type" : "tcp",
+          "prefetch_memory_size" : 0,
+          "oracle_db_port" : "#ConnParamSet_Oracle_pDBSrcServer.oracle_db_port#",
+          "select_statement" : "SELECT\tSOURCE_FLAG, NCR_HEADER_ID, NCR_SERIAL, NCR_TYPE, BUSINESS_UNIT_SHRT,\n\t\tBEST_SITE_ACRO, SITE_SHRT, NCR_QUANTITY, PART_NUMBER, PART_DESCRIPTION,\n\t\tPART_SERIAL_NUMBER, BEST_CODE, SYSTEM_SUPPLIER_CODE, NCR_WRITTEN_DATE,\n\t\tNCR_CLOSED_DATE, PO_NUMBER, PO_LINE_ITEM, LOT_CODE, ON_SITE_HOURS,\n\t\tOFF_SITE_HOURS, PVR_DISPLAY_IDENT, PVR_STATUS, PLANNED_SHIP_DATE,\n\t\tBOEING_REP_BEMSID, BFE_CUSTOMER, EFFECTIVITY, AIRCRAFT_LINE_NUMBER,\n\t\tPV_BFAI_DISPLAY_IDENT, PROGRAM_SHRT, QUANTITY_VERIFIED, QUANTITY_ACCEPTED,\n\t\tPV_ACTIVITY_TYPE_SHRT, PV_ACTIVITY_SUB_TYPE_SHRT, PV_ACTIVITY_SUB_TYPE_SRI,\n\t\tRESPONSIBILITY, CA_DOCUMENT_QUEUE_STATUS_CODE, CA_DOCUMENT_QUEUE_STATUS_LONG,\nLASTUPDATEDATE, QUANTITY_FIXED_WHILE_WAITING, QUANTITY_TOTAL_DEFECTIVE \nFROM\t#$pDBSrcName#.V_ISIS_PMWS_NCR",
+          "oracle_db_host" : "#ConnParamSet_Oracle_pDBSrcServer.oracle_db_host#",
+          "application_failover_control" : false,
+          "read_from_file_select" : false,
+          "password" : "#$pDBSrcPass#",
+          "read_mode" : "0",
+          "prefetch_row_count" : 1,
+          "before_after" : false,
+          "generate_sql" : false,
+          "pass_lob_locator.column" : "SOURCE_FLAG,SOURCE_FLAG,V_ISIS_PMWS_NCR",
+          "pass_lob_locator" : false,
+          "oracle_service_name" : "#$pDBSrcServer#",
+          "enable_quoted_ids" : false,
+          "array_size" : 2000,
+          "treat_fetch_truncate_as_error" : false,
+          "username" : "#$pDBSrcUser#"
+        }
+      },
+      "id" : "e16575bc-1c50-4966-b1f9-9b02dc2c2e46",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/OracleConnectorPX.svg",
+          "x_pos" : 88.0,
+          "label" : "ora_R_src",
+          "y_pos" : 397.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "seq",
+        "allow_column_mapping" : false
+      }
+    } ],
+    "description" : "Short description: Extract table V_ISIS_PMWS_NCR   from source to a flat file.. Long description: Job Name:        EXTOWITableIsisNcrDisc\r\nJob Identifier:    OWI3037\r\n",
+    "id" : "d0880b0c-6bf7-41f5-a2a2-b2e9d68ad9a8",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "UTF8",
+        "runtime_column_propagation" : "true"
+      },
+      "ui_data" : {
+        "comments" : [ {
+          "associated_id_refs" : [ ],
+          "formats" : [ {
+            "type" : "fontType",
+            "value" : "font-ibm-plex-sans"
+          }, {
+            "type" : "letter-spacing",
+            "value" : "-0.5px"
+          }, {
+            "type" : "textSize",
+            "value" : "text-size-12"
+          }, {
+            "type" : "textColor",
+            "value" : "#0000ff"
+          }, {
+            "type" : "alignHorizontally",
+            "value" : "align-left"
+          }, {
+            "type" : "alignVertically",
+            "value" : "align-top"
+          }, {
+            "type" : "backgroundColor",
+            "value" : "#80d5fd"
+          }, {
+            "type" : "outlineStyle",
+            "value" : "outline-solid"
+          }, {
+            "type" : "line-height",
+            "value" : "1.2"
+          }, {
+            "type" : "padding",
+            "value" : "1px"
+          }, {
+            "type" : "border-color",
+            "value" : "#000000"
+          } ],
+          "width" : 840,
+          "x_pos" : 21.0,
+          "id" : "50c2068e-6148-4db7-833b-fc5a8c755cde",
+          "y_pos" : 6.0,
+          "contentType" : "WYSIWYG",
+          "class_name" : "bkg-col-cyan-20",
+          "content" : "Job Name:        EXTOWITableISISNCR\r\nShort Description:  \r\nExtract table V_ISIS_PMWS_NCR from source to a flat file.\r\n\r\nInputs:\r\nOutputs:\r\nModification Log\r\nDate                  Name                    Purpose\r\n-----------------------------------------------------------------------\r\n2014.06.30      Alex Mitchell      Created Job\r\n",
+          "height" : 330
+        } ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "63ab797e-2097-4452-beca-a0632df27d20",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
+    "name" : "ConnParamSet_Oracle_pDBSrcServer"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "9d87ac57-bad8-4bd2-971f-2f24c50f36d0",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Char[4] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SOURCE_FLAG",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SOURCE_FLAG",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[32]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_HEADER_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_HEADER_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_SERIAL",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_SERIAL",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_TYPE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_TYPE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BUSINESS_UNIT_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BUSINESS_UNIT_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BEST_SITE_ACRO",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BEST_SITE_ACRO",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SITE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SITE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[18, 6] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_QUANTITY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_QUANTITY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[500] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_DESCRIPTION",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_DESCRIPTION",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_SERIAL_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_SERIAL_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BEST_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BEST_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SYSTEM_SUPPLIER_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SYSTEM_SUPPLIER_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Date nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_WRITTEN_DATE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_WRITTEN_DATE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Date nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_CLOSED_DATE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_CLOSED_DATE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[40] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PO_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PO_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PO_LINE_ITEM",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PO_LINE_ITEM",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LOT_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "LOT_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[5, 2] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ON_SITE_HOURS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ON_SITE_HOURS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[5, 2] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OFF_SITE_HOURS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "OFF_SITE_HOURS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PVR_DISPLAY_IDENT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PVR_DISPLAY_IDENT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PVR_STATUS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PVR_STATUS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Date nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PLANNED_SHIP_DATE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PLANNED_SHIP_DATE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BOEING_REP_BEMSID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BOEING_REP_BEMSID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BFE_CUSTOMER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BFE_CUSTOMER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[500] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "EFFECTIVITY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "EFFECTIVITY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "AIRCRAFT_LINE_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "AIRCRAFT_LINE_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[100] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_BFAI_DISPLAY_IDENT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_BFAI_DISPLAY_IDENT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PROGRAM_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PROGRAM_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_VERIFIED",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "QUANTITY_VERIFIED",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_ACCEPTED",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "QUANTITY_ACCEPTED",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_TYPE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_TYPE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_SUB_TYPE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_SUB_TYPE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[2] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_SUB_TYPE_SRI",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_SUB_TYPE_SRI",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "RESPONSIBILITY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "RESPONSIBILITY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[50] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CA_DOCUMENT_QUEUE_STATUS_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "CA_DOCUMENT_QUEUE_STATUS_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[500] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CA_DOCUMENT_QUEUE_STATUS_LONG",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "CA_DOCUMENT_QUEUE_STATUS_LONG",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Timestamp: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LASTUPDATEDATE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "LASTUPDATEDATE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Integer nullable",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_FIXED_WHILE_WAITING",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Integer nullable",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_TOTAL_DEFECTIVE",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  }, {
+    "id" : "4c48fa1c-bf62-4d7e-a93e-bb5e9c782dde",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 4,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.SOURCE_FLAG",
+        "max_length" : 4,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SOURCE_FLAG",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SOURCE_FLAG",
+        "odbc_type" : "CHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_HEADER_ID",
+        "max_length" : 32,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_HEADER_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_HEADER_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_SERIAL",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_SERIAL",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_SERIAL",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_TYPE",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_TYPE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "NCR_TYPE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.BUSINESS_UNIT_SHRT",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BUSINESS_UNIT_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BUSINESS_UNIT_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.BEST_SITE_ACRO",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BEST_SITE_ACRO",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BEST_SITE_ACRO",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.SITE_SHRT",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SITE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SITE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 18,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_QUANTITY",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_QUANTITY",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "NCR_QUANTITY",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PART_NUMBER",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PART_DESCRIPTION",
+        "max_length" : 500,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_DESCRIPTION",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_DESCRIPTION",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PART_SERIAL_NUMBER",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_SERIAL_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_SERIAL_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.BEST_CODE",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BEST_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BEST_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.SYSTEM_SUPPLIER_CODE",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SYSTEM_SUPPLIER_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SYSTEM_SUPPLIER_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_WRITTEN_DATE",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_WRITTEN_DATE",
+      "type" : "date",
+      "app_data" : {
+        "column_reference" : "NCR_WRITTEN_DATE",
+        "odbc_type" : "DATE",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.NCR_CLOSED_DATE",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "NCR_CLOSED_DATE",
+      "type" : "date",
+      "app_data" : {
+        "column_reference" : "NCR_CLOSED_DATE",
+        "odbc_type" : "DATE",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PO_NUMBER",
+        "max_length" : 40,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PO_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PO_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PO_LINE_ITEM",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PO_LINE_ITEM",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PO_LINE_ITEM",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.LOT_CODE",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LOT_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "LOT_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 2,
+        "decimal_precision" : 5,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.ON_SITE_HOURS",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ON_SITE_HOURS",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "ON_SITE_HOURS",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 2,
+        "decimal_precision" : 5,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.OFF_SITE_HOURS",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OFF_SITE_HOURS",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "OFF_SITE_HOURS",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PVR_DISPLAY_IDENT",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PVR_DISPLAY_IDENT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PVR_DISPLAY_IDENT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PVR_STATUS",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PVR_STATUS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PVR_STATUS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PLANNED_SHIP_DATE",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PLANNED_SHIP_DATE",
+      "type" : "date",
+      "app_data" : {
+        "column_reference" : "PLANNED_SHIP_DATE",
+        "odbc_type" : "DATE",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.BOEING_REP_BEMSID",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BOEING_REP_BEMSID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BOEING_REP_BEMSID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.BFE_CUSTOMER",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "BFE_CUSTOMER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "BFE_CUSTOMER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.EFFECTIVITY",
+        "max_length" : 500,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "EFFECTIVITY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "EFFECTIVITY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.AIRCRAFT_LINE_NUMBER",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "AIRCRAFT_LINE_NUMBER",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "AIRCRAFT_LINE_NUMBER",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PV_BFAI_DISPLAY_IDENT",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_BFAI_DISPLAY_IDENT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_BFAI_DISPLAY_IDENT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PROGRAM_SHRT",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PROGRAM_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PROGRAM_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.QUANTITY_VERIFIED",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_VERIFIED",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "QUANTITY_VERIFIED",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.QUANTITY_ACCEPTED",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_ACCEPTED",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "QUANTITY_ACCEPTED",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PV_ACTIVITY_TYPE_SHRT",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_TYPE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_TYPE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PV_ACTIVITY_SUB_TYPE_SHRT",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_SUB_TYPE_SHRT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_SUB_TYPE_SHRT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.PV_ACTIVITY_SUB_TYPE_SRI",
+        "max_length" : 2,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PV_ACTIVITY_SUB_TYPE_SRI",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PV_ACTIVITY_SUB_TYPE_SRI",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.RESPONSIBILITY",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "RESPONSIBILITY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "RESPONSIBILITY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.CA_DOCUMENT_QUEUE_STATUS_CODE",
+        "max_length" : 50,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CA_DOCUMENT_QUEUE_STATUS_CODE",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "CA_DOCUMENT_QUEUE_STATUS_CODE",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.CA_DOCUMENT_QUEUE_STATUS_LONG",
+        "max_length" : 500,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CA_DOCUMENT_QUEUE_STATUS_LONG",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "CA_DOCUMENT_QUEUE_STATUS_LONG",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "V_ISIS_PMWS_NCR.LASTUPDATEDATE",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LASTUPDATEDATE",
+      "type" : "timestamp",
+      "app_data" : {
+        "column_reference" : "LASTUPDATEDATE",
+        "time_scale" : 6,
+        "odbc_type" : "TIMESTAMP",
+        "sign_option" : 0,
+        "table_def" : "PlugIn-ORAOCI9-V_ISIS_PMWS_NCR",
+        "array_handling" : 0,
+        "sync_indicator" : false,
+        "is_unicode_string" : false,
+        "type_code" : "DATETIME"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_FIXED_WHILE_WAITING",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "QUANTITY_TOTAL_DEFECTIVE",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "f64466db-eaf0-421c-9faf-b2ccd799cba6",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "name" : "$pDBSrcServer",
+      "type" : "string",
+      "prompt" : "DB - Source Server",
+      "value" : "ISISODPX"
+    }, {
+      "name" : "$pDBSrcOwner",
+      "type" : "string",
+      "prompt" : "DB - Source Schema Owner",
+      "value" : "ISISRPT"
+    }, {
+      "name" : "$pDBSrcUser",
+      "type" : "string",
+      "prompt" : "DB - Source User ID",
+      "value" : "IP_PMWS"
+    }, {
+      "name" : "$pDBSrcPass",
+      "type" : "encrypted",
+      "prompt" : "DB - Source User Password",
+      "value" : "{dsmenc}h6snb+LP1h6EbZ4MDD1daA=="
+    }, {
+      "name" : "$pDirRoot",
+      "type" : "string",
+      "prompt" : "Directory Structure - Root Level",
+      "value" : "/var/dstage"
+    }, {
+      "name" : "$pDirGroup",
+      "type" : "string",
+      "prompt" : "Directory Structure - Group Level",
+      "value" : "/owi/prod"
+    }, {
+      "name" : "$pDirDSWorking",
+      "type" : "string",
+      "prompt" : "Directory Structure - DataStage Working Level",
+      "value" : "/dswork"
+    }, {
+      "name" : "$pDirTDM",
+      "type" : "string",
+      "prompt" : "Directory Structure - TDM Level",
+      "value" : "/tdm"
+    }, {
+      "name" : "$pDirLog",
+      "type" : "string",
+      "prompt" : "Directory Structure - Log Level",
+      "value" : "/log/"
+    }, {
+      "name" : "$pFileExt",
+      "type" : "string",
+      "prompt" : "File Extention Default",
+      "value" : ".txt"
+    }, {
+      "name" : "$pBegDT",
+      "type" : "string",
+      "prompt" : "Date - Begining Timestamp for sql query",
+      "value" : "2014-05-19 00:00:00"
+    }, {
+      "name" : "$pEndDT",
+      "type" : "string",
+      "prompt" : "Date - Ending Timestamp for sql query",
+      "value" : "2014-05-19 23:59:59"
+    }, {
+      "name" : "$pDSJobID",
+      "type" : "string",
+      "prompt" : "DataStage Job Identifier (Name) of this Job",
+      "value" : "OWI3037"
+    }, {
+      "name" : "$pJobID",
+      "type" : "string",
+      "prompt" : "Job Identifier for this Job",
+      "value" : "OWI3037"
+    }, {
+      "name" : "$pDBSrcName",
+      "type" : "string",
+      "prompt" : "DB - Source DB Name",
+      "value" : "ISISRPT"
+    }, {
+      "name" : "SV_JobName",
+      "type" : "string",
+      "prompt" : "DSJobName"
+    }, {
+      "name" : "SV_JobStartTime",
+      "type" : "string",
+      "prompt" : "DSJobStartTime"
+    }, {
+      "name" : "SV_JobStartTimestamp",
+      "type" : "string",
+      "prompt" : "DSJobStartTimestamp"
+    }, {
+      "name" : "SV_JobStartDate",
+      "type" : "string",
+      "prompt" : "DSJobStartDate"
+    }, {
+      "name" : "SV_JobController",
+      "type" : "string",
+      "prompt" : "DSJobController"
+    }, {
+      "name" : "DSJobInvocationId",
+      "type" : "string",
+      "prompt" : "Job invocation ID"
+    } ]
+  }
+}

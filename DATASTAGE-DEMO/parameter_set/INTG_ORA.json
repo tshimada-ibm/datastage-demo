@@ -1,0 +1,40 @@
+{
+  "parameter_set" : {
+    "name" : "INTG_ORA",
+    "description" : "",
+    "parameters" : [ {
+      "name" : "SID",
+      "type" : "string",
+      "prompt" : "SID",
+      "value" : "FREE"
+    }, {
+      "name" : "USER",
+      "type" : "string",
+      "prompt" : "USER",
+      "value" : "dsadm"
+    }, {
+      "name" : "PASSWD",
+      "type" : "encrypted",
+      "prompt" : "PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "oracle_db_host",
+      "type" : "string",
+      "prompt" : "",
+      "value" : ""
+    }, {
+      "name" : "oracle_db_port",
+      "type" : "string",
+      "prompt" : "",
+      "value" : "1521"
+    }, {
+      "name" : "ORA_HOST2",
+      "type" : "string",
+      "value" : "169.47.101.211"
+    }, {
+      "name" : "ORA_PORT2",
+      "type" : "int64",
+      "value" : 1521
+    } ]
+  }
+}

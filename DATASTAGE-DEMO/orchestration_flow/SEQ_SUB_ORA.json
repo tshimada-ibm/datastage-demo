@@ -1,0 +1,279 @@
+{
+  "app_data" : {
+    "pipeline_data" : {
+      "caching_method" : "automatic",
+      "default_cache_mode" : "never",
+      "default_error_policy" : "continue_on_error",
+      "parameter_sets" : [ ],
+      "validation" : {
+        "valid" : true,
+        "validated_at" : "2025-06-15 00:47:14.02598874 +0000 UTC"
+      },
+      "variables" : [ ],
+      "version" : "11.0"
+    },
+    "ui_data" : {
+      "settings" : {
+        "autosave" : false,
+        "enable_ds_funcs" : true
+      }
+    }
+  },
+  "doc_type" : "pipeline",
+  "id" : "096e976b-a66c-4a89-b7b5-4b6f01377cab",
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "pipelines" : [ {
+    "app_data" : {
+      "pipeline_data" : {
+        "inputs" : [ {
+          "default" : "PROJDEF",
+          "description" : "INTG_ORA_SERVICE",
+          "name" : "$INTG_ORA_SERVICE",
+          "type" : "String"
+        }, {
+          "default" : "PROJDEF",
+          "description" : "INTG_ORA_USER",
+          "name" : "$INTG_ORA_USER",
+          "type" : "String"
+        }, {
+          "default" : "{dsmenc}fJIAtWfUGz/snJJt8mSTzQ==",
+          "description" : "INTG_ORA_PASSWD",
+          "name" : "$INTG_ORA_PASSWD",
+          "type" : "Encrypted"
+        } ]
+      },
+      "ui_data" : {
+        "asset_metadata" : {
+          "2d6c0fae-ed52-4bd4-a844-d2c06e7042cc" : {
+            "name" : "ORA_INTG_READ.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          },
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "TS-NGAUTO"
+          }
+        },
+        "comments" : [ ],
+        "zoom" : {
+          "k" : 0.8,
+          "x" : 80,
+          "y" : 120
+        }
+      }
+    },
+    "id" : "2b3f7c23-8ab6-4d12-9996-72e4a183e90e",
+    "nodes" : [ {
+      "app_data" : {
+        "componentGroup" : "run",
+        "componentLabelRef" : "Run DataStage job",
+        "groups" : {
+          "inputs" : {
+            "env_variables" : {
+              "description" : "Optional. Additional environment variables passed to the shell in form of multiline string (e.g. `VAR1=value1\\nVAR2=value2`).",
+              "human_name" : "Environment Variables",
+              "name" : "env_variables",
+              "optional" : true,
+              "type" : "DynamicParamSet"
+            },
+            "job_parameters" : {
+              "description" : "Optional. Additional job parameters passed to the job run.",
+              "descriptive_name" : "Job Parameters",
+              "human_name" : "Job Parameters",
+              "name" : "job_parameters",
+              "optional" : true,
+              "type" : "JobParameters"
+            },
+            "parameter_sets" : {
+              "description" : "Additional parameter sets passed to the job run.",
+              "descriptive_name" : "Parameter sets",
+              "human_name" : "Parameter sets",
+              "name" : "parameter_sets",
+              "optional" : true,
+              "pass_style" : "file",
+              "type" : "ParameterSets"
+            }
+          },
+          "outputs" : {
+            "output_variables" : {
+              "description" : "Custom outputs variables",
+              "human_name" : "Output Variables",
+              "name" : "output_variables",
+              "type" : "DynamicParamSet"
+            }
+          }
+        },
+        "pipeline_data" : {
+          "cache_mode" : "never",
+          "config" : {
+            "link" : {
+              "component_id_ref" : "run-datastage-job",
+              "component_version_id_ref" : "run-datastage-job-1"
+            }
+          },
+          "inputs" : [ {
+            "allowed_scopes" : [ "space", "project" ],
+            "description" : "Required. CPD path of the DataStage job to be run.",
+            "human_name" : "DataStage Job",
+            "name" : "job",
+            "related_asset_type" : "data_intg_flow",
+            "source_of_scope" : true,
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            },
+            "ui_data" : {
+              "assetInputType" : "exact",
+              "inputType" : "SELECT_RESOURCE",
+              "inputTypes" : {
+                "selected-node-values-job-input" : "SELECT_RESOURCE"
+              },
+              "scopeType" : "project"
+            },
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/2d6c0fae-ed52-4bd4-a844-d2c06e7042cc"
+          }, {
+            "description" : "Optional. An action taken when the run has failed.",
+            "human_name" : "Error Policy",
+            "name" : "error_policy",
+            "type" : "ErrorPolicy",
+            "ui_data" : {
+              "inputType" : "SELECT_RESOURCE"
+            },
+            "value" : "continue_on_error"
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $INTG_ORA_SERVICE",
+            "name" : "$INTG_ORA_SERVICE",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$INTG_ORA_SERVICE\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $INTG_ORA_USER",
+            "name" : "$INTG_ORA_USER",
+            "type" : "String",
+            "value_from" : {
+              "expression" : "params[\"$INTG_ORA_USER\"]"
+            }
+          }, {
+            "group" : "job_parameters",
+            "human_name" : "Job Parameter $INTG_ORA_PASSWD",
+            "name" : "$INTG_ORA_PASSWD",
+            "type" : "Encrypted",
+            "value_from" : {
+              "expression" : "params[\"$INTG_ORA_PASSWD\"]"
+            }
+          } ],
+          "name" : "job1",
+          "outputs" : [ {
+            "description" : "The status of the job. One of: \"Completed\", \"CompletedWithWarnings\", \"CompletedWithErrors\", \"Failed\", \"Canceled\"",
+            "human_name" : "Execution Status",
+            "name" : "status",
+            "type" : "ExecutionStatus"
+          }, {
+            "description" : "Message associated with the status.",
+            "human_name" : "Status Message",
+            "name" : "status_message",
+            "type" : "String"
+          }, {
+            "human_name" : "Job",
+            "name" : "job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "job_asset_type" : "data_intg_flow",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "human_name" : "Job Run",
+            "name" : "job_run",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job_run",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          }, {
+            "human_name" : "Job Name",
+            "name" : "job_name",
+            "type" : "String"
+          }, {
+            "human_name" : "Job Name with Invocation id",
+            "name" : "resolved_job_name",
+            "type" : "String"
+          }, {
+            "human_name" : "User Status",
+            "name" : "user_status",
+            "type" : "String"
+          }, {
+            "annotations" : {
+              "human_name" : "Job Run Name"
+            },
+            "name" : "job_run_name",
+            "type" : "String"
+          } ]
+        },
+        "ui_data" : {
+          "decorations" : [ {
+            "class_name" : "oflow-node-type-label",
+            "id" : "job1_type_label",
+            "label" : "Run DataStage job",
+            "position" : "middleCenter",
+            "x_pos" : -63,
+            "y_pos" : 13
+          } ],
+          "image" : "/pipelines/graphics/orchestration-flows/nodes/run/datastage_flow.svg",
+          "label" : "ORA_INTG_READ",
+          "x_pos" : 80,
+          "y_pos" : 120
+        },
+        "validators" : { }
+      },
+      "id" : "job1",
+      "inputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Input Port"
+          }
+        },
+        "id" : "inPort"
+      } ],
+      "op" : "run_container",
+      "outputs" : [ {
+        "app_data" : {
+          "ui_data" : {
+            "cardinality" : {
+              "max" : -1,
+              "min" : 0
+            },
+            "class_name" : "oflow-node-port",
+            "label" : "Output Port"
+          }
+        },
+        "id" : "outPort"
+      } ],
+      "type" : "execution_node"
+    } ],
+    "runtime_ref" : "kfp"
+  } ],
+  "primary_pipeline" : "2b3f7c23-8ab6-4d12-9996-72e4a183e90e",
+  "schemas" : [ ],
+  "version" : "3.0"
+}

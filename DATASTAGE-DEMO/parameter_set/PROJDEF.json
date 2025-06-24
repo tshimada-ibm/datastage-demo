@@ -1,0 +1,170 @@
+{
+  "parameter_set" : {
+    "value_sets" : [ ],
+    "name" : "PROJDEF",
+    "description" : "DataStage project environment variables",
+    "parameters" : [ {
+      "name" : "$INTG_ODBC_ORA_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ODBC_ORA_USER",
+      "value" : "dsadm"
+    }, {
+      "name" : "$INTG_DB2_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_DB2_USER",
+      "value" : "db2inst1"
+    }, {
+      "name" : "$INTG_ODBC_ORA_DSN",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ODBC_ORA_DSN",
+      "value" : "INTG_ORA"
+    }, {
+      "name" : "$INTG_ORA_SERVICE",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ORA_SERVICE",
+      "value" : "FREE"
+    }, {
+      "name" : "$INTG_ODBC_ORA_PASSWD",
+      "description" : "",
+      "type" : "encrypted",
+      "prompt" : "INTG_ODBC_ORA_PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "$INTG_ORA_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ORA_USER",
+      "value" : "dsadm"
+    }, {
+      "name" : "$INTG_ODBC_DB2_PASSWD",
+      "description" : "",
+      "type" : "encrypted",
+      "prompt" : "INTG_ODBC_DB2_PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "$INTG_JDBC_DB2_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_JDBC_DB2_USER",
+      "value" : "db2inst1"
+    }, {
+      "name" : "$INTG_DB2_DATABASE",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_DB2_DATABASE",
+      "value" : "DEMO"
+    }, {
+      "name" : "$INTG_HDFS_PORT",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_PORT",
+      "value" : ""
+    }, {
+      "name" : "$INTG_HDFS_DATA_DIR",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_DATA_DIR",
+      "value" : ""
+    }, {
+      "name" : "$INTG_JDBC_DB2_PASSWD",
+      "description" : "",
+      "type" : "encrypted",
+      "prompt" : "INTG_JDBC_DB2_PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "$INTG_ODBC_DB2_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ODBC_DB2_USER",
+      "value" : "db2inst1"
+    }, {
+      "name" : "$INTG_DB2_PASSWD",
+      "description" : "",
+      "type" : "encrypted",
+      "prompt" : "INTG_DB2_PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "$INTG_HDFS_KEYTAB_FILE",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_KEYTAB_FILE",
+      "value" : ""
+    }, {
+      "name" : "$INTG_HDFS_USER",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_USER",
+      "value" : ""
+    }, {
+      "name" : "$INTG_ODBC_DB2_DSN",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_ODBC_DB2_DSN",
+      "value" : "INTG_DB2"
+    }, {
+      "name" : "$INTG_ORA_PASSWD",
+      "description" : "",
+      "type" : "encrypted",
+      "prompt" : "INTG_ORA_PASSWD",
+      "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
+    }, {
+      "name" : "$INTG_HDFS_HOST",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_HDFS_HOST",
+      "value" : ""
+    }, {
+      "name" : "$INTG_JDBC_DB2_URL",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "INTG_JDBC_DB2_URL",
+      "value" : "jdbc:db2://169.47.101.211:50000/DEMO"
+    }, {
+      "name" : "DB2_HOST1",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "",
+      "value" : "10.241.75.204"
+    }, {
+      "name" : "DB2_PORT1",
+      "type" : "int64",
+      "value" : 50000
+    }, {
+      "name" : "ORA_HOST1",
+      "type" : "string",
+      "value" : "169.47.101.211"
+    }, {
+      "name" : "ORA_PORT1",
+      "type" : "int64",
+      "value" : 1521
+    }, {
+      "name" : "JDBC_DRIVER1",
+      "type" : "string",
+      "value" : "com.ibm.db2.jcc.DB2Driver"
+    }, {
+      "name" : "$PROJ_ORA_HOST",
+      "type" : "string",
+      "prompt" : "PROJ_ORA_HOST",
+      "value" : "host-a.abc.com"
+    }, {
+      "name" : "$PROJ_ROW_COUNT",
+      "type" : "string",
+      "prompt" : "PROJ_ROW_COUNT",
+      "value" : "3"
+    }, {
+      "name" : "$SCRIPT_DIR",
+      "type" : "string",
+      "prompt" : "SCRIPT_DIR",
+      "value" : "/mnts/etlshare/scripts"
+    }, {
+      "name" : "$DATA_DIR",
+      "type" : "string",
+      "prompt" : "DATA_DIR",
+      "value" : "/mnts/etlshare/data"
+    } ]
+  }
+}

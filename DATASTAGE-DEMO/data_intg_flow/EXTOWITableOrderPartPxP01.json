@@ -1,0 +1,1498 @@
+{
+  "primary_pipeline" : "4cde8f83-e8f0-45e0-969b-13139c698554",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "op" : "PxSequentialFile",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "3a95c98d-9972-4638-a331-f3dc47d5be08",
+          "type_attr" : "PRIMARY",
+          "id" : "bd5130ea-0a23-423d-87f6-1af92ff82348",
+          "link_name" : "toSq",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "toSq",
+                "label" : "toSq",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "a3dcc71f-57c0-4289-a3ec-da3c9cff1ded"
+        } ],
+        "id" : "c0cdc349-9c64-4eda-801a-482c53d9554d",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "final_delim" : "end",
+          "Writetime" : "0",
+          "null_field" : "''",
+          "firstLineColumnNames" : " ",
+          "Backup" : "0",
+          "OmitNewLine" : "0",
+          "Flushrow" : "0",
+          "append-overwrite" : "overwrite",
+          "PadChar" : "#",
+          "EnforceMetaData" : "0",
+          "file" : [ "#$pDirRoot##$pDirGroup##$pDirDSWorking##$pDirTDM#/TDM_#$pDBSrcServer#_Order_Part_#$pFileExt#" ],
+          "quote" : "'none'",
+          "ColSpace" : "0",
+          "WaitforReader" : "0",
+          "writemethod" : " ",
+          "part_coll" : "none",
+          "runtime_column_propagation" : 0,
+          "registerDataAsset" : false,
+          "delim" : "'¸'"
+        },
+        "schema_ref" : "5500bc2f-0697-43b7-a008-8950ea005081"
+      } ],
+      "id" : "85955d79-d7ae-49bd-9585-5cbae5ce7261",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxSequentialFile.svg",
+          "x_pos" : 522.0,
+          "label" : "sq_z",
+          "y_pos" : 397.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 0,
+        "input_count" : 1,
+        "execmode" : "seq",
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "a3dcc71f-57c0-4289-a3ec-da3c9cff1ded",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "bd5130ea-0a23-423d-87f6-1af92ff82348"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "Reject" : false,
+          "RowLimit" : 0,
+          "valueDerivation" : [ {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.ORDER_KEY, \"fix_zero, suppress_zero\")",
+            "columnName" : "ORDER_KEY",
+            "sourceColumn" : "tblnm_src_read.ORDER_KEY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.ITEM_ID",
+            "columnName" : "ITEM_ID",
+            "sourceColumn" : "tblnm_src_read.ITEM_ID"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.POS_KEY, \"fix_zero, suppress_zero\")",
+            "columnName" : "POS_KEY",
+            "sourceColumn" : "tblnm_src_read.POS_KEY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PART_TYPE_CD",
+            "columnName" : "PART_TYPE_CD",
+            "sourceColumn" : "tblnm_src_read.PART_TYPE_CD"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.OPR_NO, \"fix_zero, suppress_zero\")",
+            "columnName" : "OPR_NO",
+            "sourceColumn" : "tblnm_src_read.OPR_NO"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.OPR_STEP_NO, \"fix_zero, suppress_zero\")",
+            "columnName" : "OPR_STEP_NO",
+            "sourceColumn" : "tblnm_src_read.OPR_STEP_NO"
+          }, {
+            "parsedExpression" : "tblnm_src_read.FULFILLS_TYPE_CD",
+            "columnName" : "FULFILLS_TYPE_CD",
+            "sourceColumn" : "tblnm_src_read.FULFILLS_TYPE_CD"
+          }, {
+            "parsedExpression" : "tblnm_src_read.MODULE_ID",
+            "columnName" : "MODULE_ID",
+            "sourceColumn" : "tblnm_src_read.MODULE_ID"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.PART_QTY, \"fix_zero, suppress_zero\")",
+            "columnName" : "PART_QTY",
+            "sourceColumn" : "tblnm_src_read.PART_QTY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.QTY_ACCURACY",
+            "columnName" : "QTY_ACCURACY",
+            "sourceColumn" : "tblnm_src_read.QTY_ACCURACY"
+          }, {
+            "parsedExpression" : "tblnm_src_read.ATN",
+            "columnName" : "ATN",
+            "sourceColumn" : "tblnm_src_read.ATN"
+          }, {
+            "parsedExpression" : "tblnm_src_read.INV_UNIT_CD",
+            "columnName" : "INV_UNIT_CD",
+            "sourceColumn" : "tblnm_src_read.INV_UNIT_CD"
+          }, {
+            "parsedExpression" : "tblnm_src_read.SCP_TRACE_ID",
+            "columnName" : "SCP_TRACE_ID",
+            "sourceColumn" : "tblnm_src_read.SCP_TRACE_ID"
+          }, {
+            "parsedExpression" : "tblnm_src_read.PART_DESC",
+            "columnName" : "PART_DESC",
+            "sourceColumn" : "tblnm_src_read.PART_DESC"
+          }, {
+            "parsedExpression" : "Trim(tblnm_src_read.EQUIP_ID)",
+            "columnName" : "EQUIP_ID",
+            "sourceColumn" : "tblnm_src_read.EQUIP_ID"
+          }, {
+            "parsedExpression" : "tblnm_src_read.MFG_TRACE_ID",
+            "columnName" : "MFG_TRACE_ID",
+            "sourceColumn" : "tblnm_src_read.MFG_TRACE_ID"
+          }, {
+            "parsedExpression" : "tblnm_src_read.UOM_CD",
+            "columnName" : "UOM_CD",
+            "sourceColumn" : "tblnm_src_read.UOM_CD"
+          }, {
+            "parsedExpression" : "tblnm_src_read.OBTAIN_FROM_TXT",
+            "columnName" : "OBTAIN_FROM_TXT",
+            "sourceColumn" : "tblnm_src_read.OBTAIN_FROM_TXT"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.LAST_UPDT_BEMSID, \"fix_zero, suppress_zero\")",
+            "columnName" : "LAST_UPDT_BEMSID",
+            "sourceColumn" : "tblnm_src_read.LAST_UPDT_BEMSID"
+          }, {
+            "parsedExpression" : "TimestampToString(tblnm_src_read.LAST_UPDT_TS, \"%yyyy-%mm-%dd %hh:%nn:%ss.6\")",
+            "columnName" : "LAST_UPDT_TS",
+            "sourceColumn" : "tblnm_src_read.LAST_UPDT_TS"
+          }, {
+            "parsedExpression" : "DecimalToString(tblnm_src_read.CAPP_POS, \"fix_zero, suppress_zero\")",
+            "columnName" : "CAPP_POS",
+            "sourceColumn" : "tblnm_src_read.CAPP_POS"
+          }, {
+            "parsedExpression" : "tblnm_src_read.MAKE_FROM_IND",
+            "columnName" : "MAKE_FROM_IND",
+            "sourceColumn" : "tblnm_src_read.MAKE_FROM_IND"
+          } ]
+        },
+        "schema_ref" : "5500bc2f-0697-43b7-a008-8950ea005081"
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "b76d65aa-b472-442e-af7b-78a8c7fa899d",
+          "type_attr" : "PRIMARY",
+          "id" : "ad6e64b8-9bde-448a-b83f-c3fe3e7279dc",
+          "link_name" : "tblnm_src_read",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "tblnm_src_read",
+                "label" : "tblnm_src_read",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "90c04336-3add-4315-baae-b7d7b1637902"
+        } ],
+        "id" : "43584f04-3710-4a21-be63-8fdd75f62f77",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "3a2f9d1d-7e7e-4d3a-9b84-6b2831454a34"
+      } ],
+      "id" : "3a95c98d-9972-4638-a331-f3dc47d5be08",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "43584f04-3710-4a21-be63-8fdd75f62f77",
+          "outputs_order" : "a3dcc71f-57c0-4289-a3ec-da3c9cff1ded"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 338.0,
+          "label" : "xfm_table",
+          "y_pos" : 398.0
+        }
+      },
+      "parameters" : {
+        "MaxLoopIterations" : 0,
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "input_count" : 1,
+        "execmode" : "seq",
+        "BlockSize" : 0
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "90c04336-3add-4315-baae-b7d7b1637902",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "ad6e64b8-9bde-448a-b83f-c3fe3e7279dc"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "3a2f9d1d-7e7e-4d3a-9b84-6b2831454a34"
+      } ],
+      "op" : "OracleConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "record_count" : 2000,
+          "where_clause" : "last_updt_ts BETWEEN TO_DATE('#$pBegDT#', 'YYYY-MM-DD HH24:MI:SS') AND TO_DATE('#$pEndDT#', 'YYYY-MM-DD HH24:MI:SS')",
+          "isolation_level" : "0",
+          "limit_rows" : false,
+          "treat_warnings_as_errors" : false,
+          "connection_type" : "tcp",
+          "prefetch_memory_size" : 0,
+          "oracle_db_port" : "#ConnParamSet_Oracle_pDBSrcServer.oracle_db_port#",
+          "select_statement" : "SELECT ORDER_PART.ORDER_KEY,\n       ORDER_PART.ITEM_ID,\n       ORDER_PART.POS_KEY,\n       ORDER_PART.PART_TYPE_CD,\n       ORDER_PART.OPR_NO,\n       ORDER_PART.OPR_STEP_NO,\n       ORDER_PART.FULFILLS_TYPE_CD,\n       ORDER_PART.MODULE_ID,\n       ORDER_PART.PART_QTY,\n       ORDER_PART.QTY_ACCURACY,\n       ORDER_PART.ATN,\n       ORDER_PART.INV_UNIT_CD,\n       ORDER_PART.SCP_TRACE_ID,\n       ORDER_PART.PART_DESC,\n       ORDER_PART.EQUIP_ID,\n       ORDER_PART.MFG_TRACE_ID,\n       ORDER_PART.UOM_CD,\n       ORDER_PART.OBTAIN_FROM_TXT,\n       ORDER_PART.LAST_UPDT_BEMSID,\n       ORDER_PART.LAST_UPDT_TS,\n       ORDER_PART.CAPP_POS,\n       ORDER_PART.MAKE_FROM_IND\nFROM #$pDBSrcOwner#.Order_Part\nWHERE last_updt_ts BETWEEN TO_DATE ('#$pBegDT#', 'YYYY-MM-DD HH24:MI:SS')\n                       AND TO_DATE ('#$pEndDT#', 'YYYY-MM-DD HH24:MI:SS')",
+          "oracle_db_host" : "#ConnParamSet_Oracle_pDBSrcServer.oracle_db_host#",
+          "application_failover_control" : false,
+          "read_from_file_select" : false,
+          "password" : "#$pDBSrcPass#",
+          "read_mode" : "0",
+          "prefetch_row_count" : 1,
+          "before_after" : false,
+          "generate_sql" : false,
+          "pass_lob_locator.column" : "ORDER_KEY,ORDER_KEY,ORDER_PART",
+          "pass_lob_locator" : false,
+          "oracle_service_name" : "#$pDBSrcServer#",
+          "enable_quoted_ids" : false,
+          "array_size" : 1000,
+          "treat_fetch_truncate_as_error" : false,
+          "username" : "#$pDBSrcUser#"
+        }
+      },
+      "id" : "b76d65aa-b472-442e-af7b-78a8c7fa899d",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/OracleConnectorPX.svg",
+          "x_pos" : 83.0,
+          "label" : "ora_R_src",
+          "y_pos" : 397.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "seq",
+        "allow_column_mapping" : false
+      }
+    } ],
+    "description" : "Short description: Extract table Order_Part from source to a flat file.. Long description: Job Name:        EXTOWITableOrderPart\r\nJob Identifier:    OWI3050\r\n\r\nShort Description:  \r\nExtract table Order_Part from source to a flat file.\r\n\r\nInputs:\r\n\r\nOutputs:\r\n\r\nDetailed Logic/Description:\r\nExtract table Order_Part from source to a flat file.  Use bulk load to insert into target.\r\n\r\nModification Log\r\nDate                  Name            Purpose\r\n-----------------------------------------------------------------------\r\n2005.11.07      Tom Brooks       Created Job\r\n",
+    "id" : "4cde8f83-e8f0-45e0-969b-13139c698554",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "true"
+      },
+      "ui_data" : {
+        "comments" : [ {
+          "associated_id_refs" : [ ],
+          "formats" : [ {
+            "type" : "fontType",
+            "value" : "font-ibm-plex-sans"
+          }, {
+            "type" : "letter-spacing",
+            "value" : "-0.5px"
+          }, {
+            "type" : "textSize",
+            "value" : "text-size-12"
+          }, {
+            "type" : "textColor",
+            "value" : "#0000ff"
+          }, {
+            "type" : "alignHorizontally",
+            "value" : "align-left"
+          }, {
+            "type" : "alignVertically",
+            "value" : "align-middle"
+          }, {
+            "type" : "backgroundColor",
+            "value" : "#80d5fd"
+          }, {
+            "type" : "outlineStyle",
+            "value" : "outline-solid"
+          }, {
+            "type" : "line-height",
+            "value" : "1.2"
+          }, {
+            "type" : "padding",
+            "value" : "1px"
+          }, {
+            "type" : "border-color",
+            "value" : "#000000"
+          } ],
+          "width" : 840,
+          "x_pos" : 19.0,
+          "id" : "c4d38cd1-a803-4c2f-acd1-10081800bcf8",
+          "y_pos" : 6.0,
+          "contentType" : "WYSIWYG",
+          "class_name" : "bkg-col-cyan-20",
+          "content" : "Job Name:        EXTOWITableOrderPart\r\nShort Description:  \r\nExtract table Order_Part from source to a flat file.\r\n\r\nInputs:\r\nOutputs:\r\nModification Log\r\nDate                  Name                    Purpose\r\n-----------------------------------------------------------------------\r\n2005.11.07      Tom Brooks      Created Job\r\n2006.04.11       Tom Brooks     A6.1PG-2Axx\r\n2009.08.27      Tom Brooks      A9.3",
+          "height" : 330
+        } ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "63ab797e-2097-4452-beca-a0632df27d20",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
+    "name" : "ConnParamSet_Oracle_pDBSrcServer"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "5500bc2f-0697-43b7-a008-8950ea005081",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ORDER_KEY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ORDER_KEY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[32]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ITEM_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ITEM_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0]: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "POS_KEY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "POS_KEY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[10] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_TYPE_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_TYPE_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OPR_NO",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "OPR_NO",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[3, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OPR_STEP_NO",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "OPR_STEP_NO",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[7] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "FULFILLS_TYPE_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "FULFILLS_TYPE_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[32] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MODULE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MODULE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_QTY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_QTY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[2] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QTY_ACCURACY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "QTY_ACCURACY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[20] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ATN",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ATN",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[3] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "INV_UNIT_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "INV_UNIT_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[32] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SCP_TRACE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SCP_TRACE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[80] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_DESC",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_DESC",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[2000] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "EQUIP_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "EQUIP_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[32] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MFG_TRACE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MFG_TRACE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[2] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "UOM_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "UOM_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "VarChar[10] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OBTAIN_FROM_TXT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "OBTAIN_FROM_TXT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[10, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LAST_UPDT_BEMSID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "LAST_UPDT_BEMSID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Timestamp: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LAST_UPDT_TS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "LAST_UPDT_TS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Decimal[38, 0] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CAPP_POS",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "CAPP_POS",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "Char[1] nullable: <none>",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MAKE_FROM_IND",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MAKE_FROM_IND",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "Saved-Root-TDM_pDBSrcServer_Order_Part_pFileExt",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  }, {
+    "id" : "3a2f9d1d-7e7e-4d3a-9b84-6b2831454a34",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.ORDER_KEY",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ORDER_KEY",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "ORDER_KEY",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.ITEM_ID",
+        "max_length" : 32,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ITEM_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ITEM_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.POS_KEY",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "POS_KEY",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "POS_KEY",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.PART_TYPE_CD",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_TYPE_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_TYPE_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.OPR_NO",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OPR_NO",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "OPR_NO",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 3,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.OPR_STEP_NO",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OPR_STEP_NO",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "OPR_STEP_NO",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.FULFILLS_TYPE_CD",
+        "max_length" : 7,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "FULFILLS_TYPE_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "FULFILLS_TYPE_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.MODULE_ID",
+        "max_length" : 32,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MODULE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MODULE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.PART_QTY",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_QTY",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "PART_QTY",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.QTY_ACCURACY",
+        "max_length" : 2,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QTY_ACCURACY",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "QTY_ACCURACY",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.ATN",
+        "max_length" : 20,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "ATN",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "ATN",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.INV_UNIT_CD",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "INV_UNIT_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "INV_UNIT_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.SCP_TRACE_ID",
+        "max_length" : 32,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "SCP_TRACE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "SCP_TRACE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.PART_DESC",
+        "max_length" : 80,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PART_DESC",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "PART_DESC",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.EQUIP_ID",
+        "max_length" : 2000,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "EQUIP_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "EQUIP_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.MFG_TRACE_ID",
+        "max_length" : 32,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MFG_TRACE_ID",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MFG_TRACE_ID",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.UOM_CD",
+        "max_length" : 2,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "UOM_CD",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "UOM_CD",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.OBTAIN_FROM_TXT",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "OBTAIN_FROM_TXT",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "OBTAIN_FROM_TXT",
+        "odbc_type" : "VARCHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 10,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.LAST_UPDT_BEMSID",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LAST_UPDT_BEMSID",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "LAST_UPDT_BEMSID",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.LAST_UPDT_TS",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "LAST_UPDT_TS",
+      "type" : "timestamp",
+      "app_data" : {
+        "column_reference" : "LAST_UPDT_TS",
+        "time_scale" : 6,
+        "odbc_type" : "TIMESTAMP",
+        "sign_option" : 0,
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "sync_indicator" : false,
+        "is_unicode_string" : false,
+        "type_code" : "DATETIME"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 38,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.CAPP_POS",
+        "max_length" : 38,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "CAPP_POS",
+      "type" : "double",
+      "app_data" : {
+        "column_reference" : "CAPP_POS",
+        "odbc_type" : "DECIMAL",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 1,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "<none>",
+        "source_field_id" : "ORDER_PART.MAKE_FROM_IND",
+        "max_length" : 1,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "MAKE_FROM_IND",
+      "type" : "string",
+      "app_data" : {
+        "column_reference" : "MAKE_FROM_IND",
+        "odbc_type" : "CHAR",
+        "table_def" : "PlugIn-ORAOCI9-ORDER_PART",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "5ffd3875-3c3a-443f-b3d5-2d0e1784b3f7",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "name" : "$pDBSrcServer",
+      "type" : "string",
+      "prompt" : "DB - Source Server",
+      "value" : "prodpw1"
+    }, {
+      "name" : "$pDBSrcOwner",
+      "type" : "string",
+      "prompt" : "DB - Source Schema Owner",
+      "value" : "OWI"
+    }, {
+      "name" : "$pDBSrcUser",
+      "type" : "string",
+      "prompt" : "DB - Source User ID",
+      "value" : "owietl1"
+    }, {
+      "name" : "$pDBSrcPass",
+      "type" : "encrypted",
+      "prompt" : "DB - Source User Password",
+      "value" : "{dsmenc}vD+J+wkRy8bCbhrXed96yyEnCBRvHx1tXwG6dMeqCO0="
+    }, {
+      "name" : "$pDirRoot",
+      "type" : "string",
+      "prompt" : "Directory Structure - Root Level",
+      "value" : "/var/dstage"
+    }, {
+      "name" : "$pDirGroup",
+      "type" : "string",
+      "prompt" : "Directory Structure - Group Level",
+      "value" : "/owi/prod"
+    }, {
+      "name" : "$pDirDSWorking",
+      "type" : "string",
+      "prompt" : "Directory Structure - DataStage Working Level",
+      "value" : "/dswork"
+    }, {
+      "name" : "$pDirTDM",
+      "type" : "string",
+      "prompt" : "Directory Structure - TDM Level",
+      "value" : "/tdm"
+    }, {
+      "name" : "$pDirLog",
+      "type" : "string",
+      "prompt" : "Directory Structure - Log Level",
+      "value" : "/log/"
+    }, {
+      "name" : "$pFileExt",
+      "type" : "string",
+      "prompt" : "File Extention Default",
+      "value" : ".txt"
+    }, {
+      "name" : "$pBegDT",
+      "type" : "string",
+      "prompt" : "Date - Begining Timestamp for sql query",
+      "value" : "2012-01-01 00:00:00"
+    }, {
+      "name" : "$pEndDT",
+      "type" : "string",
+      "prompt" : "Date - Ending Timestamp for sql query",
+      "value" : "9999-08-27 00:00:00"
+    }, {
+      "name" : "$pDSJobID",
+      "type" : "string",
+      "prompt" : "DataStage Job Identifier (Name) of this Job",
+      "value" : "OWI3037"
+    }, {
+      "name" : "$pJobID",
+      "type" : "string",
+      "prompt" : "Job Identifier for this Job",
+      "value" : "OWI3037"
+    }, {
+      "name" : "SV_JobName",
+      "type" : "string",
+      "prompt" : "DSJobName"
+    }, {
+      "name" : "SV_JobStartTime",
+      "type" : "string",
+      "prompt" : "DSJobStartTime"
+    }, {
+      "name" : "SV_JobStartTimestamp",
+      "type" : "string",
+      "prompt" : "DSJobStartTimestamp"
+    }, {
+      "name" : "SV_JobStartDate",
+      "type" : "string",
+      "prompt" : "DSJobStartDate"
+    }, {
+      "name" : "SV_JobController",
+      "type" : "string",
+      "prompt" : "DSJobController"
+    }, {
+      "name" : "DSJobInvocationId",
+      "type" : "string",
+      "prompt" : "Job invocation ID"
+    } ]
+  }
+}
