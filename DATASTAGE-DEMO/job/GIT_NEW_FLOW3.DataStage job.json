@@ -1,0 +1,34 @@
+{
+  "metadata" : {
+    "name" : "GIT_NEW_FLOW3.DataStage job",
+    "asset_id" : "bcc3fdfa-abee-44e8-8c2a-8169bb810ae3",
+    "owner_id" : "1000331004",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "064b0200-4318-4727-a9d9-03f474327c68",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
+      "configuration" : {
+        "env_id" : "45f8934e-1120-459f-8513-c613a042dcc1",
+        "env_type" : "datastage",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "parameter_sets" : [ ],
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "GIT_NEW_FLOW3"
+    }
+  }
+}
