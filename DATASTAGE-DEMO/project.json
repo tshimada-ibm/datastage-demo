@@ -19,11 +19,11 @@
     "iam_id" : "",
     "git_user" : "tshimada-ibm"
   },
-  "commit-time" : "2025-06-24T05:35:01Z",
-  "commit-sha" : "d73c7a8e49d051021794d03e718916f667cf1e96",
+  "commit-time" : "2025-06-24T05:36:49Z",
+  "commit-sha" : "c2e940e78f468743c0e077dddfd36b88d597abcc",
   "readme" : {
     "name" : "DataStage-README.json",
-    "sha" : "b42483783df87decc8ee4a4e8f19d5fc68dec40d",
+    "sha" : "553a2e7d9866eb5ecdce7487501e55d4cbc23012",
     "size" : 17065,
     "asset_type" : "readme",
     "resource_key" : "",
