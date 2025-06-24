@@ -2,7 +2,7 @@
   "project" : "DATASTAGE-DEMO-QA",
   "projectId" : "9fa73363-f167-464a-ba08-88db16713af6",
   "created_by" : "tshimada",
-  "created_at" : "2025-06-24T17:40:38.510163224Z",
+  "created_at" : "2025-06-24T17:42:56.976408329Z",
   "environment" : "cp4d",
   "services_info" : [ {
     "name" : "ds-canvas",
@@ -158,6 +158,10 @@
   }, {
     "name" : "USER_STATUS_TEST.DataStage job",
     "type" : "job"
+  }, {
+    "name" : "GIT_NEW_FLOW4.",
+    "type" : "data_intg_flow",
+    "location" : ""
   }, {
     "name" : "DRS_ORA_INTG_READ_PSET.DataStage job",
     "type" : "job"
@@ -326,6 +330,10 @@
   }, {
     "name" : "ORA_ENT_READ",
     "type" : "data_intg_flow"
+  }, {
+    "name" : "GIT_NEW_FLOW4.DataStage job.",
+    "type" : "job",
+    "location" : ""
   }, {
     "name" : "GIT_NEW_FLOW1.DataStage job",
     "type" : "job"
