@@ -1,0 +1,41 @@
+{
+  "project" : "DATASTAGE-DEMO-QA",
+  "projectId" : "9fa73363-f167-464a-ba08-88db16713af6",
+  "created_by" : "tshimada",
+  "created_at" : "2025-06-24T17:08:33.287883400Z",
+  "environment" : "cp4d",
+  "services_info" : [ {
+    "name" : "ds-canvas",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flows",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-codegen",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flow-runtime",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-migration",
+    "version" : "520.0.3"
+  }, {
+    "name" : "DSAssets",
+    "version" : "520.0.6"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "520.0.17"
+  }, {
+    "name" : "qs-ruleset",
+    "version" : "520.0.3"
+  } ],
+  "assets" : [ {
+    "name" : "PROJDEF.",
+    "type" : "parameter_set",
+    "location" : ""
+  } ],
+  "flow_job_mapping" : [ ]
+}
