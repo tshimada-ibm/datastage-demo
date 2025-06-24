@@ -1,27 +1,27 @@
 {
   "metadata" : {
     "name" : "SEQ_RUN_ALL_PSET.DataStage sequence",
-    "asset_id" : "c7694ef8-0d21-43c3-bb39-2aff29ed1aa8",
+    "asset_id" : "d4263a52-7865-4e9c-8e89-0e345ded0801",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "bfee2496-18c2-43c8-b035-afb9a1b1a7d9",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "TS-NGAUTO",
-      "asset_ref" : "db13a89b-6905-49b0-9281-f269a907bb8f",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "SEQ_RUN_ALL_PSET"
     }
   }

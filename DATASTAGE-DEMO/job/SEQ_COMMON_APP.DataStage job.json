@@ -2,32 +2,32 @@
   "metadata" : {
     "name" : "SEQ_COMMON_APP.DataStage job",
     "description" : "",
-    "asset_id" : "12e81f4a-a911-4ab9-8e95-b2d7be51940e",
+    "asset_id" : "72307d6f-2011-4495-bc8b-4d96b5e1d7b3",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "6eebd592-915b-4cac-882c-041833de87cc",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "version" : "fd1cca49-1957-4bc7-b465-a94e7579913e-0",
+        "version" : "6eebd592-915b-4cac-882c-041833de87cc-0",
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
-      "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "fd1cca49-1957-4bc7-b465-a94e7579913e",
+      "asset_ref_type" : "orchestration_flow",
       "job_parameters" : [ {
         "name" : "$SCRIPT_DIR",
         "value" : "PROJDEF"
       } ],
-      "schedule_id" : "",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "SEQ_COMMON_APP"
     }
   }

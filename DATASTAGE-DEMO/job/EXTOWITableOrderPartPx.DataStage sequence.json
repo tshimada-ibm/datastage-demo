@@ -1,27 +1,27 @@
 {
   "metadata" : {
     "name" : "EXTOWITableOrderPartPx.DataStage sequence",
-    "asset_id" : "aeede2a4-6105-45f0-b321-a645c0d0615b",
+    "asset_id" : "1c0c064f-6a91-416e-b726-d6b668899b93",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "e1329b5f-1958-490b-9814-392a28f36e69",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "28e6b602-00ac-4179-a301-1d007a815d42",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "EXTOWITableOrderPartPx"
     }
   }

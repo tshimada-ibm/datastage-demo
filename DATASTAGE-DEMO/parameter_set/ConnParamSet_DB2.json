@@ -1,28 +1,52 @@
 {
   "parameter_set" : {
+    "value_sets" : [ {
+      "values" : [ {
+        "name" : "password",
+        "value" : "{dsmenc}sx3VObsR03vSPIgCA0MLpQ=="
+      }, {
+        "name" : "hostname",
+        "value" : ""
+      }, {
+        "name" : "port",
+        "value" : 50000
+      }, {
+        "name" : "username",
+        "value" : "tshimada"
+      }, {
+        "name" : "database",
+        "value" : "aaa"
+      } ],
+      "name" : "VS1"
+    } ],
     "name" : "ConnParamSet_DB2",
     "description" : "DataStage generated parameter set for connection properties.",
     "parameters" : [ {
+      "subtype" : "",
       "name" : "username",
       "type" : "string",
       "prompt" : "",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "password",
       "type" : "encrypted",
       "prompt" : "",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "database",
       "type" : "string",
       "prompt" : "",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "hostname",
       "type" : "string",
       "prompt" : "",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "port",
       "type" : "int64",
       "prompt" : "",

@@ -160,8 +160,8 @@
     "id" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "972f66d6-dc33-4aee-b10f-9f6082b3c3c5",
-    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "ref" : "67abb659-b9e6-44d0-9ff9-45dc7c599dde",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
     "name" : "INTG_ODBC_ORA"
   } ],
   "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
@@ -212,6 +212,9 @@
   "app_data" : {
     "datastage" : {
       "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
     }
   },
   "version" : "3.0"

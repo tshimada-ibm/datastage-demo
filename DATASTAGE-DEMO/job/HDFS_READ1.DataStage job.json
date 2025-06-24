@@ -1,31 +1,31 @@
 {
   "metadata" : {
     "name" : "HDFS_READ1.DataStage job",
-    "asset_id" : "2a2036b7-9a64-4506-9f6b-638c8940eba5",
+    "asset_id" : "c35042dd-1173-43e2-ab6e-cee8974e4a8b",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "data_intg_flow",
+      "asset_ref" : "4e1eb29e-6736-4291-9499-704cdf368b6a",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
+        "env_type" : "",
         "flow_limits" : {
           "warn_limit" : "100"
         },
-        "runPriorityQueue" : "Medium",
-        "env_type" : "",
-        "env_variables" : [ ]
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "TS-NGAUTO",
-      "asset_ref" : "5d0e94ad-61c1-4c67-b4a0-11a8065c51f3",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "HDFS_READ1"
     }
   }

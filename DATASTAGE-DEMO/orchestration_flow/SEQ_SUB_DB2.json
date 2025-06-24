@@ -6,17 +6,18 @@
       "default_error_policy" : "continue_on_error",
       "parameter_sets" : [ {
         "name" : "ConnParamSet_DB2__INTG_DB2_DATABASE",
-        "ref" : "0d6aae3a-458f-4a2b-93e7-1f172a9e0306"
+        "ref" : "7484bf95-fd0b-428b-b4a4-5cdc25f35d09"
       } ],
       "validation" : {
         "valid" : true,
-        "validated_at" : "2024-08-12 17:16:51.323164243 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:14.132112284 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
     },
     "ui_data" : {
       "settings" : {
+        "autosave" : false,
         "enable_ds_funcs" : true
       }
     }
@@ -46,7 +47,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "0a36453a-ee19-4dc8-8c26-ffc6750640ac" : {
+          "6f8137a7-4b80-4968-9227-df0e8edca106" : {
             "name" : "DB2_INTG_READ.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -56,7 +57,7 @@
               }
             }
           },
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
             "name" : "TS-NGAUTO"
           }
         },
@@ -122,6 +123,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -139,7 +141,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/0a36453a-ee19-4dc8-8c26-ffc6750640ac"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/6f8137a7-4b80-4968-9227-df0e8edca106"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

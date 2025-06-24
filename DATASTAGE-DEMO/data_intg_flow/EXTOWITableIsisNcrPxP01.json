@@ -455,8 +455,8 @@
     "id" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "7bbdaf9f-e190-4176-9449-68e22ae8f8f0",
-    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "ref" : "63ab797e-2097-4452-beca-a0632df27d20",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
     "name" : "ConnParamSet_Oracle_pDBSrcServer"
   } ],
   "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",

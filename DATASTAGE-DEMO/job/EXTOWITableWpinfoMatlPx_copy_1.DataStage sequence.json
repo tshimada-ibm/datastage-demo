@@ -1,32 +1,28 @@
 {
   "metadata" : {
-    "name" : "ODBC_DB2_INTG_READ.DataStage job",
-    "asset_id" : "27e94dfb-50d5-4e9f-a569-465ef9344ac9",
+    "name" : "EXTOWITableWpinfoMatlPx_copy_1.DataStage sequence",
+    "asset_id" : "e11a0e92-88a5-4267-a7c1-e65c060561d1",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref" : "4601cd88-da16-4f19-902c-23d3ddf298d6",
+      "asset_ref" : "23514823-3218-40fa-b5fe-5a711c9bad03",
       "schedule_id" : "",
       "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
         "env_type" : "",
-        "flow_limits" : {
-          "warn_limit" : "100"
-        },
-        "env_variables" : [ ],
-        "runPriorityQueue" : "Medium"
+        "env_variables" : [ ]
       },
       "last_run_time" : "deprecated field",
-      "asset_ref_type" : "data_intg_flow",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
       "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
       "enable_notifications" : true,
       "future_scheduled_runs" : [ ],
       "last_run_status_timestamp" : 0,
-      "flow_name" : "ODBC_DB2_INTG_READ"
+      "flow_name" : "EXTOWITableWpinfoMatlPx_copy_1"
     }
   }
 }

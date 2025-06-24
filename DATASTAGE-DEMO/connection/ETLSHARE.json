@@ -19,8 +19,8 @@
     "trust_all_ssl_cert" : "false",
     "instance_id" : "1725062094708636",
     "gateway_url" : "https://internal-nginx-svc.cpd.svc:12443",
-    "read_timeout" : "300",
     "pvc" : "etl-share-pvc",
+    "read_timeout" : "300",
     "inherit_access_token" : "false"
   },
   "interaction_properties" : {
@@ -500,7 +500,7 @@
       "group" : "general",
       "displayGroup" : "fileFormat",
       "displayOrdinal" : 60,
-      "supported_products" : [ "catalog", "cpd", "datarefinery", "mdi", "ml", "studio" ],
+      "supported_products" : [ "ai_factsheet", "autoai", "catalog", "cpd", "datarefinery", "decision_optimization", "deployments", "federated_learning", "governance", "masking_flow", "mdi", "notebook", "orchestration_pipelines", "rstudio", "spss_modeler" ],
       "user_defined" : false,
       "user_defined_for_external" : false
     }, {
@@ -558,7 +558,7 @@
       "group" : "general",
       "displayGroup" : "fileFormat",
       "displayOrdinal" : 40,
-      "supported_products" : [ "catalog", "cpd", "datarefinery", "mdi", "ml", "studio" ],
+      "supported_products" : [ "ai_factsheet", "autoai", "catalog", "cpd", "datarefinery", "decision_optimization", "deployments", "federated_learning", "governance", "masking_flow", "mdi", "notebook", "orchestration_pipelines", "rstudio", "spss_modeler" ],
       "user_defined" : false,
       "user_defined_for_external" : false
     }, {
@@ -1847,14 +1847,14 @@
       "values" : [ {
         "value" : "delete",
         "label" : "Delete",
-        "supported_products" : [ "catalog", "cpd", "datastage", "datastage_scapi", "mdi", "ml", "studio" ]
+        "supported_products" : [ "ai_factsheet", "autoai", "catalog", "cpd", "datastage", "datastage_scapi", "decision_optimization", "deployments", "federated_learning", "governance", "masking_flow", "mdi", "notebook", "orchestration_pipelines", "rstudio", "spss_modeler" ]
       }, {
         "value" : "write",
         "label" : "Write"
       }, {
         "value" : "write_raw",
         "label" : "Write binary data",
-        "supported_products" : [ "catalog", "cpd", "datastage", "datastage_scapi", "mdi", "ml", "studio" ]
+        "supported_products" : [ "ai_factsheet", "autoai", "catalog", "cpd", "datastage", "datastage_scapi", "decision_optimization", "deployments", "federated_learning", "governance", "masking_flow", "mdi", "notebook", "orchestration_pipelines", "rstudio", "spss_modeler" ]
       } ],
       "group" : "general",
       "displayGroup" : "generalTarget",

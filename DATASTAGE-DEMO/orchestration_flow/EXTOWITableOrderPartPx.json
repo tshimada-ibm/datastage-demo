@@ -6,7 +6,7 @@
       "default_error_policy" : "fail_on_error",
       "parameter_sets" : [ {
         "name" : "ConnParamSet_Oracle_pDBSrcServer",
-        "ref" : "7bbdaf9f-e190-4176-9449-68e22ae8f8f0"
+        "ref" : "63ab797e-2097-4452-beca-a0632df27d20"
       } ],
       "settings" : {
         "mark_completed_with_errors" : true,
@@ -14,7 +14,7 @@
       },
       "validation" : {
         "valid" : true,
-        "validated_at" : "2025-06-14 00:38:56.731579475 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:18.562862606 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
@@ -114,10 +114,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "DATASTAGE-DEMO"
-          },
-          "c1e22686-c52c-4010-b05c-bbac4909497b" : {
+          "4a0406b0-967a-4971-b7a8-f2ffd0322142" : {
             "name" : "EXTOWITableOrderPartPxP01.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -126,6 +123,9 @@
                 "resource_type" : "asset"
               }
             }
+          },
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "DATASTAGE-DEMO"
           }
         },
         "comments" : [ ],
@@ -210,7 +210,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/c1e22686-c52c-4010-b05c-bbac4909497b"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/4a0406b0-967a-4971-b7a8-f2ffd0322142"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

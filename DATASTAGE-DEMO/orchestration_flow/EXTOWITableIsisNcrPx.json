@@ -11,7 +11,7 @@
       },
       "validation" : {
         "valid" : true,
-        "validated_at" : "2025-06-14 00:38:56.037011185 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:14.156219762 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
@@ -116,10 +116,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "DATASTAGE-DEMO"
-          },
-          "99091d7b-a616-489f-9e5e-78faefb416ff" : {
+          "4d5b3b7e-327b-48e0-bc05-0796db92e1d8" : {
             "name" : "EXTOWITableIsisNcrPxP01.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -128,6 +125,9 @@
                 "resource_type" : "asset"
               }
             }
+          },
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "DATASTAGE-DEMO"
           }
         },
         "comments" : [ ],
@@ -212,7 +212,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/99091d7b-a616-489f-9e5e-78faefb416ff"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/4d5b3b7e-327b-48e0-bc05-0796db92e1d8"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

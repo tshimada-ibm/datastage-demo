@@ -150,8 +150,8 @@
     "id" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "ccccf9cb-558c-4461-bbed-1b82286a2b4a",
-    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "ref" : "ecb8be62-f5ef-4fb8-86ba-7b516d8d8799",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
     "name" : "ConnParamSet_Oracle"
   } ],
   "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
@@ -202,6 +202,9 @@
   "app_data" : {
     "datastage" : {
       "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
     }
   },
   "version" : "3.0",

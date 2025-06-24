@@ -2,29 +2,29 @@
   "metadata" : {
     "name" : "Trial job - PIPE_SET_USER_STATUS",
     "description" : "Trial job and run created for the pipeline: PIPE_SET_USER_STATUS",
-    "asset_id" : "2a607b77-4ffb-476c-804b-af17988983d5",
+    "asset_id" : "59506b9f-c0f1-4236-9508-748b60cf0f2a",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "551f0067-2c8e-4951-8379-593f8fa53016",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "sub_type" : "oflow_trial_run",
-        "version" : "87170133-9199-4b91-82e3-9ef09c47f9eb-0",
+        "version" : "551f0067-2c8e-4951-8379-593f8fa53016-0",
         "env_type" : "",
+        "sub_type" : "oflow_trial_run",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "87170133-9199-4b91-82e3-9ef09c47f9eb",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "PIPE_SET_USER_STATUS"
     }
   }

@@ -9,7 +9,7 @@
       },
       "validation" : {
         "valid" : true,
-        "validated_at" : "2024-10-04 18:29:40.282511387 +0000 UTC"
+        "validated_at" : "2025-06-15 00:46:21.556662378 +0000 UTC"
       },
       "variables" : [ {
         "description" : "PIPELINE_USER_STATUS",

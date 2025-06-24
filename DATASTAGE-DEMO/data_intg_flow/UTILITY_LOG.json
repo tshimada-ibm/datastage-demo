@@ -426,7 +426,7 @@
           "description" : "",
           "id" : "0"
         } ],
-        "asset_id" : "6cbb1fe3-f240-46e5-8b30-0df98847c76a",
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
         "display_name" : "UtilityMessageToLog",
         "routine_name" : "MessageToLog"
       }, {
@@ -439,7 +439,7 @@
           "description" : "",
           "id" : "0"
         } ],
-        "asset_id" : "6cbb1fe3-f240-46e5-8b30-0df98847c76a",
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
         "display_name" : "UtilityWarningToLog",
         "routine_name" : "WarningToLog"
       }, {
@@ -452,7 +452,7 @@
           "description" : "",
           "id" : "0"
         } ],
-        "asset_id" : "6cbb1fe3-f240-46e5-8b30-0df98847c76a",
+        "asset_id" : "54f9a13f-4013-413f-a1c1-37350c8edd92",
         "display_name" : "UtilityAbortToLog",
         "routine_name" : "AbortToLog"
       } ],
@@ -469,6 +469,7 @@
         "label" : "Generate nested SQL",
         "value" : "NESTED_QUERY"
       },
+      "saveChangeFrequency" : "apply_changes_temporarily",
       "disableParamsCacheOnFlow" : false,
       "rcpLinkList" : [ ],
       "globalAcp" : true,

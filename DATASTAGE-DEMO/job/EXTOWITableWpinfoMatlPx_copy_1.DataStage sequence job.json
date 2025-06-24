@@ -1,27 +1,27 @@
 {
   "metadata" : {
     "name" : "EXTOWITableWpinfoMatlPx_copy_1.DataStage sequence job",
-    "asset_id" : "26a0d9e5-732e-422f-b6ec-bf7e4adee8eb",
+    "asset_id" : "03a8e680-575e-46ce-bbe2-545dcdb31177",
     "owner_id" : "1000331004",
     "version" : 2
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "data_intg_flow",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "pipeline_id" : "dac67ac1-82ce-4ff2-8f7a-f811c02351c7",
         "env_type" : "data_intg_flow",
+        "pipeline_id" : "23514823-3218-40fa-b5fe-5a711c9bad03",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "EXTOWITableWpinfoMatlPx_copy_1"
     }
   }

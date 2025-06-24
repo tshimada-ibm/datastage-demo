@@ -1,27 +1,27 @@
 {
   "metadata" : {
     "name" : "SEQ_SUB_ORA.DataStage sequence",
-    "asset_id" : "c7d1d4e0-ed07-4d03-abd7-1673a7199cfe",
+    "asset_id" : "cc690361-f9ee-42ea-8fc6-873b3a76967b",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "f61c7ddc-c306-480c-81ad-47d04e8df7fe",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "TS-NGAUTO",
-      "asset_ref" : "47d45a7f-08c9-4dd7-a30a-f2489fd4d571",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "SEQ_SUB_ORA"
     }
   }

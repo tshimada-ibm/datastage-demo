@@ -166,8 +166,8 @@
     "id" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "a6d0543c-ff19-4923-841b-9dba66f12ceb",
-    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "ref" : "314e3f3f-161d-4167-8e39-856d56f5e554",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
     "name" : "INTG_DB2"
   } ],
   "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
@@ -218,6 +218,9 @@
   "app_data" : {
     "datastage" : {
       "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
     }
   },
   "version" : "3.0"

@@ -1,32 +1,39 @@
 {
   "metadata" : {
-    "name" : "ODBC_DB2_INTG_READ.DataStage job",
-    "asset_id" : "27e94dfb-50d5-4e9f-a569-465ef9344ac9",
+    "name" : "GIT_NEW_FLOW1.DataStage job",
+    "asset_id" : "64a10ad4-9467-49f0-aa21-6b69fb267c13",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref" : "4601cd88-da16-4f19-902c-23d3ddf298d6",
+      "asset_ref" : "b5055f14-6020-4367-a55f-519d139054aa",
       "schedule_id" : "",
       "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "env_type" : "",
+        "env_id" : "45f8934e-1120-459f-8513-c613a042dcc1",
+        "env_type" : "datastage",
         "flow_limits" : {
-          "warn_limit" : "100"
+          "warn_limit" : 100
         },
         "env_variables" : [ ],
         "runPriorityQueue" : "Medium"
       },
       "last_run_time" : "deprecated field",
       "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ {
+        "name" : "$INTG_DB2_USER",
+        "value" : "PROJDEF"
+      } ],
+      "parameter_sets" : [ ],
       "last_run_status" : "deprecated field",
+      "retention_policy" : { },
       "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
       "enable_notifications" : true,
       "future_scheduled_runs" : [ ],
       "last_run_status_timestamp" : 0,
-      "flow_name" : "ODBC_DB2_INTG_READ"
+      "flow_name" : "GIT_NEW_FLOW1"
     }
   }
 }

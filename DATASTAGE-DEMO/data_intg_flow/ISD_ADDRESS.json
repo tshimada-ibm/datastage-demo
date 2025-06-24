@@ -371,6 +371,7 @@
         "label" : "Generate nested SQL",
         "value" : "NESTED_QUERY"
       },
+      "saveChangeFrequency" : "apply_changes_temporarily",
       "disableParamsCacheOnFlow" : false,
       "rcpLinkList" : [ ],
       "globalAcp" : true,

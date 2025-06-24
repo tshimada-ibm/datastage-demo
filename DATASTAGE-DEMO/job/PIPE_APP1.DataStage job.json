@@ -2,28 +2,28 @@
   "metadata" : {
     "name" : "PIPE_APP1.DataStage job",
     "description" : "",
-    "asset_id" : "418dd112-03c9-468f-84d8-dc716009494c",
+    "asset_id" : "4f036820-7a4c-4b27-9b29-01fab88ccfc3",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "a5bd9eef-97bb-4456-94d3-0ff368e5588e",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "version" : "c8bc4f7c-0a27-49b2-a0a4-48329a709952-0",
+        "version" : "a5bd9eef-97bb-4456-94d3-0ff368e5588e-0",
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "orchestration_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "c8bc4f7c-0a27-49b2-a0a4-48329a709952",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "PIPE_APP1"
     }
   }

@@ -11,7 +11,7 @@
       },
       "validation" : {
         "valid" : true,
-        "validated_at" : "2025-06-14 00:38:57.760871051 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:14.513109687 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
@@ -136,10 +136,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "DATASTAGE-DEMO"
-          },
-          "b9387904-8228-40a4-86c6-707d9b234371" : {
+          "6700cd0d-b0a9-4fcc-8f89-a909cd99a7bf" : {
             "name" : "EXTOWITableWpinfoMatlPxP01.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -148,6 +145,9 @@
                 "resource_type" : "asset"
               }
             }
+          },
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "DATASTAGE-DEMO"
           }
         },
         "comments" : [ ],
@@ -232,7 +232,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/b9387904-8228-40a4-86c6-707d9b234371"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/6700cd0d-b0a9-4fcc-8f89-a909cd99a7bf"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

@@ -236,8 +236,8 @@
     "id" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "376e383d-2819-4eab-b031-95df7f60fbfc",
-    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "ref" : "ab35fead-cb15-4a61-9d2b-0bffb06941ba",
+    "project_ref" : "9fa73363-f167-464a-ba08-88db16713af6",
     "name" : "ConnParamSet_HDFS"
   } ],
   "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
@@ -370,6 +370,9 @@
   "app_data" : {
     "datastage" : {
       "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "saveChangeFrequency" : "apply_changes_temporarily"
     }
   },
   "version" : "3.0",

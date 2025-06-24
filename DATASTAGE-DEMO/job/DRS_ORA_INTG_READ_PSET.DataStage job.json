@@ -1,31 +1,31 @@
 {
   "metadata" : {
     "name" : "DRS_ORA_INTG_READ_PSET.DataStage job",
-    "asset_id" : "b01b4db8-3592-40e5-892b-526b7e0076b7",
+    "asset_id" : "29864506-ed86-4684-93e7-2fa6e4f7c042",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "data_intg_flow",
+      "asset_ref" : "9ab996c8-8c37-4a15-87c0-7f28e3b7cc74",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
+        "env_type" : "",
         "flow_limits" : {
           "warn_limit" : "100"
         },
-        "runPriorityQueue" : "Medium",
-        "env_type" : "",
-        "env_variables" : [ ]
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "TS-NGAUTO",
-      "asset_ref" : "2f50d465-6fe2-4e02-b4e3-596df334b703",
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "DRS_ORA_INTG_READ_PSET"
     }
   }

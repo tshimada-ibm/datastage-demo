@@ -1,29 +1,25 @@
 {
   "metadata" : {
     "name" : "XML_OUTPUT.DataStage job",
-    "asset_id" : "a40613cb-54ad-4bbb-8d91-7dcb2176da6e",
+    "asset_id" : "1b9428c3-ab34-43d8-b13e-b7c6f2c22efe",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "data_intg_flow",
+      "asset_ref" : "64a9215c-7225-4e0d-b6be-77a467a9fd4c",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "env_variables" : [ ],
+        "env_type" : "",
         "flow_limits" : {
           "warn_limit" : 100
         },
-        "runPriorityQueue" : "Medium",
-        "env_type" : ""
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
-      "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "89221752-ee4d-4dd0-9c7b-6c72d34c0930",
+      "asset_ref_type" : "data_intg_flow",
       "job_parameters" : [ {
         "name" : "$DATA_DIR",
         "value" : "PROJDEF"
@@ -31,9 +27,12 @@
         "name" : "TEXT",
         "value" : ""
       } ],
-      "parameter_sets" : [ ],
-      "schedule_id" : "",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "XML_OUTPUT"
     }
   }

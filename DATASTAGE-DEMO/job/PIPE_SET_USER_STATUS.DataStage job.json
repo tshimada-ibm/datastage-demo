@@ -2,26 +2,22 @@
   "metadata" : {
     "name" : "PIPE_SET_USER_STATUS.DataStage job",
     "description" : "",
-    "asset_id" : "6ea11b69-2e5e-4994-b62f-e2d4fd2424ab",
+    "asset_id" : "c1750fdc-38bb-475c-aec5-63b8e69e53ab",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "orchestration_flow",
+      "asset_ref" : "551f0067-2c8e-4951-8379-593f8fa53016",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "version" : "87170133-9199-4b91-82e3-9ef09c47f9eb-0",
+        "version" : "551f0067-2c8e-4951-8379-593f8fa53016-0",
         "env_type" : "",
         "env_variables" : [ ]
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
-      "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "87170133-9199-4b91-82e3-9ef09c47f9eb",
+      "asset_ref_type" : "orchestration_flow",
       "job_parameters" : [ {
         "name" : "pCA7JobName",
         "value" : "CA7"
@@ -38,10 +34,12 @@
         "name" : "pInvocationValue",
         "value" : "inv1"
       } ],
-      "schedule_id" : "",
+      "last_run_status" : "deprecated field",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
-      "schedule" : "",
-      "parameter_sets" : [ ],
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "PIPE_SET_USER_STATUS"
     }
   }

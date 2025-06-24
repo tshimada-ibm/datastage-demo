@@ -7,13 +7,14 @@
       "parameter_sets" : [ ],
       "validation" : {
         "valid" : true,
-        "validated_at" : "2024-08-12 17:16:50.598635667 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:14.02598874 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
     },
     "ui_data" : {
       "settings" : {
+        "autosave" : false,
         "enable_ds_funcs" : true
       }
     }
@@ -43,10 +44,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "TS-NGAUTO"
-          },
-          "58868dd6-f48a-44eb-9c52-6cd22e12e785" : {
+          "2d6c0fae-ed52-4bd4-a844-d2c06e7042cc" : {
             "name" : "ORA_INTG_READ.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -55,6 +53,9 @@
                 "resource_type" : "asset"
               }
             }
+          },
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "TS-NGAUTO"
           }
         },
         "comments" : [ ],
@@ -119,6 +120,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -136,7 +138,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/58868dd6-f48a-44eb-9c52-6cd22e12e785"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/2d6c0fae-ed52-4bd4-a844-d2c06e7042cc"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

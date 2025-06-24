@@ -7,13 +7,14 @@
       "parameter_sets" : [ ],
       "validation" : {
         "valid" : true,
-        "validated_at" : "2024-08-12 17:16:55.630814149 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:30.958558035 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
     },
     "ui_data" : {
       "settings" : {
+        "autosave" : false,
         "enable_ds_funcs" : true
       }
     }
@@ -58,10 +59,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "TS-NGAUTO"
-          },
-          "81b4ce85-c500-4d0d-8a6d-9bf338f41350" : {
+          "781725f3-282b-40b8-8ed9-effa7dd58483" : {
             "name" : "SEQ_SUB_DB2.DataStage sequence",
             "type" : {
               "CPDPath" : {
@@ -71,7 +69,10 @@
               }
             }
           },
-          "c7d1d4e0-ed07-4d03-abd7-1673a7199cfe" : {
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "TS-NGAUTO"
+          },
+          "cc690361-f9ee-42ea-8fc6-873b3a76967b" : {
             "name" : "SEQ_SUB_ORA.DataStage sequence",
             "type" : {
               "CPDPath" : {
@@ -136,6 +137,7 @@
           "inputs" : [ {
             "descriptive_name" : "Pipeline Job",
             "name" : "job",
+            "related_asset_type" : "orchestration_flow",
             "type" : {
               "CPDPath" : {
                 "asset_type" : "job",
@@ -152,7 +154,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/81b4ce85-c500-4d0d-8a6d-9bf338f41350"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/781725f3-282b-40b8-8ed9-effa7dd58483"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -317,6 +319,7 @@
           "inputs" : [ {
             "descriptive_name" : "Pipeline Job",
             "name" : "job",
+            "related_asset_type" : "orchestration_flow",
             "type" : {
               "CPDPath" : {
                 "asset_type" : "job",
@@ -333,7 +336,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/c7d1d4e0-ed07-4d03-abd7-1673a7199cfe"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/cc690361-f9ee-42ea-8fc6-873b3a76967b"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",

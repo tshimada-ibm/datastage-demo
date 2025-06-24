@@ -1,32 +1,31 @@
 {
   "metadata" : {
     "name" : "CUSTOM_ROUTINE.DataStage job",
-    "asset_id" : "e80e1c55-8640-4400-a976-0997a016b043",
+    "asset_id" : "0ba1b648-4a35-4494-a468-87f7e2ec6901",
     "owner_id" : "1000331004",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref_type" : "data_intg_flow",
+      "asset_ref" : "3b7a601e-3fa5-48aa-9b2d-d41ce500400c",
+      "schedule_id" : "",
+      "project_name" : "DATASTAGE-DEMO-QA",
       "configuration" : {
-        "env_variables" : [ ],
+        "env_type" : "",
         "flow_limits" : {
           "warn_limit" : 100
         },
-        "runPriorityQueue" : "Medium",
-        "env_type" : ""
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
       },
-      "last_run_initiator" : "deprecated field",
       "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
       "last_run_status" : "deprecated field",
-      "last_run_status_timestamp" : 0,
-      "future_scheduled_runs" : [ ],
-      "enable_notifications" : true,
-      "project_name" : "DATASTAGE-DEMO",
-      "asset_ref" : "513c70a9-8001-429c-8ee5-03985ec4718e",
-      "parameter_sets" : [ ],
-      "schedule_id" : "",
+      "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
       "flow_name" : "CUSTOM_ROUTINE"
     }
   }

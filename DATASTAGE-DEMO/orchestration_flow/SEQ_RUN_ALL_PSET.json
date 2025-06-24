@@ -6,29 +6,30 @@
       "default_error_policy" : "continue_on_error",
       "parameter_sets" : [ {
         "name" : "INTG_DB2",
-        "ref" : "a6d0543c-ff19-4923-841b-9dba66f12ceb"
+        "ref" : "314e3f3f-161d-4167-8e39-856d56f5e554"
       }, {
         "name" : "INTG_ORA",
-        "ref" : "7105d25e-c195-4fe2-ba64-2b77267a27fe"
+        "ref" : "7cab4fd9-2bea-450e-83a2-db2531a84fc2"
       }, {
         "name" : "INTG_ODBC_DB2",
-        "ref" : "d0d6974f-3727-47b2-9898-3187e2e0ea2f"
+        "ref" : "5450d0dc-a891-4442-983b-94052ffbeb81"
       }, {
         "name" : "INTG_ODBC_ORA",
-        "ref" : "972f66d6-dc33-4aee-b10f-9f6082b3c3c5"
+        "ref" : "67abb659-b9e6-44d0-9ff9-45dc7c599dde"
       }, {
         "name" : "INTG_JDBC_DB2",
-        "ref" : "8b3ed33d-d3a7-4e18-bdad-255f6b48699b"
+        "ref" : "d1c84db2-9b91-4aaa-ba57-c8b3a2bbeb79"
       } ],
       "validation" : {
         "valid" : true,
-        "validated_at" : "2024-08-12 17:16:51.11668351 +0000 UTC"
+        "validated_at" : "2025-06-15 00:47:15.038735461 +0000 UTC"
       },
       "variables" : [ ],
       "version" : "11.0"
     },
     "ui_data" : {
       "settings" : {
+        "autosave" : false,
         "enable_ds_funcs" : true
       }
     }
@@ -43,40 +44,7 @@
       },
       "ui_data" : {
         "asset_metadata" : {
-          "184d63dd-cb90-4059-949f-070acc6b1c30" : {
-            "name" : "TS-NGAUTO"
-          },
-          "24b85ec7-f733-4de0-be3a-a2b65d737439" : {
-            "name" : "DRS_ODBC_DB2_INTG_READ_PSET.DataStage job",
-            "type" : {
-              "CPDPath" : {
-                "asset_type" : "job",
-                "path_type" : "resource",
-                "resource_type" : "asset"
-              }
-            }
-          },
-          "2a4892fb-9f9b-40a1-a1db-0a7690b92e34" : {
-            "name" : "ORA_INTG_READ_PSET.DataStage job",
-            "type" : {
-              "CPDPath" : {
-                "asset_type" : "job",
-                "path_type" : "resource",
-                "resource_type" : "asset"
-              }
-            }
-          },
-          "2ae875bf-00ed-4963-bdd5-0eaf908e1c7f" : {
-            "name" : "JDBC_INTG_DB2_READ_PSET.DataStage job",
-            "type" : {
-              "CPDPath" : {
-                "asset_type" : "job",
-                "path_type" : "resource",
-                "resource_type" : "asset"
-              }
-            }
-          },
-          "510512eb-d065-4c92-b2f7-88403873d04e" : {
+          "27ef2cab-1739-499c-afa0-280237c9d3b4" : {
             "name" : "ODBC_DB2_INTG_READ_PSET.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -86,7 +54,7 @@
               }
             }
           },
-          "6365dc0f-ae17-4c5b-8eca-ecac41f991d7" : {
+          "292bb219-c37a-4629-9b0a-15136b0b4b5a" : {
             "name" : "DB2_INTG_READ_PSET.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -96,17 +64,7 @@
               }
             }
           },
-          "9efb67ab-3a4d-4a89-bc45-c6cdb1a526f8" : {
-            "name" : "ODBC_ORA_INTG_READ_PSET.DataStage job",
-            "type" : {
-              "CPDPath" : {
-                "asset_type" : "job",
-                "path_type" : "resource",
-                "resource_type" : "asset"
-              }
-            }
-          },
-          "b01b4db8-3592-40e5-892b-526b7e0076b7" : {
+          "29864506-ed86-4684-93e7-2fa6e4f7c042" : {
             "name" : "DRS_ORA_INTG_READ_PSET.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -116,7 +74,50 @@
               }
             }
           },
-          "c6f49862-a204-4b80-9695-fc4b7b3a03a1" : {
+          "9fa73363-f167-464a-ba08-88db16713af6" : {
+            "name" : "TS-NGAUTO"
+          },
+          "bb9cca66-6498-448e-85c0-51794186de74" : {
+            "name" : "JDBC_INTG_DB2_READ_PSET.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          },
+          "d31dd3b9-f39f-4080-9f26-9ddf58fc47c6" : {
+            "name" : "DRS_ODBC_DB2_INTG_READ_PSET.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          },
+          "d72ee6a6-05a6-4cb0-be95-42dd58e362ea" : {
+            "name" : "ODBC_ORA_INTG_READ_PSET.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          },
+          "f49524bb-c6fd-4858-b1ef-3ce182da2a40" : {
+            "name" : "ORA_INTG_READ_PSET.DataStage job",
+            "type" : {
+              "CPDPath" : {
+                "asset_type" : "job",
+                "path_type" : "resource",
+                "resource_type" : "asset"
+              }
+            }
+          },
+          "faee50a2-69e1-4091-b879-61dc6b9dda03" : {
             "name" : "DRS_DB2_INTG_READ_PSET.DataStage job",
             "type" : {
               "CPDPath" : {
@@ -189,6 +190,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -206,7 +208,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/6365dc0f-ae17-4c5b-8eca-ecac41f991d7"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/292bb219-c37a-4629-9b0a-15136b0b4b5a"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -371,6 +373,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -388,7 +391,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/2a4892fb-9f9b-40a1-a1db-0a7690b92e34"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/f49524bb-c6fd-4858-b1ef-3ce182da2a40"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -594,6 +597,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -611,7 +615,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/510512eb-d065-4c92-b2f7-88403873d04e"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/27ef2cab-1739-499c-afa0-280237c9d3b4"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -817,6 +821,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -834,7 +839,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/9efb67ab-3a4d-4a89-bc45-c6cdb1a526f8"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/d72ee6a6-05a6-4cb0-be95-42dd58e362ea"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -1040,6 +1045,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -1057,7 +1063,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/2ae875bf-00ed-4963-bdd5-0eaf908e1c7f"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/bb9cca66-6498-448e-85c0-51794186de74"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -1263,6 +1269,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -1280,7 +1287,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/c6f49862-a204-4b80-9695-fc4b7b3a03a1"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/faee50a2-69e1-4091-b879-61dc6b9dda03"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -1486,6 +1493,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -1503,7 +1511,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/b01b4db8-3592-40e5-892b-526b7e0076b7"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/29864506-ed86-4684-93e7-2fa6e4f7c042"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
@@ -1709,6 +1717,7 @@
             "description" : "Required. CPD path of the DataStage job to be run.",
             "human_name" : "DataStage Job",
             "name" : "job",
+            "related_asset_type" : "data_intg_flow",
             "source_of_scope" : true,
             "type" : {
               "CPDPath" : {
@@ -1726,7 +1735,7 @@
               },
               "scopeType" : "project"
             },
-            "value" : "/projects/184d63dd-cb90-4059-949f-070acc6b1c30/jobs/24b85ec7-f733-4de0-be3a-a2b65d737439"
+            "value" : "/projects/9fa73363-f167-464a-ba08-88db16713af6/jobs/d31dd3b9-f39f-4080-9f26-9ddf58fc47c6"
           }, {
             "description" : "Optional. An action taken when the run has failed.",
             "human_name" : "Error Policy",
