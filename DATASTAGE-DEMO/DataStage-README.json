@@ -1,36 +1,36 @@
 {
-  "project" : "DATASTAGE-DEMO",
-  "projectId" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+  "project" : "DATASTAGE-DEMO-QA",
+  "projectId" : "9fa73363-f167-464a-ba08-88db16713af6",
   "created_by" : "tshimada",
-  "created_at" : "2025-06-15T00:42:01.390732856Z",
+  "created_at" : "2025-06-24T17:24:09.900759429Z",
   "environment" : "cp4d",
   "services_info" : [ {
     "name" : "ds-canvas",
-    "version" : "512.0.10"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-flows",
-    "version" : "512.0.7"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-codegen",
-    "version" : "512.0.7"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-flow-runtime",
-    "version" : "512.0.2"
+    "version" : "520.0.3"
   }, {
     "name" : "ds-migration",
-    "version" : "512.0.4"
+    "version" : "520.0.3"
   }, {
     "name" : "DSAssets",
-    "version" : "512.0.3"
+    "version" : "520.0.6"
   }, {
     "name" : "ds-cas-lite",
-    "version" : "512.0.3"
+    "version" : "520.0.3"
   }, {
     "name" : "ds-px-runtime",
-    "version" : "512.0.7"
+    "version" : "520.0.17"
   }, {
     "name" : "qs-ruleset",
-    "version" : "512.0.2"
+    "version" : "520.0.3"
   } ],
   "assets" : [ {
     "name" : "Trial job - PIPE_K8S_BATCH",
@@ -474,6 +474,10 @@
     "name" : "XML_OUTPUT",
     "type" : "px_executables",
     "location" : "XML_OUTPUT"
+  }, {
+    "name" : "PROJDEF.",
+    "type" : "parameter_set",
+    "location" : ""
   }, {
     "name" : "SEQ_RUN_DB",
     "type" : "orchestration_flow"
