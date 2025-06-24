@@ -1,44 +1,52 @@
 {
-  "project" : "DATASTAGE-DEMO",
-  "projectId" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+  "project" : "DATASTAGE-DEMO-QA",
+  "projectId" : "9fa73363-f167-464a-ba08-88db16713af6",
   "created_by" : "tshimada",
-  "created_at" : "2025-06-15T00:26:17.494795060Z",
+  "created_at" : "2025-06-24T17:26:29.911016724Z",
   "environment" : "cp4d",
   "services_info" : [ {
     "name" : "ds-canvas",
-    "version" : "512.0.10"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-flows",
-    "version" : "512.0.7"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-codegen",
-    "version" : "512.0.7"
+    "version" : "520.0.16"
   }, {
     "name" : "ds-flow-runtime",
-    "version" : "512.0.2"
+    "version" : "520.0.3"
   }, {
     "name" : "ds-migration",
-    "version" : "512.0.4"
+    "version" : "520.0.3"
   }, {
     "name" : "DSAssets",
-    "version" : "512.0.3"
+    "version" : "520.0.6"
   }, {
     "name" : "ds-cas-lite",
-    "version" : "512.0.3"
+    "version" : "520.0.3"
   }, {
     "name" : "ds-px-runtime",
-    "version" : "512.0.7"
+    "version" : "520.0.17"
   }, {
     "name" : "qs-ruleset",
-    "version" : "512.0.2"
+    "version" : "520.0.3"
   } ],
   "assets" : [ {
+    "name" : "GIT_NEW_FLOW1.DataStage job.",
+    "type" : "job",
+    "location" : ""
+  }, {
     "name" : "RUN_DSJOBREPORT_AFTER_SUB.DataStage job.",
     "type" : "job",
     "location" : ""
   }, {
     "name" : "FLOW1.DataStage job",
     "type" : "job"
+  }, {
+    "name" : "GIT_NEW_FLOW1.",
+    "type" : "data_intg_flow",
+    "location" : ""
   }, {
     "name" : "default_datastage_px",
     "type" : "environment"
@@ -53,6 +61,10 @@
   }, {
     "name" : "FLOW1",
     "type" : "data_intg_flow"
+  }, {
+    "name" : "PROJDEF.",
+    "type" : "parameter_set",
+    "location" : ""
   } ],
   "flow_job_mapping" : [ ]
 }
