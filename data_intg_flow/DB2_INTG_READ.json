@@ -1,0 +1,348 @@
+{
+  "primary_pipeline" : "60bf2153-5d1e-4d5d-a275-7be5f79ce3ed",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : -1
+            }
+          }
+        },
+        "parameters" : { }
+      } ],
+      "op" : "PxPeek",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "90f5e51a-24c8-425f-ad32-2a440b996f74",
+          "type_attr" : "PRIMARY",
+          "id" : "60135f71-89d4-4f11-981d-3b25697e297a",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_single_line" : true,
+                "label_align" : "center",
+                "tooltip" : "DSLink2",
+                "x_pos" : 0,
+                "label" : "DSLink2",
+                "label_allow_return_key" : "save",
+                "width" : 183,
+                "label_editable" : true,
+                "id" : "dec-8",
+                "position" : "middle",
+                "y_pos" : -20,
+                "height" : 20
+              } ],
+              "class_name" : "undefined"
+            }
+          },
+          "link_name" : "DSLink2",
+          "port_id_ref" : "212d1bd0-c756-40ea-8c92-c429210a0b7b"
+        } ],
+        "id" : "924dd54b-8ba3-43d2-a782-be8c1f0a7675",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "d6880ac8-afa8-4ef4-a750-83e8d3795ce8",
+        "parameters" : {
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "91135ea7-2ec6-4a88-bf9b-d8e2ec4a18b7",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "924dd54b-8ba3-43d2-a782-be8c1f0a7675",
+          "outputs_order" : ""
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxPeek.svg",
+          "x_pos" : 411.84,
+          "label" : "Peek_0",
+          "y_pos" : 237.6
+        }
+      },
+      "parameters" : {
+        "all" : " ",
+        "showPartType" : true,
+        "columns" : " ",
+        "showCollType" : false,
+        "inputName" : "DSLink2",
+        "showSortOptions" : false,
+        "combinability" : "auto",
+        "OutputlinkOrderingList" : [ ],
+        "inputcolProperties" : [ {
+          "Unicode" : false,
+          "Signed" : true,
+          "Metadata" : "INTEGER",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "a",
+          "TempOldColumnName" : "a",
+          "ColumnName" : "a",
+          "Length" : "–",
+          "MisFieldProperties" : "",
+          "DataType" : "INTEGER",
+          "Key" : false,
+          "Nullable" : false
+        }, {
+          "Unicode" : false,
+          "Signed" : false,
+          "Metadata" : "VARCHAR(10)",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "b",
+          "TempOldColumnName" : "b",
+          "ColumnName" : "b",
+          "Length" : 10,
+          "MisFieldProperties" : "",
+          "DataType" : "VARCHAR",
+          "Key" : false,
+          "Nullable" : false
+        } ],
+        "nrecs" : 15,
+        "selection" : " ",
+        "output_count" : 0,
+        "execmode" : "default_par",
+        "input_count" : 1,
+        "name" : "name",
+        "dataset" : " "
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "212d1bd0-c756-40ea-8c92-c429210a0b7b",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "60135f71-89d4-4f11-981d-3b25697e297a"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 2147483647
+            }
+          }
+        },
+        "schema_ref" : "d6880ac8-afa8-4ef4-a750-83e8d3795ce8",
+        "parameters" : {
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "DB2ConnectorPX",
+      "connection" : {
+        "ref" : "local",
+        "properties" : {
+          "use_et_source" : true,
+          "session.schema_reconciliation.fail_on_code_page_mismatch" : false,
+          "session.isolation_level" : "cursor_stability",
+          "lock_wait_mode" : "use_the_lock_timeout_database_configuration_parameter",
+          "transaction.end_of_wave" : "none",
+          "use_direct_connections" : false,
+          "keep_conductor_connection_alive" : true,
+          "table_name" : "test1",
+          "authentication_type" : "username_and_password",
+          "session.autocommit_mode" : "off",
+          "database" : "#$INTG_DB2_DATABASE#",
+          "password" : "#$INTG_DB2_PASSWD#",
+          "session.pass_lob_locator" : false,
+          "limit_rows" : false,
+          "advanced.hostname" : "#DB2_HOST1#",
+          "session.schema_reconciliation.fail_on_size_mismatch" : true,
+          "xml_column_as_lob" : false,
+          "session.array_size" : 2000,
+          "sql.enable_partitioning" : false,
+          "prefix_for_expression_columns" : "EXPR",
+          "session.schema_reconciliation.fail_on_type_mismatch" : true,
+          "re_optimization" : "none",
+          "migrated_job" : false,
+          "before_after" : false,
+          "advanced.port" : "#DB2_PORT1#",
+          "generate_sql" : true,
+          "transaction.record_count" : 2000,
+          "enable_quoted_i_ds" : false,
+          "session.use_external_tables" : false,
+          "username" : "#$INTG_DB2_USER#"
+        }
+      },
+      "id" : "90f5e51a-24c8-425f-ad32-2a440b996f74",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : {
+          "outputs_order" : "212d1bd0-c756-40ea-8c92-c429210a0b7b"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/DB2ConnectorPX.svg",
+          "x_pos" : 95.03999999999999,
+          "label" : "DB2_Connector_1",
+          "y_pos" : 237.6
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    } ],
+    "description" : "",
+    "id" : "60bf2153-5d1e-4d5d-a275-7be5f79ce3ed",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "",
+        "runtime_column_propagation" : "false",
+        "nls_locale" : "OFF"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "0d6aae3a-458f-4a2b-93e7-1f172a9e0306",
+    "project_ref" : "184d63dd-cb90-4059-949f-070acc6b1c30",
+    "name" : "ConnParamSet_DB2__INTG_DB2_DATABASE"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "d6880ac8-afa8-4ef4-a750-83e8d3795ce8",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "a",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "b",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "768f8d62-d875-433d-b56d-2aaa60fc35fd",
+  "app_data" : {
+    "datastage" : {
+      "timestamp_format" : "",
+      "decimal_separator" : "",
+      "flowRunPriorityQueue" : "Medium",
+      "time_format" : "",
+      "external_message_handlers" : [ ],
+      "date_format" : "",
+      "message_handlers" : [ ],
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "transInputLinkMapper" : { },
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "disableParamsCacheOnFlow" : false,
+      "rcpLinkList" : [ ],
+      "globalAcp" : true,
+      "enableRCP" : false,
+      "isNewTransActive" : false,
+      "enableSchemaLessDesign" : false,
+      "runMode" : "ETL"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "subtype" : "",
+      "name" : "$INTG_DB2_DATABASE",
+      "type" : "string",
+      "prompt" : "INTG_DB2_DATABASE",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$INTG_DB2_USER",
+      "type" : "string",
+      "prompt" : "INTG_DB2_USER",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$INTG_DB2_PASSWD",
+      "type" : "encrypted",
+      "prompt" : "INTG_DB2_PASSWD",
+      "value" : "{dsmenc}fJIAtWfUGz/snJJt8mSTzQ=="
+    }, {
+      "subtype" : "",
+      "name" : "DB2_HOST1",
+      "type" : "string",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "DB2_PORT1",
+      "type" : "int64",
+      "value" : "PROJDEF"
+    } ]
+  }
+}
