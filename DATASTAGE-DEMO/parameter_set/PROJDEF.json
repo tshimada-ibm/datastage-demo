@@ -1,170 +1,199 @@
 {
   "parameter_set" : {
+    "value_sets" : [ ],
     "name" : "PROJDEF",
     "description" : "DataStage project environment variables",
     "parameters" : [ {
+      "subtype" : "",
       "name" : "$INTG_ODBC_ORA_USER",
       "description" : "",
-      "prompt" : "INTG_ODBC_ORA_USER",
       "type" : "string",
+      "prompt" : "INTG_ODBC_ORA_USER",
       "value" : "dsadm"
     }, {
+      "subtype" : "",
       "name" : "$INTG_DB2_USER",
       "description" : "",
-      "prompt" : "INTG_DB2_USER",
       "type" : "string",
+      "prompt" : "INTG_DB2_USER",
       "value" : "db2inst1"
     }, {
+      "subtype" : "",
       "name" : "$INTG_ODBC_ORA_DSN",
       "description" : "",
-      "prompt" : "INTG_ODBC_ORA_DSN",
       "type" : "string",
+      "prompt" : "INTG_ODBC_ORA_DSN",
       "value" : "INTG_ORA"
     }, {
+      "subtype" : "",
       "name" : "$INTG_ORA_SERVICE",
       "description" : "",
-      "prompt" : "INTG_ORA_SERVICE",
       "type" : "string",
+      "prompt" : "INTG_ORA_SERVICE",
       "value" : "FREE"
     }, {
+      "subtype" : "",
       "name" : "$INTG_ODBC_ORA_PASSWD",
       "description" : "",
-      "prompt" : "INTG_ODBC_ORA_PASSWD",
       "type" : "encrypted",
+      "prompt" : "INTG_ODBC_ORA_PASSWD",
       "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
     }, {
+      "subtype" : "",
       "name" : "$INTG_ORA_USER",
       "description" : "",
-      "prompt" : "INTG_ORA_USER",
       "type" : "string",
+      "prompt" : "INTG_ORA_USER",
       "value" : "dsadm"
     }, {
+      "subtype" : "",
       "name" : "$INTG_ODBC_DB2_PASSWD",
       "description" : "",
-      "prompt" : "INTG_ODBC_DB2_PASSWD",
       "type" : "encrypted",
+      "prompt" : "INTG_ODBC_DB2_PASSWD",
       "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
     }, {
+      "subtype" : "",
       "name" : "$INTG_JDBC_DB2_USER",
       "description" : "",
-      "prompt" : "INTG_JDBC_DB2_USER",
       "type" : "string",
+      "prompt" : "INTG_JDBC_DB2_USER",
       "value" : "db2inst1"
     }, {
+      "subtype" : "",
       "name" : "$INTG_DB2_DATABASE",
       "description" : "",
-      "prompt" : "INTG_DB2_DATABASE",
       "type" : "string",
+      "prompt" : "INTG_DB2_DATABASE",
       "value" : "DEMO"
     }, {
+      "subtype" : "",
       "name" : "$INTG_HDFS_PORT",
       "description" : "",
-      "prompt" : "INTG_HDFS_PORT",
       "type" : "string",
+      "prompt" : "INTG_HDFS_PORT",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "$INTG_HDFS_DATA_DIR",
       "description" : "",
-      "prompt" : "INTG_HDFS_DATA_DIR",
       "type" : "string",
+      "prompt" : "INTG_HDFS_DATA_DIR",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "$INTG_JDBC_DB2_PASSWD",
       "description" : "",
-      "prompt" : "INTG_JDBC_DB2_PASSWD",
       "type" : "encrypted",
+      "prompt" : "INTG_JDBC_DB2_PASSWD",
       "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
     }, {
+      "subtype" : "",
       "name" : "$INTG_ODBC_DB2_USER",
       "description" : "",
-      "prompt" : "INTG_ODBC_DB2_USER",
       "type" : "string",
+      "prompt" : "INTG_ODBC_DB2_USER",
       "value" : "db2inst1"
     }, {
+      "subtype" : "",
       "name" : "$INTG_DB2_PASSWD",
       "description" : "",
-      "prompt" : "INTG_DB2_PASSWD",
       "type" : "encrypted",
+      "prompt" : "INTG_DB2_PASSWD",
       "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
     }, {
+      "subtype" : "",
       "name" : "$INTG_HDFS_KEYTAB_FILE",
       "description" : "",
-      "prompt" : "INTG_HDFS_KEYTAB_FILE",
       "type" : "string",
+      "prompt" : "INTG_HDFS_KEYTAB_FILE",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "$INTG_HDFS_USER",
       "description" : "",
-      "prompt" : "INTG_HDFS_USER",
       "type" : "string",
+      "prompt" : "INTG_HDFS_USER",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "$INTG_ODBC_DB2_DSN",
       "description" : "",
-      "prompt" : "INTG_ODBC_DB2_DSN",
       "type" : "string",
+      "prompt" : "INTG_ODBC_DB2_DSN",
       "value" : "INTG_DB2"
     }, {
+      "subtype" : "",
       "name" : "$INTG_ORA_PASSWD",
       "description" : "",
-      "prompt" : "INTG_ORA_PASSWD",
       "type" : "encrypted",
+      "prompt" : "INTG_ORA_PASSWD",
       "value" : "{dsmenc}XI+hB2hBMLnCkYpsPR9y0g=="
     }, {
+      "subtype" : "",
       "name" : "$INTG_HDFS_HOST",
       "description" : "",
-      "prompt" : "INTG_HDFS_HOST",
       "type" : "string",
+      "prompt" : "INTG_HDFS_HOST",
       "value" : ""
     }, {
+      "subtype" : "",
       "name" : "$INTG_JDBC_DB2_URL",
       "description" : "",
-      "prompt" : "INTG_JDBC_DB2_URL",
       "type" : "string",
+      "prompt" : "INTG_JDBC_DB2_URL",
       "value" : "jdbc:db2://169.47.101.211:50000/DEMO"
     }, {
+      "subtype" : "",
       "name" : "DB2_HOST1",
       "description" : "",
-      "prompt" : "",
       "type" : "string",
+      "prompt" : "",
       "value" : "10.241.75.204"
     }, {
+      "subtype" : "",
       "name" : "DB2_PORT1",
       "type" : "int64",
       "value" : 50000
     }, {
+      "subtype" : "",
       "name" : "ORA_HOST1",
       "type" : "string",
       "value" : "169.47.101.211"
     }, {
+      "subtype" : "",
       "name" : "ORA_PORT1",
       "type" : "int64",
       "value" : 1521
     }, {
+      "subtype" : "",
       "name" : "JDBC_DRIVER1",
       "type" : "string",
       "value" : "com.ibm.db2.jcc.DB2Driver"
     }, {
+      "subtype" : "",
       "name" : "$PROJ_ORA_HOST",
-      "prompt" : "PROJ_ORA_HOST",
       "type" : "string",
+      "prompt" : "PROJ_ORA_HOST",
       "value" : "host-a.abc.com"
     }, {
+      "subtype" : "",
       "name" : "$PROJ_ROW_COUNT",
-      "prompt" : "PROJ_ROW_COUNT",
       "type" : "string",
+      "prompt" : "PROJ_ROW_COUNT",
       "value" : "3"
     }, {
+      "subtype" : "",
       "name" : "$SCRIPT_DIR",
-      "prompt" : "SCRIPT_DIR",
       "type" : "string",
+      "prompt" : "SCRIPT_DIR",
       "value" : "/mnts/etlshare/scripts"
     }, {
+      "subtype" : "",
       "name" : "$DATA_DIR",
-      "prompt" : "DATA_DIR",
       "type" : "string",
+      "prompt" : "DATA_DIR",
       "value" : "/mnts/etlshare/data"
-    } ],
-    "value_sets" : [ ]
+    } ]
   }
 }
